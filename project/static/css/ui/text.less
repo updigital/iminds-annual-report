@@ -1,0 +1,56 @@
+/* ==========================================================================
+Font Family: 'Open Sans Condensed', 'Helvetica Neue';
+========================================================================== */
+ @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+.open-sans-condensed {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.helvetica-neue {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+/* ==========================================================================
+Sizes: 'normal', 'medium', 'large' etc;
+========================================================================== */
+.font-size-small { font-size: 0.8em }
+.font-size-normal { font-size: 0.95em }
+.font-size-medium { font-size: 1.5em }
+.font-size-larg { font-size: 2em }
+.font-size-largest { font-size: 2.5em }
+
+/* ==========================================================================
+Properties: 'Bold', 'Uppercase' etc;
+========================================================================== */
+.bold { font-weight: bold }
+.uppercase { text-transform: uppercase }
+
+/* ==========================================================================
+Aligns: 'left', 'right', 'align-left' etc;
+========================================================================== */
+.align-left { text-align: left }
+.align-right { text-align: right }
+.align-center { text-align: center }
+
+/* ==========================================================================
+General: 'etc';
+========================================================================== */
+body {
+    .open-sans-condensed;
+}
+
+/* ==========================================================================
+Sections: 'start';
+========================================================================== */
+section[role="start"] {
+    color: @black;
+}
+section[role="start"]
+    h3 {
+    .font-size-largest;
+    margin-bottom: 0.8em;
+}
+section[role="start"]
+    p {
+    .font-size-normal;
+    line-height: 1.8em;
+}

@@ -1,0 +1,109 @@
+/* ==========================================================================
+Section: 'start';
+Elements: 'h1' > 'a.logo';
+========================================================================== */
+section[role="start"] h1 a.logo {
+	height: 1.7em;
+	background: url('../img/logo-iminds.png') no-repeat;
+	text-indent: -9999px;
+	.hidden;
+	.block;
+}
+
+/* ==========================================================================
+Section: 'home', 'odd, 'even';
+Elements: 'header.main';
+========================================================================== */
+section[role="home"] header.main,
+section[role="odd"] header.main,
+section[role="even"] header.main {
+	height: 3.3em;
+	padding-top: 0.8em;
+}
+section[role="home"] header.main {
+	background: @gray-hard;
+}
+
+/* ==========================================================================
+Section: 'odd, 'even';
+Aside: '.content';
+Elements: 'header > h2', 'header > h3', 'header > hr.v-line';
+========================================================================== */
+section[role="odd"] .content header,
+section[role="even"] .content header {
+	top: 0;
+	left: 0;
+	.absolute;
+}
+	section[role="odd"] .content header h2,
+	section[role="even"] .content header h2 {
+		top: 6.2em;
+		left: 32em;
+		.font-size-normal;
+		.uppercase;
+		.align-right;
+		.relative;
+	}
+	section[role="even"] .content header h2 {
+		color: @gray-hard;
+	}
+	section[role="odd"] .content header h3,
+	section[role="even"] .content header h3 {
+		width: 2.1em;
+		height: 2.1em;
+		padding: 0.45em 0.65em;
+		top: 3.4em;
+		left: 17.8em;
+		z-index: 9;
+		background: @white;
+		color: @gray-hard;
+		.font-size-medium;
+		.radius-full;
+		.right;
+		.relative;
+	}
+	section[role="odd"] .content header hr.v-line,
+	section[role="even"] .content header hr.v-line {
+		width: 0.13em;
+		height: 50em;
+		top: -3.5em;
+		left: 48.8%;
+		background: @white;
+		border: none;
+		.relative;
+	}
+
+/* 	EXCEPETIONS:
+
+	Elements: 'section > odd > #january', '~#january > header > span';
+========================================================================== */
+section[role="odd"]#january .content header hr.v-line {
+	top: 5em;
+	height: 45em;
+}
+aside.content header span {
+	top: 1.5em;
+	left: 14.1em;
+	.relative;
+	font-size: 2.4em;
+	.bold;
+}
+section[role="odd"]#january .content header h2 {
+		top: 6.3em;
+	}
+
+
+/* other need refactoring */
+section[role="odd"] aside.tooltip-article,
+section[role="even"] aside.tooltip-article {}
+	section[role="odd"] aside.tooltip-article h3,
+	section[role="even"] aside.tooltip-article h3 {
+		color: @black;
+		top: 4.5em;
+		.align-center;
+		.relative;
+		.open-sans-condensed;
+		.font-size-larg;
+		.uppercase;
+	}
+		

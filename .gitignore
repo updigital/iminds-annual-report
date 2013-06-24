@@ -1,4 +1,16 @@
 *.log
 *.pot
 *.pyc
-local_settings.py
+*.db
+*_settings.py
+*_requirements.txt
+*.DS_Store
+*.Python
+*.sublime-*
+gunicorn.conf.py
+lib
+bin
+local
+build
+include
+

@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% block section %}
+<div class="wrapper row">
+
+    <section role="home" class="row" id="top">
+        {% include "navigator-months.html" %}
+    </section>
+        
+    {% include "sections/start.html" %}
+
+    {% include "sections/january.html" %}
+    {% include "sections/february.html" %}
+    {% include "sections/march.html" %}
+    {% include "sections/april.html" %}
+    {% include "sections/may.html" %}
+    {% include "sections/june.html" %}
+    {% include "sections/july.html" %}
+    {% include "sections/august.html" %}
+    {% include "sections/september.html" %}
+    {% include "sections/october.html" %}
+    {% include "sections/november.html" %}
+    {% include "sections/december.html" %}
+
+</div>
+{% endblock %}

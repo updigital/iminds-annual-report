@@ -1,0 +1,59 @@
+/* ==========================================================================
+Section: 'odd', 'even'.
+Aside: 'content';
+========================================================================== */
+section[role="odd"] .content,
+		section[role="even"] .content {}
+			
+
+/* ==========================================================================
+Section: '#january'.
+Aside: 'content';
+========================================================================== */
+	section[role="odd"]#january {}
+		section[role="odd"]#january .content {}
+
+/* ==========================================================================
+Section: ''.
+Aside: 'content' > 'text';
+========================================================================== */			
+aside.content .text {
+	background: @white;
+	padding: 1.2em;
+	border-radius: 5px;
+	margin-top: 10em;
+}
+aside.content .text p {
+	color: @black;
+	font-size: 0.8em;
+}
+aside.content .text button {
+	height: 2.5em;
+	.open-sans-condensed;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	color: @white;
+	background: @gray-hard;
+	border-radius: 3px;
+}
+
+/* ==========================================================================
+Section: ''.
+Aside: 'draw';
+========================================================================== */
+aside.draw {
+	margin-top: 6em;
+}
+
+section[role="odd"] aside.draw img,
+section[role="even"] aside.draw img {
+	border-width: 10px;
+	border-style: solid;
+	.radius-full;
+}
+section[role="odd"] aside.draw img {
+	border-color: @white;
+}
+section[role="even"] aside.draw img {
+	border-color: @gray-hard;
+}

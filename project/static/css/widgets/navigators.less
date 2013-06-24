@@ -1,0 +1,67 @@
+/* ==========================================================================
+Section: 'home', odd', 'even'.
+Navigator: 'months';
+========================================================================== */
+section[role="home"] header.main nav.months,
+section[role="odd"] header.main nav.months,
+section[role="even"] header.main nav.months {
+	z-index: 9;
+	.relative;
+}
+	section[role="home"] header.main nav.months
+		ul,
+	section[role="odd"] header.main nav.months
+		ul,
+	section[role="even"] header.main nav.months
+		ul {
+			list-style: none;
+			.font-size-normal;
+			.bold;
+			.uppercase;
+		}
+			section[role="home"] header.main nav.months
+				ul li,
+			section[role="odd"] header.main nav.months
+				ul li,
+			section[role="even"] header.main nav.months
+				ul li {
+				width: 2.6em;
+				height: 0.2em;
+				padding: 0 0.5em 1.4em 0.5em;
+				margin: 0 1em 0 -0.15em;
+				background: @white;
+				.align-center;
+				.block;
+				.radius;
+				.left;
+			}
+				section[role="home"] header.main nav.months
+					ul li:hover,
+				section[role="odd"] header.main nav.months
+					ul li:hover,
+				section[role="even"] header.main nav.months
+					ul li:hover {
+					background: @gray-tiny;
+				}
+				section[role="odd"] header.main nav.months
+					ul li.active,
+				section[role="even"] header.main nav.months
+					ul li.active {
+					background: @pink;
+				}
+				section[role="home"] header.main nav.months
+					ul li a,
+				section[role="odd"] header.main nav.months
+					ul li a,
+				section[role="even"] header.main nav.months
+					ul li a {
+					color: @gray-hard;
+					top: -0.2em;
+					.relative;
+				}
+					section[role="odd"] header.main nav.months
+						ul li.active a,
+					section[role="even"] header.main nav.months
+						ul li.active a {
+						color: @white;
+					}
