@@ -13,7 +13,7 @@ urlpatterns = patterns('',
 
     url(r'^manager/', include(admin.site.urls)),
 
-    url(r'^$', include('project.apps.timeline.urls')),
+    url(r'^timeline/', include('project.apps.timeline.urls')),
 )
 
 if settings.DEBUG:

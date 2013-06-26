@@ -1,6 +1,9 @@
-from django.conf.urls import patterns
-from django.views.generic import TemplateView
+# coding: utf-8
+from django.conf.urls import patterns, include, url
 
-urlpatterns = patterns('',
-    (r'^', TemplateView.as_view(template_name='home.html')),
+
+urlpatterns = patterns('project.apps.timeline.views',
+
+	(r'^(?P<slug>[\w_-]+)/$', 'timeline'),
+	(r'^', 'list_timeline'),
 )
