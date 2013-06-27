@@ -13,16 +13,14 @@ button.download {
 
 	section[role="start"] button.down {
 		height: 10em;
-		position: relative;
-		bottom: 0;
 		z-index: 9;
-		top: 44.2em;
-		right: 46%;
+		top: -30px;
 		border: none;
 		color: @white;
+		.absolute;
 	}
 		section[role="start"] button.down .text {
-			position: relative;
+			.relative;
 			.open-sans-condensed;
 			color: @white;
 			top: -3em;
@@ -32,12 +30,12 @@ button.download {
 		}
 
 		section[role="even"] button.scroll-top {
-		height: 10em;
-		position: relative;
+		height: 100px;
+		.relative;
 		bottom: 0;
 		z-index: 9;
-		top: 60.1em;
-		right: 45.9%;
+		top: 50.3em;
+		left: 579px;
 		border: none;
 		color: @white;
 	}
@@ -46,12 +44,11 @@ button.download {
 		border-radius: 0;
 	}
 		section[role="even"] button.scroll-top .text {
-			position: relative;
-			.align-center;
+			.relative;
 			.open-sans-condensed;
 			color: @white;
 			top: -4.3em;
-			left: 3em;
+			left: 17px;
 			line-height: 1em;
 			height: 2.8em;
 		}

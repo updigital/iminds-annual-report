@@ -1,49 +1,54 @@
 <section role="start" id="start">
+    
     <div class="fixed row">
-        <div class="wrapper push_five thirty columns">
-        
+
+        <div class="push_two thirty-six columns">
         {% if report %}
         {% for report in report|slice:":1" %}
-        <aside class="sixteen columns">
+        <aside class="eighteen columns alpha">
             <h1>
                 <a class="logo">
                     iMinds - Connect Create Innovate
                 </a>
             </h1>
 
-            <button class="download thirty-eight columns alpha">
-                <div class="eleven columns">
+            <button class="download sixteen columns alpha">
+                <div class="four columns">
                 {% include "cloud-download.svg" %}
                 </div>
-                <div class="text twenty-eight columns">download printable version {{ report.pdf.size }}</div>
+                <div class="text nine columns">download printable version ({{ report.pdf_en.size|filesizeformat }})</div>
             </button>
         </aside>
 
-        <aside class="eighteen columns omega">
+        <aside class="text sixteen columns omega">
             <h3>Annual Report {{ report.year }}</h3>
-            <p>{{ report.description }}</p>
+            <p>{{ report.description_en|safe }}</p>
         </aside>
         {% endfor %}
         {% else %}
         Add a report <a href="/manager/timeline/report/add/">here.</a>
         {% endif %}
         </div>
+    </div>
 
-        <a href="#january">
-            <button class="down">
-            {% include "arrow-down.svg" %}
-            <div class="text twenty columns">scroll to<br> discover</div>
-            </button>
-        </a>
-        
-    <footer role="start">
-        <div class="push_four thirty-two columns">
+    <footer role="start" class="full">
+        <div class="row">
+            <a href="#january">
+                <button class="down push_sixteen">
+                {% include "arrow-down.svg" %}
+                <div class="text two columns">scroll to<br> discover</div>
+                </button>
+            </a>
+
+            <div class="push_three thirty-four columns">
             <div class="seventeen columns">
             <strong>iMinds</strong> | Zuiderpoort Office Park | Gaston Crommenlaan 8 (box 102) |
             </div>
-            <div class="push_six ten columns">
+            <div class="push_three ten columns">
             B-9050 Ghent-Ledeberg | Belgium
+            </div>
             </div>
         </div>
     </footer>
+
 </section>

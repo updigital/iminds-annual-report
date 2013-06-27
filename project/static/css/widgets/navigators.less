@@ -15,7 +15,7 @@ section[role="even"] header.main nav.months {
 	section[role="even"] header.main nav.months
 		ul {
 			list-style: none;
-			.font-size-normal;
+			font-size: 17,5pt;
 			.bold;
 			.uppercase;
 		}
@@ -25,10 +25,10 @@ section[role="even"] header.main nav.months {
 				ul li,
 			section[role="even"] header.main nav.months
 				ul li {
-				width: 2.6em;
+				width: 38px;
 				height: 0.2em;
-				padding: 0 0.5em 1.4em 0.5em;
-				margin: 0 1em 0 -0.15em;
+				padding: 0 0 20px 0;
+				margin: 0 14px 0 0;
 				background: @white;
 				.align-center;
 				.block;
@@ -65,3 +65,31 @@ section[role="even"] header.main nav.months {
 						ul li.active a {
 						color: @white;
 					}
+
+section[role="home"] header.main nav.language {
+	z-index: 9;
+	.relative;
+}
+section[role="home"] header.main nav.language ul li {
+	width: 1.2em;
+	height: 0.2em;
+	padding: 0.7em;
+	margin: 0 1em 0 -0.15em;
+	.align-center;
+	.block;
+	.radius;
+	.left;
+}
+section[role="home"] header.main nav.language ul li:hover {
+	background: @gray-low;
+}
+section[role="home"] header.main nav.language ul li:hover a {
+	color: @gray-hard;
+}
+section[role="home"] header.main nav.language ul li a {
+	color: @gray-low;
+	top: -0.9em;
+	left: -0.4em;
+	.relative;
+	.bold;
+}

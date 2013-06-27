@@ -9,16 +9,21 @@ section[role="start"] h1 a.logo {
 	.hidden;
 	.block;
 }
+section[role="start"]
+    h3 {
+    font-size: 36px;
+    margin: 0.45em 0 0.85em 0;
+}
 
 /* ==========================================================================
 Section: 'home', 'odd, 'even';
 Elements: 'header.main';
-========================================================================== */
+========================================================================= */
 section[role="home"] header.main,
 section[role="odd"] header.main,
 section[role="even"] header.main {
-	height: 3.3em;
-	padding-top: 0.8em;
+	height: 50px;
+	padding-top: 15px;
 }
 section[role="home"] header.main {
 	background: @gray-hard;
@@ -37,11 +42,11 @@ section[role="even"] .content header {
 }
 	section[role="odd"] .content header h2,
 	section[role="even"] .content header h2 {
-		top: 6.2em;
-		left: 32em;
+		top: 3.7em;
+		left: 400px;
 		.font-size-normal;
 		.uppercase;
-		.align-right;
+		.align-right!important;
 		.relative;
 	}
 	section[role="even"] .content header h2 {
@@ -49,11 +54,11 @@ section[role="even"] .content header {
 	}
 	section[role="odd"] .content header h3,
 	section[role="even"] .content header h3 {
-		width: 2.1em;
-		height: 2.1em;
-		padding: 0.45em 0.65em;
-		top: 3.4em;
-		left: 17.8em;
+		width: 54px;
+		height: 54px;
+		padding: 13px 18px;
+		top: 1.7em;
+		left: 357px;
 		z-index: 9;
 		background: @white;
 		color: @gray-hard;
@@ -62,12 +67,12 @@ section[role="even"] .content header {
 		.right;
 		.relative;
 	}
-	section[role="odd"] .content header hr.v-line,
-	section[role="even"] .content header hr.v-line {
-		width: 0.13em;
+	section[role="odd"] .content div.line,
+	section[role="even"] .content div.line {
+		width: 2px;
 		height: 50em;
-		top: -3.5em;
-		left: 48.8%;
+		top: -50px;
+		left: 438px;
 		background: @white;
 		border: none;
 		.relative;
@@ -77,20 +82,17 @@ section[role="even"] .content header {
 
 	Elements: 'section > odd > #january', '~#january > header > span';
 ========================================================================== */
-section[role="odd"]#january .content header hr.v-line {
+section[role="odd"]#january .content div.line {
 	top: 5em;
 	height: 45em;
 }
 aside.content header span {
-	top: 1.5em;
-	left: 14.1em;
+	top: 0.5em;
+	left: 480px;
 	.relative;
-	font-size: 2.4em;
+	font-size: 32px;
 	.bold;
 }
-section[role="odd"]#january .content header h2 {
-		top: 6.3em;
-	}
 
 
 /* other need refactoring */

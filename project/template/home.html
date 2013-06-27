@@ -1,25 +1,86 @@
 {% extends "index.html" %}
 {% block section %}
-<div class="wrapper row">
+<section role="home" id="top">
+    
+    <header class="main full">
+        <div class="row">
+        <nav class="months push_eight twenty-five columns">
+            <ul>
+            <li class="skiplink">
+                <a href="#" gumby-goto="#january">jan</a>
+            </li>
 
-    <section role="home" class="row" id="top">
-        {% include "navigator-months.html" %}
-    </section>
+            <li class="skiplink">
+                <a href="#" gumby-goto="#february">feb</a>
+            </li>
+
+            <li class="skiplink">
+                <a href="#" gumby-goto="#march">mar</a>
+            </li>
+
+            <li class="skiplink">
+                <a href="#" gumby-goto="#april">apr</a>
+            </li>
+
+            <li class="skiplink">
+                <a href="#" gumby-goto="#may">may</a>
+            </li>
+
+            <li class="skiplink">
+                <a href="#" gumby-goto="#june">jun</a>
+            </li>
+
+            <li class="skiplink">
+                <a href="#" gumby-goto="#july">jul</a>
+            </li>
+
+            <li class="skiplink">
+                <a href="#" gumby-goto="#august">aug</a>
+            </li>
+
+            <li class="skiplink">
+                <a href="#" gumby-goto="#september">sep</a>
+            </li>
+
+            <li class="skiplink">
+                <a href="#" gumby-goto="#october">oct</a>
+            </li>
+
+            <li class="skiplink">
+                <a href="#" gumby-goto="#november">nov</a>
+            </li>
+
+            <li class="skiplink">
+                <a href="#" gumby-goto="#december">dec</a>
+            </li>
+            </ul>
+        </nav>
+
+        <nav class="language push_four three columns">
+            <ul>
+                <li><a href="/en/">en</a></li>
+                <li><a href="/nl/">nl</a></li>
+            </ul>
+        </nav>
         
-    {% include "sections/start.html" %}
+        </div>
+    </header>
+    
+</section>
+        
+{% include "sections/start.html" %}
 
-    {% include "sections/january.html" %}
-    {% include "sections/february.html" %}
-    {% include "sections/march.html" %}
-    {% include "sections/april.html" %}
-    {% include "sections/may.html" %}
-    {% include "sections/june.html" %}
-    {% include "sections/july.html" %}
-    {% include "sections/august.html" %}
-    {% include "sections/september.html" %}
-    {% include "sections/october.html" %}
-    {% include "sections/november.html" %}
-    {% include "sections/december.html" %}
+{% include "sections/january.html" %}
+{% include "sections/february.html" %}
+{% include "sections/march.html" %}
+{% include "sections/april.html" %}
+{% include "sections/may.html" %}
+{% include "sections/june.html" %}
+{% include "sections/july.html" %}
+{% include "sections/august.html" %}
+{% include "sections/september.html" %}
+{% include "sections/october.html" %}
+{% include "sections/november.html" %}
+{% include "sections/december.html" %}
 
-</div>
 {% endblock %}

@@ -9,31 +9,24 @@ from django.http import HttpResponseRedirect
 from models import *
 
 
-def list_timeline(request):
+def list_timeline_en(request):
     return direct_to_template(request, 'list_timeline.html',
         {'report':Report.objects.all(),},
     )
 
-# def timeline_year(request, slug):
-#     report = Report.objects.get(slug=slug)
-#     return direct_to_template(request, 'home.html',
-#         {'report':Report.objects.all()[0:],
-#         'january':Month.objects.filter(month=1)[0:],
-#         'music':Report.objects.filter(month=0)[0:],
-#         'literature':Report.objects.filter(month=0)[0:],
-#         'art':Report.objects.filter(month=0)[0:],
-#         'cinema':Report.objects.filter(month=0)[0:],
-#         'moda':Report.objects.filter(month=0)[0:],
-#         'events':Report.objects.filter(month=0)[0:]},
-#     )
+def list_timeline_nl(request):
+    return direct_to_template(request, 'list_timeline.html',
+        {'report':Report.objects.all(),},
+    )
 
-def timeline(request, slug):
+def timeline_en(request, slug):
     report = Report.objects.filter(slug=slug)
     january = Month.objects.filter(report=report)
     payload = { 'report':report, 'january':january}
     return render(request, 'home.html', payload)
 
-# def home(request, slug):
-#     report = Report.objects.filter(slug=slug)
-#     return render_to_response('home.html', locals(),
-#         context_instance=RequestContext(request))
+def timeline_nl(request, slug):
+    report = Report.objects.filter(slug=slug)
+    january = Month.objects.filter(report=report)
+    payload = { 'report':report, 'january':january}
+    return render(request, 'home.html', payload)
