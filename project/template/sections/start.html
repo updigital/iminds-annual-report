@@ -16,7 +16,8 @@
                 <div class="four columns">
                 {% include "cloud-download.svg" %}
                 </div>
-                <div class="text nine columns">download printable version ({{ report.pdf_en.size|filesizeformat }})</div>
+                <div class="text nine columns">
+                    <a href="{{ report.pdf_en.url }}" target="_blank">download printable version ({{ report.pdf_en.size|filesizeformat }})</a></div>
             </button>
         </aside>
 

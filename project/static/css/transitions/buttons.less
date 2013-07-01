@@ -1,3 +1,97 @@
+
+
+
+.sticky {
+	position: fixed;
+	top: 15px;
+	
+	animation:thedrop 1s 1;
+	-moz-animation:thedrop 1s 1;
+	-webkit-animation:thedrop 1s 1;
+}
+
+.sticky .nav-above {
+	position: absolute;
+	top:-15px;
+	left:1em;
+	right:1em;
+	height:15px;
+	background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 80%);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+    
+/*media queries*/  
+
+	/* #Tablet (Portrait) width of 768px */  
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+   		.wrapper { 
+   			width: 700px;
+   		}
+		
+		nav {
+			width: 728px;
+		}
+
+	}
+	
+	/* #Mobile (Portrait) width of 320px */
+
+    @media only screen and (max-width: 767px) {
+        .wrapper { 
+        	width: 300px;
+        }
+        
+        .wrapper .column {
+        	float: none;
+        	width: 100%;
+        }
+		
+		nav {
+			width: 328px;
+		}
+        
+        h1 {
+			font-size: 2.5em;
+			text-align: center;
+        }
+        
+        h3 {
+			font-size: 1.3em;
+			text-align: center;
+		}
+		
+ 	}
+ 	
+ 	/* Mobile (Landscape) width of 480px */
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        .wrapper {
+        	width: 400px;
+        }
+		
+		nav {
+			width: 428px;
+		}
+        
+        h1 {
+			font-size: 3.5em;
+        }
+        
+        h3 {
+			font-size: 1.7em;
+		}
+
+  	}     
+ 
+
+
+
+
+
+
+
+
 .transition-basic {
 	-webkit-appearance: none;
 	-webkit-transition: all 0.2s linear;
@@ -136,4 +230,13 @@
 	.radius-full;
 }
 
+
+
+
+
+    .my-sticky-element.stuck {
+      position: fixed;
+      top: 0;
+      box-shadow:0 2px 4px rgba(0, 0, 0, .8);
+    }
 
