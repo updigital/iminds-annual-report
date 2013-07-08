@@ -10,14 +10,9 @@
 <head>
     <meta charset="utf-8">
 
-    <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-        More info: h5bp.com/b/378 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>iMinds - Annual Report
-        {{ site.title }}
-        {% if site.section %} - {{ site.section }}{% endif %}
-    </title>
+    <title>iMinds - Annual Report</title>
     
     <meta name="description" content="{{ site.description }}" />
     <meta name="keywords" content="" />
@@ -35,42 +30,17 @@
 
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    {% if social.facebook %}
     <!--Facebook Metadata /-->
     <meta property="fb:page_id" content="{{ social.facebook }}" />
     <meta property="og:image" content="" />
     <meta property="og:description" content=""/>
     <meta property="og:title" content=""/>
-    {% endif %}
 
-    <!--Google+ Metadata /-->
-    <meta itemprop="name" content="">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="">
-
-    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+    <!--<link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/style.css" />-->
+    <link rel="stylesheet/less" type="text/less" media="all" href="{{ STATIC_URL }}css/style.less" />
 
-    <!-- CSS: implied media=all -->
-    <!-- CSS concatenated and minified via ant build script-->
-    <!-- <link rel="stylesheet" href="css/minified.css"> -->
-
-    <!-- LESS CSS -->
-
-    <link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/style.css" />
-    <!--<link rel="stylesheet/less" type="text/less" media="all" href="{{ STATIC_URL }}css/style.less" />-->
-
-    <!-- CSS imports non-minified for staging, minify before moving to production-->
-    <!-- end CSS-->
-
-    <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-
-    <!-- All JavaScript at the bottom, except for Modernizr / Respond.
-        Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
-        For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
     <script src="{{ STATIC_URL }}js/libs/min/modernizr-2.6.2.min.js"></script>
     
 </head>
@@ -82,153 +52,29 @@
     <!-- JavaScript at the bottom for fast page loading -->
 
     <script src="{{ STATIC_URL }}js/libs/min/less-1.3.3.min.js"></script>
-    <!-- Less: CSS Framework -->
-    <script type="text/javascript">
-        less = {
-            env: "dev", // or "production"
-            async: false,       // load imports async
-            fileAsync: false,   // load imports async when in a page under
-            // a file protocol
-            poll: 1000,         // when in watch mode, time in ms between polls
-            functions: {},      // user functions, keyed by name
-            dumpLineNumbers: "comments", // or "mediaQuery" or "all"
-            relativeUrls: false,// whether to adjust url's to be relative
-            // if false, url's are already relative to the
-            // entry less file
-            rootpath: ":/a.com/"// a path to add on to the start of every url
-            //resource
-        };
-    </script>
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery-1.7.2.min.js"><\/script>')</script>-->
-
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>-->
-    <script src="{{ STATIC_URL }}js/libs/min/jquery-1.9.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery-1.9.1.min.js"><\/script>')</script>
 
     <script src="{{ STATIC_URL }}js/libs/min/gumby.min.js"></script>
-    <script src="{{ STATIC_URL }}js/libs/ui/gumby.tabs.js"></script>
-
-    <!-- Add fancyBox main JS and CSS files -->
-    <script src="{{ STATIC_URL }}js/libs/min/jquery.fancybox.min.js"></script>
 
     <script src="{{ STATIC_URL }}js/plugins.js"></script>
     <!-- Lib: Effects -->
-    <script src="{{ STATIC_URL }}js/main.js"></script>
-    <!-- end scripts-->
-
-    <script src="{{ STATIC_URL }}js/libs/min/jquery.slides.min.js"></script>
-    <script src="{{ STATIC_URL }}js/libs/min/jquery.fancybox.min.js"></script>
     
-    <script src="{{ STATIC_URL }}js/libs/jquery.parallax-1.1.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/libs/jquery.lettering.js"></script>
-    
 
     <script type="text/javascript" src="{{ STATIC_URL }}js/timeline.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/libs/jquery.easing.1.3.js"></script>
 
-    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.fancybox.js"></script>
-
     <script src="{{ STATIC_URL }}js/jquery.fittext.js"></script>
-        <script src="{{ STATIC_URL }}js/boxgrid.js"></script>
-        <script>
-            $(function() {
-
-                Boxgrid.init();
-                
-            });
-        </script>
+    <script src="{{ STATIC_URL }}js/boxgrid.js"></script>
     
     <script src="{{ STATIC_URL }}js/waypoints.js"></script>
     <script src="{{ STATIC_URL }}js/waypoints-sticky.js"></script>
 
+    <script src="{{ STATIC_URL }}js/main.js"></script>
+    <!-- end scripts-->
 
-    <script type="text/javascript">
-$(function() {
-
-    // Do our DOM lookups beforehand
-    var nav_container = $(".nav-container");
-    var nav = $("nav");
-    
-    var top_spacing = 15;
-    var waypoint_offset = 50;
-
-    nav_container.waypoint({
-        handler: function(event, direction) {
-            
-            if (direction == 'down') {
-            
-                nav_container.css({ 'height':nav.outerHeight() });      
-                nav.stop().addClass("sticky").css("top",-nav.outerHeight()).animate({"top":top_spacing});
-                
-            } else {
-            
-                nav_container.css({ 'height':'auto' });
-                nav.stop().removeClass("sticky").css("top",nav.outerHeight()+waypoint_offset).animate({"top":""});
-                
-            }
-            
-        },
-        offset: function() {
-            return -nav.outerHeight()-waypoint_offset;
-        }
-    });
-    
-    var sections = $("section");
-    var navigation_links = $("nav a");
-    
-    sections.waypoint({
-        handler: function(event, direction) {
-        
-            var active_section;
-            active_section = $(this);
-            if (direction === "up") active_section = active_section.prev();
-
-            var active_link = $('nav a[href="#' + active_section.attr("id") + '"]');
-            navigation_links.removeClass("selected");
-            active_link.addClass("selected");
-
-        },
-        offset: '25%'
-    })
-    
-    
-    navigation_links.click( function(event) {
-
-        $.scrollTo(
-            $(this).attr("href"),
-            {
-                duration: 200,
-                offset: { 'left':0, 'top':-0.15*$(window).height() }
-            }
-        );
-    });
-
-
-});
-</script>
-
-
-
-
-    <!-- Prompt IE 6 users to install Chrome Frame. We suggest that you not support IE 6.
-        chromium.org/developers/how-tos/chrome-frame-getting-started -->
-    <!--[if lt IE 7 ]>
-    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-    <![endif]-->
-
-    <!-- Social Widget Rendering Javascript /-->
-    <!--<script src="http://platform.twitter.com/widgets.js"></script>
-    <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-    <script type="text/javascript">
-        (function() {
-            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-            po.src = 'https://apis.google.com/js/plusone.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-        })();
-    </script>
-    <!-- End Social Widget Rendering Javascript /-->
 </body>
 </html>

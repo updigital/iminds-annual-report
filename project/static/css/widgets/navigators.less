@@ -26,7 +26,7 @@ section[role="even"] header.main nav.months {
 				ul li,
 			section[role="even"] header.main nav.months
 				ul li {
-				.left;
+					.left;
 			}
 
 			section[role="home"] header.main nav.months
@@ -35,7 +35,7 @@ section[role="even"] header.main nav.months {
 				ul li a,
 			section[role="even"] header.main nav.months
 				ul li a {
-				width: 38px;
+					width: 38px;
 				height: 0;
 				padding: 0 0 20px 0;
 				margin: 0 14px 0 0;
@@ -43,6 +43,10 @@ section[role="even"] header.main nav.months {
 				.align-center;
 				.block;
 				.radius;
+				
+				font-weight: normal;
+
+				line-height: 20px;
 
 				-webkit-transition: background 0.2s linear;
 				-moz-transition: background 0.2s linear;
@@ -58,20 +62,6 @@ section[role="even"] header.main nav.months {
 					ul li a:hover {
 						background: @gray-tiny;
 					}
-				section[role="odd"] header.main nav.months
-					ul li a.selected,
-				section[role="even"] header.main nav.months
-					ul li a.selected {
-					background: @pink;
-					color: @white!important;
-				}
-
-				section[role="odd"] header.main nav.months
-					ul li.active,
-				section[role="even"] header.main nav.months
-					ul li.active {
-					background: @pink;
-				}
 				section[role="home"] header.main nav.months
 					ul li a,
 				section[role="odd"] header.main nav.months
@@ -82,12 +72,13 @@ section[role="even"] header.main nav.months {
 					top: -0.2em;
 					.relative;
 				}
-					section[role="odd"] header.main nav.months
-						ul li.active a,
-					section[role="even"] header.main nav.months
-						ul li.active a {
-						color: @white;
-					}
+				section[role="odd"] header.main nav.months
+					ul li a.selected,
+				section[role="even"] header.main nav.months
+					ul li a.selected {
+					background: @pink;
+					color: @white;
+				}
 
 section[role="home"] header.main nav.language {
 	z-index: 9;
@@ -97,16 +88,18 @@ section[role="home"] header.main nav.language ul li {
 	width: 1.2em;
 	height: 0.2em;
 	padding: 0.7em;
-	margin: 0 1em 0 -0.15em;
+	margin: -4px 1em 0 -0.15em;
 	.align-center;
 	.block;
 	.radius;
 	.left;
 }
-section[role="home"] header.main nav.language ul li:hover {
+section[role="home"] header.main nav.language ul li:hover,
+section[role="home"] header.main nav.language ul li.active {
 	background: @gray-low;
 }
-section[role="home"] header.main nav.language ul li:hover a {
+section[role="home"] header.main nav.language ul li:hover a,
+section[role="home"] header.main nav.language ul li.active a {
 	color: @gray-hard;
 }
 section[role="home"] header.main nav.language ul li a {

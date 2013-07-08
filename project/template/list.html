@@ -1,0 +1,48 @@
+{% extends "index.html" %}
+{% block section %}
+<section role="init">
+
+    {% if report %}
+        {% for report in report %}
+
+    <nav class="language push_four three columns">
+        <ul>
+            {% if nl %}
+            <li><a href="/en/">en</a></li>
+            <li class="active"><a href="/nl/">nl</a></li>
+            {% else %}
+            <li class="active"><a href="/en/">en</a></li>
+            <li><a href="/nl/">nl</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    <div class="row">
+        <header>
+            {% if nl %}
+            <h1>Jaarverslag's</h1>
+            {% else %}
+            <h1>Annual Report's</h1>
+            {% endif %}
+            
+        </header>
+    <ul>
+        
+        <aside>
+            <a href="{{ report.year }}/">
+                <span class="two columns" >{{ report.year }}</span>
+                <span class="two columns push_thirty-four">view</span>
+            </a>
+
+            <p>{{ report.description|safe }}</p>
+        </aside>
+                
+        <li></li>
+    </ul>
+    </div>
+    {% endfor %}
+    {% else %}
+        {% include "404.html" %}
+    {% endif %}
+</section>
+{% endblock %}

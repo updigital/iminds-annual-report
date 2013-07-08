@@ -6,18 +6,21 @@ from thumbs import ImageWithThumbsField
 from django.utils.translation import ugettext_lazy as _
 from django.db.models import signals
 from django.template.defaultfilters import slugify
-from managers import FacebookSocialManager
+
+LANGUAGE = (
+		('EN', _('English')),
+		('NL', _('Dutch')),
+	)
 
 class Report(models.Model):
-	slug = models.SlugField(max_length=100, editable=False, unique=True)
+	language = models.CharField(max_length=2, choices=LANGUAGE)
 	created_at = models.DateTimeField(auto_now=True)
 
-	year = models.CharField(max_length=4)
+	slug = models.SlugField(max_length=4, unique=True, editable=False)
+	year = models.CharField(max_length=4, help_text='This is year', unique=True)
 
-	description_en = models.TextField(max_length=200, verbose_name=u'Description (en)')
-	description_nl = models.TextField(max_length=200, verbose_name=u'Signalement (nl)')
-	pdf_en = models.FileField(upload_to='pdf', verbose_name=u'PDF (en)')
-	pdf_nl = models.FileField(upload_to='pdf', verbose_name=u'PDF (nl)')
+	description = models.TextField(max_length=200)
+	pdf = models.FileField(upload_to='pdf')
 	
 	class Meta:
 		verbose_name = _(u'Annual Report')
@@ -27,9 +30,10 @@ class Report(models.Model):
 		return self.year
 
 class Month(models.Model):
+	language = models.CharField(max_length=2, choices=LANGUAGE)
 	created_at = models.DateTimeField(auto_now=True)
 
-	MONTH_EN = (
+	MONTH = (
 		('01', _('January')),
 		('02', _('February')),
 		('03', _('March')),
@@ -44,38 +48,20 @@ class Month(models.Model):
 		('12', _('December')),
 	)
 
-	MONTH_NL = (
-		('01', _('Januari')),
-		('02', _('Februari')),
-		('03', _('Maart')),
-		('04', _('April')),
-		('05', _('Mei')),
-		('06', _('Juni')),
-		('07', _('Juli')),
-		('08', _('Augustus')),
-		('09', _('September')),
-		('10', _('Oktober')),
-		('11', _('November')),
-		('12', _('December')),
-	)
 	report = models.ForeignKey('Report')
-	month_en = models.CharField(max_length=2, choices=MONTH_EN, verbose_name=u'Month (en)')
-	month_nl = models.CharField(max_length=2, choices=MONTH_NL, verbose_name=u'Maand (nl)')
-	title_en = models.CharField(_('Title (en)'), max_length=140)
-	title_nl = models.CharField(_('Titel (nl)'), max_length=140)
-	description_en = models.TextField(_('Description (en)'), max_length=140)
-	description_nl = models.TextField(_('Signalement (nl)'), max_length=140)
-	milestone = ImageWithThumbsField(_('Milestone'),
+	month = models.CharField(max_length=2, choices=MONTH)
+	title = models.CharField(max_length=140)
+	description = models.TextField(max_length=140)
+	milestone = ImageWithThumbsField(
 			upload_to='images',
 			sizes=((160,160),(200,200)))
-	pdf_en = models.FileField(upload_to='PDF (en)')
-	pdf_nl = models.FileField(upload_to='PDF (nl)')
+	pdf = models.FileField(upload_to='pdf')
 
-	content_en = models.TextField(_('Content (en)'), max_length=840)
-	content_nl = models.TextField(_('Inhoud (nl)'), max_length=840)
+	article = models.CharField(max_length=120)
+	content = models.TextField(max_length=840)
 
 	def __unicode__(self):
-		return self.title_en
+		return self.title
 
 def slug_pre_save(signal, instance, sender, **kwargs):
     instance.slug = slugify(instance.year)

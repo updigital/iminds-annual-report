@@ -1,12 +1,15 @@
 # coding: utf-8
 from django.conf.urls import patterns, include, url
+from django.http import HttpResponseRedirect
 
 
 urlpatterns = patterns('project.apps.timeline.views',
 
-	(r'^en/(?P<slug>[\w_-]+)/$', 'timeline_en'),
-	(r'^nl/(?P<slug>[\w_-]+)/$', 'timeline_nl'),
+	(r'^en/(?P<slug>[\w_-]+)/$', 'report_en'),
+	(r'^nl/(?P<slug>[\w_-]+)/$', 'report_nl'),
 
-	(r'^en/', 'list_timeline_en'),
-	(r'^nl/', 'list_timeline_en'),
+	(r'^en/', 'list_en'),
+	(r'^nl/', 'list_nl'),
+
+	(r'^', lambda x: HttpResponseRedirect('/en/')),
 )

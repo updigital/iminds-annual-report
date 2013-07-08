@@ -3,46 +3,40 @@
 
 <section role="home" id="top">
     
+    {% if report %}
     <header class="main full">
         <div class="row">
 
-        <nav class="navigator ss-links months push_eight twenty-five columns"><ul>
-            
-            <li><a href="#january">jan</a></li>
-
-            <li><a href="#february">feb</a></li>
-
-            <li><a href="#march">mar</a></li>
-
-            <li><a href="#april">apr</a></li>
-
-            <li><a href="#may">may</a></li>
-
-            <li><a href="#june">jun</a></li>
-
-            <li><a href="#july">jul</a></li>
-
-            <li><a href="#august">aug</a></li>
-
-            <li><a href="#september">sep</a></li>
-
-            <li><a href="#october">oct</a></li>
-
-            <li><a href="#november">nov</a></li>
-
-            <li><a href="#december">dec</a></li>
-        
-        </ul></nav>
+        <nav class="navigator ss-links months push_eight twenty-five columns">
+            <ul>
+                <li><a href="#january">jan</a></li>
+                <li><a href="#february">feb</a></li>
+                <li><a href="#march">mar</a></li>
+                <li><a href="#april">apr</a></li>
+                <li><a href="#may">may</a></li>
+                <li><a href="#june">jun</a></li>
+                <li><a href="#july">jul</a></li>
+                <li><a href="#august">aug</a></li>
+                <li><a href="#september">sep</a></li>
+                <li><a href="#october">oct</a></li>
+                <li><a href="#november">nov</a></li>
+                <li><a href="#december">dec</a></li>
+            </ul>
+        </nav>
 
         <nav class="language push_four three columns">
             <ul>
+                {% if nl %}
                 <li><a href="/en/">en</a></li>
+                <li class="active"><a href="/nl/">nl</a></li>
+                {% else %}
+                <li class="active"><a href="/en/">en</a></li>
                 <li><a href="/nl/">nl</a></li>
+                {% endif %}
             </ul>
         </nav>
         
         </div>
-         
     </header>
     
 </section>
@@ -61,5 +55,9 @@
 {% include "sections/october.html" %}
 {% include "sections/november.html" %}
 {% include "sections/december.html" %}
+
+{% else %}
+    {% include "404.html" %}
+{% endif %}
 
 {% endblock %}

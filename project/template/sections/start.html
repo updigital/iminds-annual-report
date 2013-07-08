@@ -3,7 +3,6 @@
     <div class="fixed row">
 
         <div class="push_two thirty-six columns">
-        {% if report %}
         {% for report in report|slice:":1" %}
         <aside class="eighteen columns alpha">
             <h1>
@@ -16,19 +15,16 @@
                 <div class="four columns">
                 {% include "cloud-download.svg" %}
                 </div>
-                <div class="text nine columns">
-                    <a href="{{ report.pdf_en.url }}" target="_blank">download printable version ({{ report.pdf_en.size|filesizeformat }})</a></div>
+                <div class="text ten columns">
+                    <a href="{{ report.pdf.url }}" target="_blank">download printable version ({{ report.pdf.size|filesizeformat }})</a></div>
             </button>
         </aside>
 
         <aside class="text sixteen columns omega">
             <h3>Annual Report {{ report.year }}</h3>
-            <p>{{ report.description_en|safe }}</p>
+            <p>{{ report.description|safe }}</p>
         </aside>
         {% endfor %}
-        {% else %}
-        Add a report <a href="/manager/timeline/report/add/">here.</a>
-        {% endif %}
         </div>
     </div>
 

@@ -15,6 +15,30 @@ section[role="start"]
     margin: 0.45em 0 0.85em 0;
 }
 
+
+section[role="init"]
+    header h1 {
+    font-size: 48px;
+    margin: 0.45em 0 0.85em 0;
+    color: @pink;
+}
+section[role="init"]
+    p {
+    font-size: 14px;
+}
+
+section[role="init"]
+    a {
+    font-size: 22px;
+    padding: 0 10px;
+    height: 50px;
+    display: block;
+    margin: 0.45em 10px 0.85em 0;
+    padding: 10px;
+    color: @gray-hard;
+    background: @gray-tiny;
+}
+
 /* ==========================================================================
 Section: 'home', 'odd, 'even';
 Elements: 'header.main';
@@ -23,7 +47,7 @@ section[role="home"] header.main,
 section[role="odd"] header.main,
 section[role="even"] header.main {
 	height: 50px;
-	padding-top: 15px;
+	padding-top: 18px;
 }
 section[role="home"] header.main {
 	background: @gray-hard;
@@ -42,9 +66,11 @@ section[role="even"] .content header {
 }
 	section[role="odd"] .content header h2,
 	section[role="even"] .content header h2 {
-		top: 3.7em;
+		top: 2.6em;
 		left: 370px;
-		.font-size-normal;
+		.open-sans-condensed;
+		font-size: 20px;
+		letter-spacing: 1px;
 		.uppercase;
 		.align-right!important;
 		.relative;

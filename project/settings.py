@@ -83,6 +83,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'project.middleware.DeveloperMiddleware',
@@ -96,13 +97,8 @@ WSGI_APPLICATION = 'project.wsgi.application'
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR,'template'),
     os.path.join(PROJECT_DIR,'template/manager'),
-    os.path.join(PROJECT_DIR,'template/subscriptions'),
-    os.path.join(PROJECT_DIR,'template/base'),
-    os.path.join(BASE_DIR,'template/mob'),
     os.path.join(PROJECT_DIR,'template/svg'),
-    os.path.join(BASE_DIR,'template/adsense'),
-    os.path.join(BASE_DIR,'template/sections'),
-    os.path.join(BASE_DIR,'template/widgets'),
+    os.path.join(PROJECT_DIR,'template/sections'),
     os.path.join(BASE_DIR,'template/base'),
 )
 

@@ -8,6 +8,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
 
+	url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+
 	url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'}, name='login'),
     url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}, name='logout'),
 
@@ -15,8 +17,3 @@ urlpatterns = patterns('',
 
     url(r'^', include('project.apps.timeline.urls')),
 )
-
-if settings.DEBUG:
-	urlpatterns += patterns('',
-		url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
-	)
