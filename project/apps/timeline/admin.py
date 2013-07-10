@@ -8,10 +8,10 @@ from django.utils.datetime_safe import datetime
 
 
 class MonthAdmin(admin.ModelAdmin):
-	list_display = ('report', 'month', 'title', 'description', 'milestone', 'created_at')
+	list_display = ('report', 'language', 'month', 'title', 'description', 'created_at')
 	data_hierarchy = 'name'
-	search_fields = ('name',)
-	list_filter = ['report', 'month', 'title', 'description', 'milestone', 'created_at']
+	search_fields = ('title', 'description')
+	list_filter = ['report', 'language', 'month', 'created_at']
 
 	def subscribe_today(self, obj):
 		return obj.publication.date() == datetime.today().date()
@@ -22,7 +22,7 @@ class MonthAdmin(admin.ModelAdmin):
 class ReportInline(admin.StackedInline):
     model = Month
     extra = 1
-    max_num = 12
+    max_num = 24
 
 class ReportAdmin(admin.ModelAdmin):
 	list_display = ('year', 'language', 'created_at')

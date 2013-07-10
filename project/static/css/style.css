@@ -1556,7 +1556,7 @@ button.download .text {
 }
 section[role="start"] button.down {
   height: 10em;
-  z-index: 9;
+  z-index: 0;
   top: -30px;
   left: 9px;
   border: none;
@@ -1576,8 +1576,8 @@ section[role="even"] button.scroll-top {
   height: 100px;
   position: relative;
   z-index: 9;
-  top: -60px;
-  left: 338px;
+  top: -58px;
+  left: 290px;
   border: none;
   color: #ffffff;
 }
@@ -1590,7 +1590,7 @@ section[role="even"] button.scroll-top .text {
   font-family: 'Open Sans Condensed', sans-serif;
   color: #ffffff;
   top: -4.3em;
-  left: -10px;
+  left: 40px;
   line-height: 1em;
   height: 2.8em;
 }
@@ -2232,6 +2232,16 @@ section[role="even"] .content header h2 {
   text-align: right;
   position: relative;
 }
+section[role="odd"]#january .content header h2 {
+  top: 4.1em;
+  left: 370px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: right;
+  position: relative;
+}
 section[role="even"] .content header h2 {
   color: #b8c4ce;
 }
@@ -2274,7 +2284,7 @@ section[role="odd"]#january .content div.line {
 }
 aside.content header span {
   top: 0.5em;
-  left: 480px;
+  left: 390px;
   position: relative;
   font-size: 32px;
   font-weight: bold;

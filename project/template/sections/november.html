@@ -9,7 +9,7 @@
                 
             <header class="seven columns">
                 <div class="ss-left">
-                    <h2 class="four columns alpha">november</h2>
+                    <h2 class="four columns alpha">{{ november.get_month_display }}</h2>
                 </div>
                 <h3>11</h3>
             </header>
@@ -19,16 +19,16 @@
             <div class="ss-left eighteen columns">
                 <aside class="draw hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-draw">
-                        <img src="{{ STATIC_URL }}img/milestones/image-milestone-example.png" />
+                        <img src="{{ MEDIA_URL }}{{ november.milestone }}" />
                     </figure>
                 </aside>
             </div>
 
             <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
                 <div class="ss-right push_one sixteen columns">
-                    <h3>milestone</h3>
+                    <h3>{{ november.title }}</h3>
                     <div class="text arrow-left fifteen columns">
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+                        <p>{{ november.description }}</p>
                         
                         <div id="rb-grid" class="rb-grid">
                             <li>
@@ -38,14 +38,10 @@
                                     <div class="rb-week">
                                         <article>
                                             <header>
-                                                <h1>Article title</h1>
+                                                <h1>{{ november.article }}</h1>
                                             </header>
                                             <aside class="">
-                                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-
-                                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-
-                                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum.</p>
+                                                <p>{{ november.content }}</p>
                                             </aside>
                                         </article>
                                     </div>
