@@ -1,48 +1,76 @@
 {% extends "index.html" %}
 {% block section %}
-<section role="init">
-
-    {% if report %}
-        {% for report in report %}
-
-    <nav class="language push_four three columns">
-        <ul>
-            {% if nl %}
-            <li><a href="/en/">en</a></li>
-            <li class="active"><a href="/nl/">nl</a></li>
-            {% else %}
-            <li class="active"><a href="/en/">en</a></li>
-            <li><a href="/nl/">nl</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-
+<section role="list">
     <div class="row">
-        <header>
-            {% if nl %}
-            <h1>Jaarverslag's</h1>
-            {% else %}
-            <h1>Annual Report's</h1>
-            {% endif %}
-            
-        </header>
-    <ul>
+
+        <div class="push_two thirty-six columns">
         
-        <aside>
-            <a href="{{ report.year }}/">
-                <span class="two columns" >{{ report.year }}</span>
-                <span class="two columns push_thirty-four">view</span>
+        <aside class="eighteen columns alpha">
+            <h1>
+                <a class="logo">
+                    iMinds - Connect Create Innovate
+                </a>
+            </h1>
+        </aside>
+
+        {% if nl %}
+        <h2>Jaarverslag's</h1>
+        {% else %}
+        <h2>Annual Report's</h1>
+        {% endif %}
+
+        <nav class="language push_four three columns">
+            <ul>
+                {% if nl %}
+                <li><a href="/en/">en</a></li>
+                <li class="active"><a href="/nl/">nl</a></li>
+                {% else %}
+                <li class="active"><a href="/en/">en</a></li>
+                <li><a href="/nl/">nl</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <br><br><br><br>
+
+        <aside class="reports">
+            
+            <ul>
+                {% if report %}
+            {% for report in report %}
+                <li>
+                    <a class="three columns" href="{{ report.year }}/">
+                <span class="three columns" >{% include "icon-report.svg" %} {{ report.year }}<br>
+                    <button>view pdf | share etc</button></span>
             </a>
 
-            <p>{{ report.description|safe }}</p>
+            <p class="twenty-three columns push_one">{{ report.description|safe }}</p>
+
+            <button class="go push_one four columns">to report ></button>
+                </li>
+                <br><br><br><br>
+                {% endfor %}
+            {% else %}
+            no reports
+            {% endif %}
+            </ul>
+            
+            
         </aside>
-                
-        <li></li>
-    </ul>
+        </div>
     </div>
-    {% endfor %}
-    {% else %}
-        {% include "404.html" %}
-    {% endif %}
+
+    <footer role="start" class="full">
+        <div class="row">
+
+            <div class="push_three thirty-four columns">
+                <div class="thirty columns">
+                <strong>iMinds</strong> | Zuiderpoort Office Park | Gaston Crommenlaan 8 (box 102) | B-9050 Ghent-Ledeberg | Belgium
+                <span class="push_one"><a href="mailto:info@iminds.be">info@iminds.be</a></span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
 </section>
 {% endblock %}

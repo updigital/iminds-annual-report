@@ -1,3 +1,5 @@
+{% if december %}
+{% for december in december %}
 <section role="even" id="december">
 
     {% include "base/navigator-months.html" %}
@@ -90,3 +92,6 @@
     </footer>
 
 </section>
+{% endfor %}
+{% else %}
+{% endif %}

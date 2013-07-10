@@ -109,3 +109,29 @@ section[role="home"] header.main nav.language ul li a {
 	.relative;
 	.bold;
 }
+
+section[role="list"] nav.language {
+	position: absolute;
+	top: -30px;
+	right: 40px;
+}
+section[role="list"] nav.language li a {
+	width: 26px;
+	padding-left: 6px;
+	color: @black;
+	margin-left: 3px;
+	margin-top: 0;
+	border-radius: 0 0 5px 5px;
+	.left;
+}
+section[role="list"] nav.language li.active a {
+	width: 26px;
+	padding-left: 6px;
+	background: @gray-hard;
+	color: @white;
+	margin-left: 3px;
+	margin-top: 0;
+	.bold;
+	border-radius: 0 0 5px 5px;
+	.left;
+}

@@ -2,19 +2,27 @@
 Section: 'start';
 Elements: 'h1' > 'a.logo';
 ========================================================================== */
-section[role="start"] h1 a.logo {
+section[role="start"] h1 a.logo,
+section[role="list"] h1 a.logo {
 	height: 1.7em;
 	background: url('../img/logo-iminds.png') no-repeat;
 	text-indent: -9999px;
 	.hidden;
 	.block;
 }
-section[role="start"]
+section[role="start"],
+section[role="list"]
     h3 {
     font-size: 36px;
     margin: 0.45em 0 0.85em 0;
 }
 
+section[role="start"] aside.text h3 {
+	font-size: 45px;
+}
+section[role="list"] h2 {
+	.uppercase;
+}
 
 section[role="init"]
     header h1 {
@@ -123,7 +131,6 @@ aside.content header span {
 	font-size: 32px;
 	.bold;
 }
-
 
 /* other need refactoring */
 section[role="odd"] aside.tooltip-article,

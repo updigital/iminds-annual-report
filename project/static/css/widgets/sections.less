@@ -1,17 +1,10 @@
-html, body {
-height: 100%;
-margin: 0px;
-padding: 0px;
-
-.relative;
-}
-
 /* ==========================================================================
 Section: Generals
 ========================================================================== */
 section[role="start"],	
 section[role="odd"],
-section[role="even"] {
+section[role="even"],
+section[role="list"] {
 	height: 100%;
 	.relative;
 }
@@ -28,6 +21,10 @@ Section: Statrt; etc etc
 section[role="start"] {
 	padding-top: 30px;
 	background: @white;
+}
+section[role="list"] {
+	padding-top: 30px;
+	border-top: 3px solid @gray-hard;
 }
 /* ==========================================================================
 Section: odd, even; etc etc

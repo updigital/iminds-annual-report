@@ -1,9 +1,9 @@
+{% if january %}
+{% for january in january %}
 <section role="odd" id="january">
 
     {% include "base/navigator-months.html" %}
 
-    {% if january %}
-    {% for january in january %}
     <aside class="ss-container content">
         <div class="ss-row row">
                 
@@ -55,8 +55,8 @@
         
         </div>
     </aside>
-    {% endfor %}
-    {% else %}
-    add month
-    {% endif %}
+
 </section>
+{% endfor %}
+{% else %}
+{% endif %}

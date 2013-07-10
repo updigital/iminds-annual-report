@@ -1,3 +1,5 @@
+{% if august %}
+{% for august in august %}
 <section role="even" id="august">
 
     {% include "base/navigator-months.html" %}
@@ -58,3 +60,6 @@
     </aside>
 
 </section>
+{% endfor %}
+{% else %}
+{% endif %}

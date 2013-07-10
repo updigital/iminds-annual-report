@@ -27,11 +27,12 @@
         <nav class="language push_four three columns">
             <ul>
                 {% if nl %}
-                <li><a href="/en/">en</a></li>
-                <li class="active"><a href="/nl/">nl</a></li>
+                {{ nl.report }}
+                <li><a href="/en/2012/">en</a></li>
+                <li class="active"><a href="/nl/2012/">nl</a></li>
                 {% else %}
-                <li class="active"><a href="/en/">en</a></li>
-                <li><a href="/nl/">nl</a></li>
+                <li class="active"><a href="/en/2012/">en</a></li>
+                <li><a href="/nl/2012/">nl</a></li>
                 {% endif %}
             </ul>
         </nav>
@@ -40,7 +41,8 @@
     </header>
     
 </section>
-        
+
+
 {% include "sections/start.html" %}
 
 {% include "sections/january.html" %}
@@ -56,8 +58,5 @@
 {% include "sections/november.html" %}
 {% include "sections/december.html" %}
 
-{% else %}
-    {% include "404.html" %}
 {% endif %}
-
 {% endblock %}

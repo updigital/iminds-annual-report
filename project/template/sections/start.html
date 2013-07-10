@@ -3,7 +3,7 @@
     <div class="fixed row">
 
         <div class="push_two thirty-six columns">
-        {% for report in report|slice:":1" %}
+        {% for report in report %}
         <aside class="eighteen columns alpha">
             <h1>
                 <a class="logo">
@@ -30,6 +30,7 @@
 
     <footer role="start" class="full">
         <div class="row">
+            
             <a href="#january">
                 <button class="down push_sixteen">
                 {% include "arrow-down.svg" %}

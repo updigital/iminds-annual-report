@@ -47,6 +47,13 @@ button {
 * http://www.gumbyframework.com/
 */
 html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+html,
 body,
 div,
 span,
@@ -1524,6 +1531,14 @@ Arrows: 'left', 'right' etc;
 .arrow-right:before {
   border-color: rgba(194, 225, 245, 0);
 }
+button.go {
+  height: 36px;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #b8c4ce;
+}
 button.download {
   margin-top: -3.5em;
   height: 4em;
@@ -1541,8 +1556,9 @@ button.download .text {
 }
 section[role="start"] button.down {
   height: 10em;
-  z-index: 0;
-  top: -34px;
+  z-index: 9;
+  top: -30px;
+  left: 9px;
   border: none;
   color: #ffffff;
   position: absolute;
@@ -1559,9 +1575,9 @@ section[role="start"] button.down .text {
 section[role="even"] button.scroll-top {
   height: 100px;
   position: relative;
-  z-index: 0;
-  top: -58px;
-  left: 288px;
+  z-index: 9;
+  top: -60px;
+  left: 338px;
   border: none;
   color: #ffffff;
 }
@@ -1573,8 +1589,8 @@ section[role="even"] button.scroll-top .text {
   position: relative;
   font-family: 'Open Sans Condensed', sans-serif;
   color: #ffffff;
-  top: -4.1em;
-  left: 40px;
+  top: -4.3em;
+  left: -10px;
   line-height: 1em;
   height: 2.8em;
 }
@@ -1908,73 +1924,11 @@ body {
 Sections: 'start';
 ========================================================================== */
 section[role="start"] {
-  height: 40.8em!important;
   color: #404040;
 }
 section[role="start"] p {
   font-size: 14px;
   line-height: 24px;
-}
-.sticky {
-  position: fixed;
-  top: 15px;
-  animation: thedrop 1s 1;
-  -moz-animation: thedrop 1s 1;
-  -webkit-animation: thedrop 1s 1;
-}
-.sticky .nav-above {
-  position: absolute;
-  top: -15px;
-  left: 1em;
-  right: 1em;
-  height: 15px;
-  background: linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 80%);
-  background: -webkit-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-  background: -moz-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-}
-/*media queries*//* #Tablet (Portrait) width of 768px */@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .wrapper {
-    width: 700px;
-  }
-  nav {
-    width: 728px;
-  }
-}
-/* #Mobile (Portrait) width of 320px */
-@media only screen and (max-width: 767px) {
-  .wrapper {
-    width: 300px;
-  }
-  .wrapper .column {
-    float: none;
-    width: 100%;
-  }
-  nav {
-    width: 328px;
-  }
-  h1 {
-    font-size: 2.5em;
-    text-align: center;
-  }
-  h3 {
-    font-size: 1.3em;
-    text-align: center;
-  }
-}
-/* Mobile (Landscape) width of 480px */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .wrapper {
-    width: 400px;
-  }
-  nav {
-    width: 428px;
-  }
-  h1 {
-    font-size: 3.5em;
-  }
-  h3 {
-    font-size: 1.7em;
-  }
 }
 .transition-basic {
   -webkit-appearance: none;
@@ -2010,7 +1964,7 @@ section[role="start"] p {
 }
 /* Effect 1 */
 .hi-icon-effect-1 .hi-icon {
-  background: #eeeeee;
+  background: #b8c4ce;
   -webkit-transition: background 0.2s, color 0.2s;
   -moz-transition: background 0.2s, color 0.2s;
   transition: background 0.2s, color 0.2s;
@@ -2032,7 +1986,7 @@ section[role="start"] p {
 /* Effect 1a */
 .no-touch .hi-icon-effect-1a .hi-icon:hover {
   background: #b8c4ce;
-  color: #eeeeee;
+  color: #ffffff;
 }
 .no-touch .hi-icon-effect-1a .hi-icon:hover:after {
   -webkit-transform: scale(1);
@@ -2041,6 +1995,7 @@ section[role="start"] p {
   transform: scale(1);
   opacity: 1;
 }
+/* Circle Effect */
 .hi-icon-draw {
   z-index: 1;
   position: relative;
@@ -2060,7 +2015,6 @@ section[role="start"] p {
 .hi-icon-draw:before {
   display: block;
 }
-/* Effect 9 */
 .hi-icon-effect-9 .hi-icon-draw {
   -webkit-transition: box-shadow 0.2s;
   -moz-transition: box-shadow 0.2s;
@@ -2069,37 +2023,40 @@ section[role="start"] p {
   width: 400px;
   height: 400px;
 }
+section[role="odd"] aside .hi-icon-effect-9 .hi-icon-draw:after {
+  box-shadow: 0 0 0 8px #eff2f5;
+}
+section[role="even"] aside .hi-icon-effect-9 .hi-icon-draw:after {
+  box-shadow: 0 0 0 8px #b8c4ce;
+}
 .hi-icon-effect-9 .hi-icon-draw:after {
   height: 400px;
   top: 0;
   left: 0;
   padding: 0;
-  box-shadow: 0 0 0 8px #ffffff;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
   -moz-transition: -moz-transform 0.2s, opacity 0.2s;
   transition: transform 0.2s, opacity 0.2s;
   border-radius: 100%;
 }
-/* Effect 9a */
 .no-touch .hi-icon-effect-9a .hi-icon-draw:hover:after {
+  height: 400px;
   -webkit-transform: scale(0.85);
   -moz-transform: scale(0.85);
   -ms-transform: scale(0.85);
   transform: scale(0.85);
   opacity: 0.5;
   border-radius: 100%;
-  height: 400px;
+}
+section[role="odd"] aside .hi-icon-effect-9a .hi-icon-draw:hover {
+  box-shadow: 0 0 0 14px #eff2f5;
+}
+section[role="even"] aside .hi-icon-effect-9a .hi-icon-draw:hover {
+  box-shadow: 0 0 0 14px #b8c4ce;
 }
 .no-touch .hi-icon-effect-9a .hi-icon-draw:hover {
   height: 400px;
-  box-shadow: 0 0 0 14px #ffffff;
-  color: #fff;
   border-radius: 100%;
-}
-.my-sticky-element.stuck {
-  position: fixed;
-  top: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 .ss-container {
   width: 100%;
@@ -2203,16 +2160,42 @@ Widgets: ;
 Section: 'start';
 Elements: 'h1' > 'a.logo';
 ========================================================================== */
-section[role="start"] h1 a.logo {
+section[role="start"] h1 a.logo,
+section[role="list"] h1 a.logo {
   height: 1.7em;
   background: url('../img/logo-iminds.png') no-repeat;
   text-indent: -9999px;
   overflow: hidden;
   display: block;
 }
-section[role="start"] h3 {
+section[role="start"],
+section[role="list"] h3 {
   font-size: 36px;
   margin: 0.45em 0 0.85em 0;
+}
+section[role="start"] aside.text h3 {
+  font-size: 45px;
+}
+section[role="list"] h2 {
+  text-transform: uppercase;
+}
+section[role="init"] header h1 {
+  font-size: 48px;
+  margin: 0.45em 0 0.85em 0;
+  color: #ec008c;
+}
+section[role="init"] p {
+  font-size: 14px;
+}
+section[role="init"] a {
+  font-size: 22px;
+  padding: 0 10px;
+  height: 50px;
+  display: block;
+  margin: 0.45em 10px 0.85em 0;
+  padding: 10px;
+  color: #b8c4ce;
+  background: #eff2f5;
 }
 /* ==========================================================================
 Section: 'home', 'odd, 'even';
@@ -2222,7 +2205,7 @@ section[role="home"] header.main,
 section[role="odd"] header.main,
 section[role="even"] header.main {
   height: 50px;
-  padding-top: 15px;
+  padding-top: 18px;
 }
 section[role="home"] header.main {
   background: #b8c4ce;
@@ -2240,9 +2223,11 @@ section[role="even"] .content header {
 }
 section[role="odd"] .content header h2,
 section[role="even"] .content header h2 {
-  top: 3.7em;
+  top: 2.6em;
   left: 370px;
-  font-size: 15px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   text-align: right;
   position: relative;
@@ -2315,16 +2300,35 @@ section[role="start"] footer {
   bottom: 0;
   background: #ec008c;
   color: #ffffff;
-  font-size: 0.7em;
+  font-size: 11px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: bold;
   position: fixed;
+}
+section[role="list"] footer {
+  width: 100%;
+  height: 3em;
+  padding-top: 0.5em;
+  bottom: 0;
+  letter-spacing: 1px;
+  background: #eff2f5;
+  border-top: 1px solid #b8c4ce;
+  color: #404040;
+  font-size: 12px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  position: fixed;
+}
+section[role="list"] footer a {
+  color: #404040;
+  font-weight: bold;
+  font-size: 11px;
 }
 /* ==========================================================================
 Section: 'even > #december'
 ========================================================================== */
 section[role="even"]#december footer {
   height: 22em;
+  padding-bottom: 10em;
   background: #ffffff;
   position: relative;
 }
@@ -2340,6 +2344,7 @@ section[role="even"]#december footer p {
   line-height: 1.6em;
   font-size: 15px;
   font-weight: bold;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 section[role="even"]#december footer p span {
   color: #ec008c;
@@ -2374,11 +2379,25 @@ aside.content .text p {
 aside.content .text button {
   width: 100%;
   height: 50px;
-  color: #b8c4ce;
-  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-size: 18px;
   border-radius: 3px;
   font-family: 'Open Sans Condensed', sans-serif;
   text-transform: uppercase;
+}
+aside.reports a {
+  color: #404040;
+  border-right: 3px solid #b8c4ce;
+  padding: 3px;
+  font-size: 20px;
+  font-weight: bold;
+}
+aside.reports a svg {
+  fill: #b8c4ce;
+}
+aside.reports p {
+  font-size: 12px;
 }
 /* ==========================================================================
 Section: ''.
@@ -2391,7 +2410,7 @@ aside.draw {
   margin-left: 0;
 }
 section[role="odd"] aside.draw img {
-  border-color: #ffffff;
+  border-color: #eff2f5;
 }
 section[role="even"] aside.draw img {
   border-color: #b8c4ce;
@@ -2430,6 +2449,8 @@ section[role="even"] header.main nav.months ul li a {
   text-align: center;
   display: block;
   border-radius: 3px;
+  font-weight: normal;
+  line-height: 20px;
   -webkit-transition: background 0.2s linear;
   -moz-transition: background 0.2s linear;
   -o-transition: background 0.2s linear;
@@ -2441,15 +2462,6 @@ section[role="odd"] header.main nav.months ul li a:hover,
 section[role="even"] header.main nav.months ul li a:hover {
   background: #eff2f5;
 }
-section[role="odd"] header.main nav.months ul li a.selected,
-section[role="even"] header.main nav.months ul li a.selected {
-  background: #ec008c;
-  color: #ffffff !important;
-}
-section[role="odd"] header.main nav.months ul li.active,
-section[role="even"] header.main nav.months ul li.active {
-  background: #ec008c;
-}
 section[role="home"] header.main nav.months ul li a,
 section[role="odd"] header.main nav.months ul li a,
 section[role="even"] header.main nav.months ul li a {
@@ -2457,8 +2469,9 @@ section[role="even"] header.main nav.months ul li a {
   top: -0.2em;
   position: relative;
 }
-section[role="odd"] header.main nav.months ul li.active a,
-section[role="even"] header.main nav.months ul li.active a {
+section[role="odd"] header.main nav.months ul li a.selected,
+section[role="even"] header.main nav.months ul li a.selected {
+  background: #ec008c;
   color: #ffffff;
 }
 section[role="home"] header.main nav.language {
@@ -2469,16 +2482,18 @@ section[role="home"] header.main nav.language ul li {
   width: 1.2em;
   height: 0.2em;
   padding: 0.7em;
-  margin: 0 1em 0 -0.15em;
+  margin: -4px 1em 0 -0.15em;
   text-align: center;
   display: block;
   border-radius: 3px;
   float: left;
 }
-section[role="home"] header.main nav.language ul li:hover {
+section[role="home"] header.main nav.language ul li:hover,
+section[role="home"] header.main nav.language ul li.active {
   background: #eeeeee;
 }
-section[role="home"] header.main nav.language ul li:hover a {
+section[role="home"] header.main nav.language ul li:hover a,
+section[role="home"] header.main nav.language ul li.active a {
   color: #b8c4ce;
 }
 section[role="home"] header.main nav.language ul li a {
@@ -2488,15 +2503,40 @@ section[role="home"] header.main nav.language ul li a {
   position: relative;
   font-weight: bold;
 }
+section[role="list"] nav.language {
+  position: absolute;
+  top: -30px;
+  right: 40px;
+}
+section[role="list"] nav.language li a {
+  width: 26px;
+  padding-left: 6px;
+  color: #404040;
+  margin-left: 3px;
+  margin-top: 0;
+  border-radius: 0 0 5px 5px;
+  float: left;
+}
+section[role="list"] nav.language li.active a {
+  width: 26px;
+  padding-left: 6px;
+  background: #b8c4ce;
+  color: #ffffff;
+  margin-left: 3px;
+  margin-top: 0;
+  font-weight: bold;
+  border-radius: 0 0 5px 5px;
+  float: left;
+}
 /* ==========================================================================
 Section: Generals
 ========================================================================== */
-section[role="start"] {
-  height: 40em;
-}
+section[role="start"],
 section[role="odd"],
-section[role="even"] {
-  height: 42em;
+section[role="even"],
+section[role="list"] {
+  height: 100%;
+  position: relative;
 }
 section[role="home"],
 section[role="odd"],
@@ -2511,6 +2551,10 @@ Section: Statrt; etc etc
 section[role="start"] {
   padding-top: 30px;
   background: #ffffff;
+}
+section[role="list"] {
+  padding-top: 30px;
+  border-top: 3px solid #b8c4ce;
 }
 /* ==========================================================================
 Section: odd, even; etc etc
