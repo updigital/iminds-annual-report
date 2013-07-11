@@ -11,5 +11,5 @@ urlpatterns = patterns('project.apps.timeline.views',
 	(r'^en/', 'list_en'),
 	(r'^nl/', 'list_nl'),
 
-	(r'^', lambda x: HttpResponseRedirect('/en/')),
+	(r'^', lambda x: HttpResponseRedirect('/en/2012/')),
 )

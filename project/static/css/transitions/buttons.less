@@ -1,3 +1,63 @@
+header {
+
+    position: relative;
+
+    -moz-animation-name: dropHeader;
+    -moz-animation-iteration-count: once;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 0.5s;
+
+    -webkit-animation-name: dropHeader;
+    -webkit-animation-iteration-count: once;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 0.5s;
+}
+@-moz-keyframes dropHeader {
+    0% {
+        top: -30px;
+    }
+    100% {
+        top: 0;
+    }
+}
+@-webkit-keyframes dropHeader {
+    0% {
+        top: -30px;
+    }
+    100% {
+        top: 0;
+    }
+}
+footer {
+
+    position: relative;
+
+    -moz-animation-name: dropFooter;
+    -moz-animation-iteration-count: once;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 0.5s;
+
+    -webkit-animation-name: dropFooter;
+    -webkit-animation-iteration-count: once;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 0.5s;
+}
+@-moz-keyframes dropFooter {
+    0% {
+        bottom: -30px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+@-webkit-keyframes dropFooter {
+    0% {
+        bottom: -30px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
 .transition-basic {
 	-webkit-appearance: none;
 	-webkit-transition: all 0.2s linear;
@@ -12,7 +72,6 @@
 	-ms-transition: background 0.2s linear;
 	transition: background 0.2s linear;
 }
-
 
 .hi-icon {
 	z-index: 1;

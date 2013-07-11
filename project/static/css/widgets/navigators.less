@@ -40,11 +40,10 @@ section[role="even"] header.main nav.months {
 				padding: 0 0 20px 0;
 				margin: 0 14px 0 0;
 				background: @white;
+				font-size: 12px;
 				.align-center;
 				.block;
 				.radius;
-				
-				font-weight: normal;
 
 				line-height: 20px;
 
@@ -53,6 +52,8 @@ section[role="even"] header.main nav.months {
 				-o-transition: background 0.2s linear;
 				-ms-transition: background 0.2s linear;
 				transition: background 0.2s linear;
+
+				
 			}
 				section[role="home"] header.main nav.months
 					ul li a:hover,
@@ -60,7 +61,19 @@ section[role="even"] header.main nav.months {
 					ul li a:hover,
 				section[role="even"] header.main nav.months
 					ul li a:hover {
-						background: @gray-tiny;
+						background: #eff2f5; /* Old browsers */
+						background: @black;
+						color: @white;
+						top: 0;
+font-size: 14px;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+
+	// -webkit-box-shadow: -2px 2px 0 rgba(50, 50, 50, 0.15);
+	// -moz-box-shadow:    2px 4px 0 rgba(50, 50, 50, 0.25);
+	// box-shadow:         -2px 2px 0 rgba(50, 50, 50, 0.15);
 					}
 				section[role="home"] header.main nav.months
 					ul li a,
@@ -69,7 +82,7 @@ section[role="even"] header.main nav.months {
 				section[role="even"] header.main nav.months
 					ul li a {
 					color: @gray-hard;
-					top: -0.2em;
+					top: 2px;
 					.relative;
 				}
 				section[role="odd"] header.main nav.months

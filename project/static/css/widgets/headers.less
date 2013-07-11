@@ -59,6 +59,32 @@ section[role="even"] header.main {
 }
 section[role="home"] header.main {
 	background: @gray-hard;
+
+}
+
+section[role="home"] header.main
+{
+  	position:relative;
+    -webkit-box-shadow:0 0 25px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 0 25px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+section[role="home"] header.main:before,
+section[role="home"] header.main:after
+{
+	content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 40px rgba(0,0,0,0.1);
+    -moz-box-shadow:0 0 40px rgba(0,0,0,0.1);
+    box-shadow:0 0 40px rgba(0,0,0,0.1);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius: 10px;
 }
 
 /* ==========================================================================
@@ -96,6 +122,7 @@ section[role="even"] .content header {
 		z-index: 9;
 		background: @white;
 		color: @gray-hard;
+		.bold;
 		.font-size-medium;
 		.radius-full;
 		.right;
@@ -104,15 +131,16 @@ section[role="even"] .content header {
 	section[role="odd"] .content div.line,
 	section[role="even"] .content div.line {
 		width: 2px;
-		height: 50em;
+		height: 60em;
 		top: -50px;
 		left: 490px;
 		background: @white;
-		border: none;
+		border: 1px solid @white;
 		.relative;
 	}
+
 	section[role="even"]#december .content div.line {
-		height: 38em;
+		height: 40em;
 		top: -50px;
 	}
 

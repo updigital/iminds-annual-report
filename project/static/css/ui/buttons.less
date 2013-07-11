@@ -9,10 +9,50 @@ button.go {
 button.download {
 	margin-top: -3.5em;
 	height: 4em;
-	background: @pink;
+	background: #fe0097; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlMDA5NyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOTAwODEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #fe0097 0%, #d90081 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fe0097), color-stop(100%,#d90081)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fe0097 0%,#d90081 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fe0097 0%,#d90081 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fe0097 0%,#d90081 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fe0097 0%,#d90081 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe0097', endColorstr='#d90081',GradientType=0 ); /* IE6-8 */
+
 	color: @white;
 	.radius;
+	-webkit-transition: all 0.2s linear;
+				-moz-transition: all 0.2s linear;
+				-o-transition: all 0.2s linear;
+				-ms-transition: all 0.2s linear;
+				transition: all 0.2s linear;
 }
+
+button.download:hover {
+background: #d90081; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Q5MDA4MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZTAwOTciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #d90081 0%, #fe0097 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d90081), color-stop(100%,#fe0097)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #d90081 0%,#fe0097 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #d90081 0%,#fe0097 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #d90081 0%,#fe0097 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #d90081 0%,#fe0097 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d90081', endColorstr='#fe0097',GradientType=0 ); /* IE6-8 */
+
+-webkit-box-shadow: 3px 3px 0 #d90081;
+	-moz-box-shadow:    2px 4px 0 #d90081;
+	box-shadow:         3px 3px 0 #d90081;
+
+
+}
+button.download:active {
+	-webkit-box-shadow: inset 0 0 12px rgba(50, 50, 50, 1);
+	-moz-box-shadow:  inset  2px 4px 0 rgba(50, 50, 50, 0.25);
+	box-shadow:      inset   0 0 12px rgba(50, 50, 50, 1);
+
+	}
 	button.download a {
 		color: @white;
 	}
@@ -25,19 +65,20 @@ button.download {
 	section[role="start"] button.down {
 		height: 10em;
 		z-index: 0;
-		top: -30px;
-		left: 9px;
+		top: 55.9em;
+		left: 50em;
 		border: none;
 		color: @white;
-		.absolute;
+		.fixed;
 	}
 		section[role="start"] button.down .text {
 			.relative;
 			.open-sans-condensed;
 			color: @white;
 			top: -3em;
-			left: 23%;
+			left: 25%;
 			height: 2.8em;
+			letter-spacing: 1px;
 			line-height: 1em;
 		}
 

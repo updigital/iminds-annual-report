@@ -22,21 +22,21 @@
 
         <aside class="text sixteen columns omega">
             <h3>Annual Report {{ report.year }}</h3>
-            <p>{{ report.description|safe }}</p>
+            <p>{{ report.description|safe|truncatechars:"580" }}</p>
         </aside>
         {% endfor %}
         </div>
     </div>
 
-    <footer role="start" class="full">
-        <div class="row">
-            
-            <a href="#january">
+    <a href="#january">
                 <button class="down push_sixteen">
                 {% include "arrow-down.svg" %}
                 <div class="text two columns">scroll to<br> discover</div>
                 </button>
             </a>
+            
+    <footer role="start" class="full">
+        <div class="row">
 
             <div class="push_three thirty-four columns">
             <div class="seventeen columns">

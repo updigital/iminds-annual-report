@@ -55,40 +55,23 @@
         </div>
     </aside>
 
-    <footer>
+<footer role="start" class="full">
         <div class="row">
+            
 
-            <a href="#top">
-                <button class="scroll-top">
-                {% include "arrow-top.svg" %}
-                <div class="text twelve columns">scroll to<br> top</div>
-                </button>
-            </a>
 
-    
-        <div class="push_two thirty-six columns">
-
-            <h5 class="eight columns">
-                <img src="{{ STATIC_URL }}img/logo-iminds-footer.png" />
-            </h5>
-
-            <p class="push_two twelve columns">
-            Zuiderpoort Office Park<br>
-            Gaston Crommenlaan 8 (box 102)<br>
-            B-9050 Ghent-Ledeberg<br>
-            Belgium<br>
-            <span>Route Description</span><br><br>
-            T +32 9 331 48 00<br>
-            F +32 9 331 48 05<br>
-            <a mailto="info@iminds.be">info@iminds.be</a>
-            </p>
-
-        </div> 
+            <div class="push_three thirty-four columns">
+            <div class="seventeen columns">
+            <strong>iMinds</strong> | Zuiderpoort Office Park | Gaston Crommenlaan 8 (box 102) |
+            </div>
+            <div class="push_three ten columns">
+            B-9050 Ghent-Ledeberg | Belgium
+            </div>
+            </div>
         </div>
     </footer>
 
 </section>
 {% endfor %}
 {% else %}
-dsfsdfsdfsfsdfsd
 {% endif %}

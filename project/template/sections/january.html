@@ -2,7 +2,28 @@
 {% for january in january %}
 <section role="odd" id="january">
 
-    {% include "base/navigator-months.html" %}
+    <header class="main full">
+    <div class="row">
+
+        <nav class="navigator ss-links months push_eight twenty-five columns">
+            <ul>
+                <li><a class="selected" href="#january">jan</a></li>
+                <li><a href="#february">feb</a></li>
+                <li><a href="#march">mar</a></li>
+                <li><a href="#april">apr</a></li>
+                <li><a href="#may">may</a></li>
+                <li><a href="#june">jun</a></li>
+                <li><a href="#july">jul</a></li>
+                <li><a href="#august">aug</a></li>
+                <li><a href="#september">sep</a></li>
+                <li><a href="#october">oct</a></li>
+                <li><a href="#november">nov</a></li>
+                <li><a href="#december">dec</a></li>
+            </ul>
+        </nav>
+    
+    </div>
+</header>
 
     <aside class="ss-container content">
         <div class="ss-row row">
@@ -23,7 +44,7 @@
                         <img src="{{ MEDIA_URL }}{{ january.milestone }}" />
                     </figure>
                 </aside>
-            </div>
+            </div>            
 
             <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
                 <div class="ss-right push_one sixteen columns">
@@ -35,7 +56,7 @@
                             <li>
                                 <button class="hi-icon">to the article ></button>
                                 <div class="rb-overlay">
-                                    <span class="rb-close">back to report</span>
+                                    <span class="rb-close">X</span>
                                     <div class="rb-week">
                                         <article>
                                             <header>

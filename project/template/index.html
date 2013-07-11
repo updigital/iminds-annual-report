@@ -38,8 +38,8 @@
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/style.css" />
-    <!--<link rel="stylesheet/less" type="text/less" media="all" href="{{ STATIC_URL }}css/style.less" />-->
+    <!--<link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/style.css" />-->
+    <link rel="stylesheet/less" type="text/less" media="all" href="{{ STATIC_URL }}css/style.less" />
 
     <script src="{{ STATIC_URL }}js/libs/min/modernizr-2.6.2.min.js"></script>
     
@@ -73,7 +73,53 @@
     <script src="{{ STATIC_URL }}js/waypoints.js"></script>
     <script src="{{ STATIC_URL }}js/waypoints-sticky.js"></script>
 
+    <script src="{{ STATIC_URL }}js/jquery.pfold.js"></script>
+
     <script src="{{ STATIC_URL }}js/main.js"></script>
+
+    <script type="text/javascript">
+            $(function() {
+
+                // say we want to have only one item opened at one moment
+                var opened = false;
+
+                $( '#grid > div.uc-container' ).each( function( i ) {
+
+                    var $item = $( this ), direction;
+
+                    switch( i ) {
+                        case 0 : direction = ['right','bottom']; break;
+                        case 1 : direction = ['left','bottom']; break;
+                        case 2 : direction = ['right','top']; break;
+                        case 3 : direction = ['left','top']; break;
+                    }
+                    
+                    var pfold = $item.pfold( {
+                        folddirection : direction,
+                        speed : 300,
+                        onEndFolding : function() { opened = false; },
+                        centered : true
+                    } );
+
+                    $item.find( 'span.icon-eye' ).on( 'click', function() {
+
+                        if( !opened ) {
+                            opened = true;
+                            pfold.unfold();
+                        }
+
+
+                    } ).end().find( 'span.icon-cancel' ).on( 'click', function() {
+
+                        pfold.fold();
+
+                    } );
+
+                } );
+                
+            });
+        </script>
+
     <!-- end scripts-->
 
 </body>

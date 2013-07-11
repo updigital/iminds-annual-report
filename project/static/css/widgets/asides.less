@@ -21,7 +21,9 @@ aside.content {
 	margin-top: -4em;
 	padding-top: 4em;
 }
-aside.content .text {
+section[role="odd"] aside.content .text,
+section[role="even"] aside.content .text {
+	height: 230px;
 	background: @white;
 	margin-top: 10em;
 	padding: 20px;
@@ -44,6 +46,8 @@ aside.content .text button {
 	border-radius: 3px;
 	.open-sans-condensed;
 	.uppercase;
+	.absolute;
+	top: 106px;
 }
 
 aside.reports {
@@ -81,4 +85,25 @@ section[role="odd"] aside.draw img {
 }
 section[role="even"] aside.draw img {
 	border-color: @gray-hard;
+}
+
+section[role="start"] aside.text {
+	text-shadow: 1px 1px 0 #fff;
+	max-height: 13em;
+	background: #f4f6f7; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZjZmNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #f4f6f7 0%, #ffffff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f6f7), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f4f6f7 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f4f6f7 0%,#ffffff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f4f6f7 0%,#ffffff 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f4f6f7 0%,#ffffff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f6f7', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+
+	padding: 34px;
+
+	-webkit-box-shadow: 5px 5px 0 @gray-tiny;
+	-moz-box-shadow:    5px 5px 0 @gray-tiny;
+	box-shadow:         5px 5px 0 @gray-tiny;
 }
