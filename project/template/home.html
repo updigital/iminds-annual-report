@@ -1,49 +1,326 @@
 {% extends "index.html" %}
 {% block section %}
-
 <section role="home" id="top">
-    
-    {% if report %}
+
     <header class="main full">
         <div class="row">
-
-        <nav class="navigator ss-links months push_eight twenty-five columns">
-            <ul>
-                <li><a href="#january">jan</a></li>
-                <li><a href="#february">feb</a></li>
-                <li><a href="#march">mar</a></li>
-                <li><a href="#april">apr</a></li>
-                <li><a href="#may">may</a></li>
-                <li><a href="#june">jun</a></li>
-                <li><a href="#july">jul</a></li>
-                <li><a href="#august">aug</a></li>
-                <li><a href="#september">sep</a></li>
-                <li><a href="#october">oct</a></li>
-                <li><a href="#november">nov</a></li>
-                <li><a href="#december">dec</a></li>
-            </ul>
-        </nav>
-
-        <nav class="language push_four three columns">
+        <div class="push_two thirty-six columns">
+        
+        <nav class="language four columns">
             <ul>
                 {% if nl %}
                 {{ nl.report }}
-                <li><a href="/en/2012/">en</a></li>
-                <li class="active"><a href="/nl/2012/">nl</a></li>
+                <li><a href="/en/2012/">EN</a></li>
+                <li class="active"><a href="/nl/2012/">NL</a></li>
                 {% else %}
-                <li class="active"><a href="/en/2012/">en</a></li>
-                <li><a href="/nl/2012/">nl</a></li>
+                <li class="active"><a href="/en/2012/">EN</a></li>
+                <li><a href="/nl/2012/">NL</a></li>
                 {% endif %}
             </ul>
         </nav>
-        
+
+        </div>
+        </div>
+    </header>
+
+    {% if report %}
+    <header class="main full cbp-af-header">
+        <div class="row">
+        <div class="push_two thirty-six columns">
+            
+            <div class="display-text"><div class="circle">
+                <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<path d="M50.433,0.892c-27.119,0-49.102,21.983-49.102,49.102s21.983,49.104,49.102,49.104c27.119,0,49.101-21.984,49.101-49.104
+    S77.552,0.892,50.433,0.892z M78,51.036C78,54.882,74.882,58,71.036,58H57v14.035C57,75.882,53.882,79,50.036,79h-0.071
+    C46.118,79,43,75.882,43,72.035V58H27.964C24.118,58,21,54.882,21,51.036v-0.072C21,47.118,24.118,44,27.964,44H43V28.964
+    C43,25.118,46.118,22,49.964,22h0.071C53.882,22,57,25.118,57,28.964V44h14.036C74.882,44,78,47.118,78,50.964V51.036z"/>
+</svg>
+ show the months menu</div>
+            </div>
+
+            <ul class="months push_seven twenty-five columns">
+                <li>
+                    JAN
+                </li>
+                <li>
+                    FEB
+                </li>
+                <li>
+                    MAR
+                </li>
+                <li>
+                   APR
+                </li>
+                <li>
+                    JUN
+                </li>
+                <li>
+                    JUL
+                </li>
+                <li>
+                    AGO
+                </li>
+                <li>
+                    SEP
+                </li>
+                <li>
+                    OCT
+                </li>
+                <li>
+                    NOV
+                </li>
+                <li>
+                    DEC
+                </li>
+            </ul>
+        </div>
         </div>
     </header>
     
+
+    <section role="start" id="start">
+    <div class="fixed row">
+
+        <div class="push_two thirty-six columns">
+        {% for report in report %}
+        <aside class="twelve columns alpha">
+            <h1>
+                <a class="logo">
+                    iMinds - Connect Create Innovate
+                </a>
+            </h1> 
+
+            <figure class="iminds-ceo">
+                <img src="{{ STATIC_URL }}img/ceo-iminds.png">
+                <figcaption>Wim De Waele, CEO iMinds</figcaption>
+            </figure>
+        </aside>
+
+        <aside class="text twenty columns omega">
+            <h3 class="alpha">Annual Report <strong>{{ report.year }}</strong></h3>
+            <!--<ul id="cbp-tm-menu" class="cbp-tm-menu">
+
+                <li>
+                    <a href="#">select month</a>
+                    <ul class="cbp-tm-submenu">
+                        <li><a href="#january">January</a></li>
+                        <li><a href="#february">February</a></li>
+                        <li><a href="#march">March</a></li>
+                        <li><a href="#april">April</a></li>
+                        <li><a href="#june">June</a></li>
+                        <li><a href="#july">July</a></li>
+                        <li><a href="#august">August</a></li>
+                        <li><a href="#september">September</a></li>
+                        <li><a href="#october">October</a></li>
+                        <li><a href="#november">November</a></li>
+                        <li><a href="#december">December</a></li>
+                    </ul>
+                </li>
+            </ul>-->
+            
+    <div id="slider-wrap">
+
+                <div id="slider" class="slider-horizontal">
+
+        <div class="item item-1">
+            <a href="#january">
+                        <figure>
+                            <img src="{{ STATIC_URL }}img/milestones/01-rebranding_small.png" />
+                        </figure>
+                    </a>
+        </div>
+        
+        <div class="item item-2">
+            <a href="#january">
+                        <figure>
+                            <img src="{{ STATIC_URL }}img/milestones/02-mix_launch_small.png" />
+                        </figure>
+                    </a>
+        </div>
+
+        <div class="item item-3">
+            <a href="#january">
+                        <figure>
+                            <img src="{{ STATIC_URL }}img/milestones/03-creative_media_days_small.png" />
+                        </figure>
+                    </a>
+        </div>
+
+        <div class="item item-4">
+            <a href="#january">
+                        <figure>
+                            <img src="{{ STATIC_URL }}img/milestones/04-startup_garage_small.png" />
+                        </figure>
+                    </a>
+        </div>
+
+        <div class="item item-5">
+            <a href="#january">
+                        <figure>
+                            <img src="{{ STATIC_URL }}img/milestones/05-istart_small.png" />
+                        </figure>
+                    </a>
+        </div>
+
+        <div class="item item-6">
+            <a href="#january">
+                        <figure>
+                            <img src="{{ STATIC_URL }}img/milestones/06-new_strategies_small.png" />
+                        </figure>
+                    </a>
+        </div>
+
+        <div class="item item-7">
+            <a href="#january">
+                        <figure>
+                            <img src="{{ STATIC_URL }}img/milestones/07-year_changes.png" />
+                        </figure>
+                    </a>
+        </div>
+
+        <div class="item item-8">
+            <a href="#january">
+                        <figure>
+                            <img src="{{ STATIC_URL }}img/milestones/08-health_care.png" />
+                        </figure>
+                    </a>
+        </div>
+
+        <div class="item item-9">
+            <a href="#january">
+                        <figure>
+                            <img src="{{ STATIC_URL }}img/milestones/01-rebranding_small.png" />
+                        </figure>
+                    </a>
+        </div>
+
+        <div class="item item-10">
+            <a href="#january">
+                        <figure>
+                            <img src="{{ STATIC_URL }}img/milestones/01-rebranding_small.png" />
+                        </figure>
+                    </a>
+        </div>
+
+        <div class="item item-11">
+            <a href="#january">
+                        <figure>
+                            <img src="{{ STATIC_URL }}img/milestones/01-rebranding_small.png" />
+                        </figure>
+                    </a>
+        </div>
+
+        <div class="item item-12">
+            <a href="#january">
+                        <figure>
+                            <img src="{{ STATIC_URL }}img/milestones/01-rebranding_small.png" />
+                        </figure>
+                    </a>
+        </div>
+    </div>
+
+    <!-- Here we add white blurry clouds from both sides of the slider -->
+        <div id="blur-left"></div>
+        <div id="blur-right"></div>
+
+    </div>
+            <p>{{ report.description|safe|truncatechars:"450" }}</p>
+
+            <button class="download thirteen columns alpha">
+                <div class="two columns">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="25px" fill="#fff" height="30px" viewBox="29.636 32.75 16.5 19.5" enable-background="new 29.636 32.75 16.5 19.5"
+     xml:space="preserve">
+<g opacity="0.6">
+    <rect x="20.581" y="33.333" fill="none" width="34.723" height="38.51"/>
+    <path d="M40.101,35.051l4.141,4.242v11.111H31.641V35.051H40.101z M33.46,48.586h8.965v-8.687h-3.258v-3.03H33.46V48.586z
+         M34.697,42.651h6.414v-0.707h-6.414V42.651z M34.697,44.672h6.414v-0.707h-6.414V44.672z M34.697,46.692h6.414v-0.707h-6.414
+        V46.692z"/>
+</g>
+</svg>
+
+
+                </div>
+                <div class="text ten columns">
+                    <a href="{{ report.pdf.url }}" target="_blank">download printable version ({{ report.pdf.size|filesizeformat }})</a></div>
+            </button> 
+
+        </aside>
+        {% endfor %}
+
+        
+        </div>
+
+         
+
+    </div>
+
+    <a href="#january" class="button-down two columns">
+
+        <div class="old">
+        <span>scrrol down</span><br>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="42.25px" height="31.75px" viewBox="17.5 31 42.25 31.75" enable-background="new 17.5 31 42.25 31.75"
+     xml:space="preserve">
+<g id="Your_Icon" opacity="0.7">
+    <path fill="#B8C4CE" d="M57.365,43.745c-0.589-0.704-1.631-0.8-2.335-0.212l-15.905,13.26L23.22,43.532
+        c-0.704-0.586-1.749-0.49-2.335,0.212c-0.587,0.703-0.492,1.749,0.211,2.335l16.967,14.144c0.308,0.257,0.686,0.385,1.062,0.385
+        c0.377,0,0.755-0.128,1.062-0.385L57.154,46.08C57.857,45.494,57.952,44.448,57.365,43.745z"/>
+</g>
+<g id="Your_Icon_1_" opacity="0.4">
+    <path fill="#B8C4CE" d="M57.365,34.466c-0.589-0.704-1.631-0.799-2.335-0.212l-15.905,13.26L23.22,34.254
+        c-0.704-0.585-1.749-0.49-2.335,0.212c-0.587,0.703-0.492,1.75,0.211,2.336l16.967,14.143c0.308,0.258,0.686,0.386,1.062,0.386
+        c0.378,0,0.755-0.128,1.062-0.386l16.967-14.143C57.857,36.216,57.952,35.17,57.365,34.466z"/>
+</g>
+</svg>
+</div>
+
+<div class="new">
+    <span>scrrol down</span><br>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="44.079px" height="50.658px" viewBox="0 0 44.079 50.658" enable-background="new 0 0 44.079 50.658" xml:space="preserve">
+<g id="Your_Icon">
+    <path fill="#B9C4CE" d="M41.168,31.1c-0.589-0.703-1.631-0.799-2.335-0.212l-15.905,13.26L7.022,30.888
+        c-0.704-0.586-1.749-0.489-2.335,0.212c-0.587,0.703-0.492,1.75,0.211,2.336l16.967,14.144c0.308,0.257,0.686,0.385,1.062,0.385
+        c0.377,0,0.755-0.128,1.062-0.385l16.967-14.144C41.66,32.85,41.755,31.803,41.168,31.1z"/>
+</g>
+<g id="Your_Icon_1_" opacity="0.4">
+    <path fill="#B9C4CE" d="M41.168,21.822c-0.589-0.704-1.631-0.799-2.335-0.212L22.928,34.869L7.022,21.61
+        c-0.704-0.585-1.749-0.49-2.335,0.212c-0.587,0.703-0.492,1.75,0.211,2.336l16.967,14.143c0.308,0.258,0.686,0.386,1.062,0.386
+        c0.378,0,0.755-0.128,1.062-0.386l16.967-14.143C41.66,23.572,41.755,22.525,41.168,21.822z"/>
+</g>
+<g id="Your_Icon_2_" opacity="0.2">
+    <path fill="#B9C4CE" d="M41.168,11.822c-0.589-0.704-1.631-0.799-2.335-0.212L22.928,24.869L7.022,11.61
+        c-0.704-0.585-1.749-0.49-2.335,0.212c-0.587,0.703-0.492,1.75,0.211,2.336l16.967,14.143c0.308,0.258,0.686,0.386,1.062,0.386
+        c0.378,0,0.755-0.128,1.062-0.386l16.967-14.143C41.66,13.572,41.755,12.525,41.168,11.822z"/>
+</g>
+<g id="Your_Icon_3_" opacity="0.08">
+    <path fill="#B9C4CE" d="M41.168,1.822c-0.589-0.704-1.631-0.799-2.335-0.212L22.928,14.869L7.022,1.61
+        C6.319,1.024,5.273,1.12,4.688,1.822C4.1,2.525,4.195,3.572,4.898,4.158l16.967,14.143c0.308,0.258,0.686,0.386,1.062,0.386
+        c0.378,0,0.755-0.128,1.062-0.386L40.957,4.158C41.66,3.572,41.755,2.525,41.168,1.822z"/>
+</g>
+</svg>
+</div>
+
+
+
+
+
+
+
+
+</a>
+
 </section>
 
-
-{% include "sections/start.html" %}
+</section>
 
 {% include "sections/january.html" %}
 {% include "sections/february.html" %}

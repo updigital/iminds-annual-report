@@ -120,6 +120,29 @@
             });
         </script>
 
+        <script src="{{ STATIC_URL }}js/classie.js"></script>
+        <script src="{{ STATIC_URL }}js/cbpAnimatedHeader.min.js"></script>
+
+    <script src="{{ STATIC_URL }}js/jquery.mousewheel.min.js"></script>
+    <script src="{{ STATIC_URL }}js/flowslider.jquery.js"></script>
+
+
+        <script src="{{ STATIC_URL }}js/cbpTooltipMenu.min.js"></script>
+        <script>
+            var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
+        </script>
+
+        <script>
+        jQuery(document).ready(function($) {
+            $("#slider").FlowSlider({
+                animation: "jQuery"                
+                
+            }); 
+        });
+    </script>
+
+
+
     <!-- end scripts-->
 
 </body>

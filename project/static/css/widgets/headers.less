@@ -9,6 +9,7 @@ section[role="list"] h1 a.logo {
 	text-indent: -9999px;
 	.hidden;
 	.block;
+	margin-top: -50px;
 }
 section[role="start"],
 section[role="list"]
@@ -18,7 +19,7 @@ section[role="list"]
 }
 
 section[role="start"] aside.text h3 {
-	font-size: 45px;
+	font-size: 35px;
 }
 section[role="list"] h2 {
 	.uppercase;
@@ -55,36 +56,11 @@ section[role="home"] header.main,
 section[role="odd"] header.main,
 section[role="even"] header.main {
 	height: 50px;
-	padding-top: 18px;
-}
-section[role="home"] header.main {
-	background: @gray-hard;
-
+	padding-top: 12px;
 }
 
-section[role="home"] header.main
-{
-  	position:relative;
-    -webkit-box-shadow:0 0 25px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-       -moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-            box-shadow:0 0 25px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-}
-section[role="home"] header.main:before,
-section[role="home"] header.main:after
-{
-	content:"";
-    position:absolute;
-    z-index:-1;
-    -webkit-box-shadow:0 0 40px rgba(0,0,0,0.1);
-    -moz-box-shadow:0 0 40px rgba(0,0,0,0.1);
-    box-shadow:0 0 40px rgba(0,0,0,0.1);
-    top:0;
-    bottom:0;
-    left:10px;
-    right:10px;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    border-radius: 10px;
+section[role="home"] {
+	border-top: 3px solid @gray-hard;
 }
 
 /* ==========================================================================
@@ -108,6 +84,7 @@ section[role="even"] .content header {
 		.uppercase;
 		.align-right!important;
 		.relative;
+		.bold;
 	}
 	section[role="even"] .content header h2 {
 		color: @gray-hard;
@@ -116,12 +93,13 @@ section[role="even"] .content header {
 	section[role="even"] .content header h3 {
 		width: 54px;
 		height: 54px;
-		padding: 13px 18px;
+		padding: 10px 15px;
 		top: 1.7em;
 		left: 357px;
 		z-index: 9;
-		background: @white;
-		color: @gray-hard;
+		background: @gray-hard;
+		border: 2px solid @white;
+		color: @white;
 		.bold;
 		.font-size-medium;
 		.radius-full;
@@ -134,8 +112,7 @@ section[role="even"] .content header {
 		height: 60em;
 		top: -50px;
 		left: 490px;
-		background: @white;
-		border: 1px solid @white;
+		border: 1px dashed #e1e3e6;
 		.relative;
 	}
 
@@ -166,11 +143,8 @@ section[role="even"] aside.tooltip-article {}
 	section[role="odd"] aside.tooltip-article h3,
 	section[role="even"] aside.tooltip-article h3 {
 		color: @black;
-		top: 4.5em;
-		.align-center;
+		.align-left;
 		.relative;
 		.open-sans-condensed;
-		.font-size-larg;
-		.uppercase;
 	}
 		

@@ -1,7 +1,7 @@
 /* ==========================================================================
 Section: Generals
 ========================================================================== */
-section[role="start"],	
+section[role="home"],	
 section[role="odd"],
 section[role="even"],
 section[role="list"] {
@@ -14,15 +14,10 @@ section[role="even"] {
 	color: @white;
 	.relative;
 }
-section[role="even"]#december {
-	height: 41.2em;
-}
+
 /* ==========================================================================
 Section: Statrt; etc etc
 ========================================================================== */
-section[role="start"] {
-	padding-top: 30px;
-}
 section[role="list"] {
 	padding-top: 30px;
 	border-top: 3px solid @gray-hard;
@@ -32,11 +27,77 @@ Section: odd, even; etc etc
 ========================================================================== */
 section[role="odd"] {
 	background: @gray-hard;
+	// background-image: url(../img/pattern_black.png);
 }
 section[role="even"] {
-	background: @gray-tiny;
+	background: @gray-hard;
+	// background-image: url(../img/pattern_white.png);
 }
 
 /* ==========================================================================
 Exceptions?
 ========================================================================== */
+section[role="start"] figure.iminds-ceo:hover img {
+	border: 2px solid @white;
+	box-shadow: -8px 10px 0 @black;
+	.radius-full;
+	margin: -6px 0 0 6px;
+
+}
+
+section[role="start"] figure.iminds-ceo:hover figcaption {
+	margin-top: -110px;
+	color: @white;
+	font-size: 20px;
+	text-shadow: 1px 1px 0 @black;
+}
+
+section[role="start"] figure.iminds-ceo img {
+	border: 2px solid @white;
+	box-shadow: -3px 5px 0 @gray-hard;
+	.radius-full;
+	.transition-basic;
+}
+section[role="start"] figure.iminds-ceo figcaption {
+	font-size: 12px;
+	margin-top: 20px;
+	.bold;
+	.italic;
+	.align-center;
+	.transition-basic;
+}
+section[role="start"] figure.iminds-ceo {
+
+    position: relative;
+
+    -moz-animation-name: dropFigure;
+    -moz-animation-iteration-count: once;
+    -moz-animation-timing-function: ease-out;
+    -moz-animation-duration: 1.3s;
+
+    -webkit-animation-name: dropFigure;
+    -webkit-animation-iteration-count: once;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 1.3s;
+}
+@-moz-keyframes dropFigure {
+    0% {
+        left: -600px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes dropFigure {
+    0% {
+        left: -600px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+

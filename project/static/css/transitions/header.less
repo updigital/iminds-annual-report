@@ -1,0 +1,63 @@
+.cbp-af-header {
+	width: 50px;
+	height: 50px!important;
+
+	background: @gray-hard;
+
+	top: 0;
+	left: 0;
+	opacity: 0.6;
+	z-index: 99;
+	
+	.fixed;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+	.cbp-af-header:hover {
+		width: 100%;
+		left: 0;
+		opacity: 1;
+	}
+		/* Display Text */
+		.cbp-af-header div.display-text {
+			.align-center;
+			display: block;
+		}
+		.cbp-af-header:hover div.display-text {
+			display: none;
+		}
+		/* Display Months */
+		.cbp-af-header ul.months {
+			display: none;
+		}
+		.cbp-af-header:hover ul.months {
+			display: block;
+		}
+
+		ul.months li {
+			width: 40px;
+			height: 40px;
+			border: 2px solid @gray-tiny;
+			margin-right: 16px;
+			.radius-full;
+			.left;
+		}
+
+.cbp-af-header .cbp-af-inner {
+	width: 90%;
+	margin: 0 auto;
+
+}
+.cbp-af-header.cbp-af-header-shrink {
+	
+
+
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.cbp-af-header.cbp-af-header-shrink:hover {
+	height: 60px!important;
+}
+

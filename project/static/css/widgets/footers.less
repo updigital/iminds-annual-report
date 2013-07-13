@@ -1,19 +1,25 @@
 /* ==========================================================================
 Section: 'start'
 ========================================================================== */
-section[role="start"] footer,
+section[role="home"] footer,
 section[role="even"]#december footer {
 	width: 100%;
-	height: 3em;
-	padding-top: 0.5em;
+	height: 30px;
+	padding-top: 3px;
 	z-index: -1;
 	bottom: 0;
-	background: @pink;
-	color: @white;
+	background: @white;
+	border-top: 1px solid @gray-hard;
+	color: #a2adb6;
 	font-size: 11px;
 	.helvetica-neue;
 	.bold;
 	.fixed;
+	box-shadow: 0 5px 60px @gray-hard;
+}
+section[role="even"]#december footer:hover {
+	color: @black;
+	border-top: 1px solid @black;
 }
 section[role="list"] footer {
 	width: 100%;

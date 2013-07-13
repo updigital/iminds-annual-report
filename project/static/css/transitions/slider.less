@@ -1,0 +1,63 @@
+
+
+
+/*  Wrap slider into another DIV to position it and set the reference point for
+    the absolute positioning of the blurring overlays. */
+#slider-wrap {
+    width: 500px;
+    margin-left: -18px;
+    /* Position slider. */
+    max-width:1400px;
+    
+    /* Set reference point for the overlays. */
+    position:relative;
+}
+
+
+/*  Place two white blurring overlays in both ends of the slider to
+    smoothly hide images as they slide outside the bounds. */
+#blur-left, #blur-right {
+    width:200px;
+    height:110px;
+    position:absolute;
+    top:0;
+    
+    /* Pass mouse movement events to the slider. */
+    pointer-events:none;
+    
+    /* Only for the left blur. */
+    left:0;
+}
+#blur-right {
+    /* Only for the right blur. */
+    box-shadow: inset -40px 0 40px #fefefe;
+    left:auto;
+    right:0;
+}
+#blur-left {
+    /* Only for the right blur. */
+    box-shadow: inset 40px 0 40px #fefefe;
+    right:auto;
+    left:0;
+}
+
+.www_FlowSlider_com-branding { background: none!important; }
+.slider-horizontal {
+	height:110px;
+}
+.slider-horizontal .item img {
+	width: 80px;
+	height: 80px;
+	margin: 20px 5px 0;
+	.transition-basic;
+	.radius-full;
+	border: 3px solid @gray-hard;
+	-webkit-filter: grayscale(100%);
+}
+.slider-horizontal .item img:hover {
+	width: 100px;
+	height: 100px;
+	border: 3px solid @gray-hard;
+	-webkit-filter: grayscale(0%);
+	margin-top: 10px;
+}

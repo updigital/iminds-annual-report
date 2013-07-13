@@ -94,32 +94,33 @@ font-size: 14px;
 				}
 
 section[role="home"] header.main nav.language {
-	z-index: 9;
-	.relative;
+	.absolute;
+	right: 0;
+	top: -12px;
+	height: 20px;
+	z-index: 99999;
+	font-size: 12px;
 }
 section[role="home"] header.main nav.language ul li {
-	width: 1.2em;
-	height: 0.2em;
-	padding: 0.7em;
-	margin: -4px 1em 0 -0.15em;
+	width: 20px;
+	height: 20px;
+	margin-right: 6px;
 	.align-center;
 	.block;
-	.radius;
+	border-radius: 0 0 4px 4px;
 	.left;
+	background: @white;
 }
 section[role="home"] header.main nav.language ul li:hover,
 section[role="home"] header.main nav.language ul li.active {
-	background: @gray-low;
+	background: @gray-hard;
 }
 section[role="home"] header.main nav.language ul li:hover a,
 section[role="home"] header.main nav.language ul li.active a {
-	color: @gray-hard;
+	color: @white;
 }
 section[role="home"] header.main nav.language ul li a {
-	color: @gray-low;
-	top: -0.9em;
-	left: -0.4em;
-	.relative;
+	color: @gray-tiny;
 	.bold;
 }
 
