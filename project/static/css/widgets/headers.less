@@ -5,11 +5,9 @@ Elements: 'h1' > 'a.logo';
 section[role="start"] h1 a.logo,
 section[role="list"] h1 a.logo {
 	height: 1.7em;
-	background: url('../img/logo-iminds.png') no-repeat;
-	text-indent: -9999px;
 	.hidden;
 	.block;
-	margin-top: -50px;
+	margin-top: -80px;
 }
 section[role="start"],
 section[role="list"]
@@ -18,6 +16,9 @@ section[role="list"]
     margin: 0.45em 0 0.85em 0;
 }
 
+section[role="start"] aside.text {
+	margin-top: 30px;
+}
 section[role="start"] aside.text h3 {
 	font-size: 35px;
 }
@@ -85,8 +86,6 @@ section[role="even"] .content header {
 		.align-right!important;
 		.relative;
 		.bold;
-	}
-	section[role="even"] .content header h2 {
 		color: @gray-hard;
 	}
 	section[role="odd"] .content header h3,
@@ -97,9 +96,8 @@ section[role="even"] .content header {
 		top: 1.7em;
 		left: 357px;
 		z-index: 9;
-		background: @gray-hard;
-		border: 2px solid @white;
-		color: @white;
+		background: @gray-tiny;
+		box-shadow: 0 2px 0 @gray-tiny;
 		.bold;
 		.font-size-medium;
 		.radius-full;
@@ -109,11 +107,13 @@ section[role="even"] .content header {
 	section[role="odd"] .content div.line,
 	section[role="even"] .content div.line {
 		width: 2px;
-		height: 60em;
+		height: 42em;
 		top: -50px;
 		left: 490px;
-		border: 1px dashed #e1e3e6;
+		border: 1px dashed @gray-tiny;
+		opacity: 1;
 		.relative;
+		z-index: 1;
 	}
 
 	section[role="even"]#december .content div.line {

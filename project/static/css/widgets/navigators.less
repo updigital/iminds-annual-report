@@ -18,6 +18,7 @@ section[role="even"] header.main nav.months {
 			font-size: 17,5pt;
 			.bold;
 			.uppercase;
+			margin-top: 10px;
 		}
 
 		section[role="home"] header.main nav.months
@@ -39,7 +40,6 @@ section[role="even"] header.main nav.months {
 				height: 0;
 				padding: 0 0 20px 0;
 				margin: 0 14px 0 0;
-				background: @white;
 				font-size: 12px;
 				.align-center;
 				.block;
@@ -61,19 +61,14 @@ section[role="even"] header.main nav.months {
 					ul li a:hover,
 				section[role="even"] header.main nav.months
 					ul li a:hover {
-						background: #eff2f5; /* Old browsers */
-						background: @black;
-						color: @white;
-						top: 0;
-font-size: 14px;
+						background: none;
+					
+
+font-size: 16px;
 	-webkit-transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
 	transition: all 0.2s linear;
-
-	// -webkit-box-shadow: -2px 2px 0 rgba(50, 50, 50, 0.15);
-	// -moz-box-shadow:    2px 4px 0 rgba(50, 50, 50, 0.25);
-	// box-shadow:         -2px 2px 0 rgba(50, 50, 50, 0.15);
 					}
 				section[role="home"] header.main nav.months
 					ul li a,
@@ -89,8 +84,8 @@ font-size: 14px;
 					ul li a.selected,
 				section[role="even"] header.main nav.months
 					ul li a.selected {
-					background: @pink;
-					color: @white;
+					font-size: 16px;
+					color: @pink;
 				}
 
 section[role="home"] header.main nav.language {
@@ -120,7 +115,7 @@ section[role="home"] header.main nav.language ul li.active a {
 	color: @white;
 }
 section[role="home"] header.main nav.language ul li a {
-	color: @gray-tiny;
+	color: @gray-hard;
 	.bold;
 }
 
