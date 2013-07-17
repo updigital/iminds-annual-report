@@ -1,36 +1,24 @@
+@-moz-keyframes dropFigure {
+	    0% {
+	        left: -600px;
+	        opacity: 0;
+	    }
+	    100% {
+	        left: 0;
+	        opacity: 1;
+	    }
+	}
+	@-webkit-keyframes dropFigure {
+	    0% {
+	        left: -600px;
+	        opacity: 0;
+	    }
+	    100% {
+	        left: 0;
+	        opacity: 1;
+	    }
+	}
 
-
-
-header {
-
-    position: relative;
-
-    -moz-animation-name: dropHeader;
-    -moz-animation-iteration-count: once;
-    -moz-animation-timing-function: ease-in;
-    -moz-animation-duration: 0.5s;
-
-    -webkit-animation-name: dropHeader;
-    -webkit-animation-iteration-count: once;
-    -webkit-animation-timing-function: ease-in;
-    -webkit-animation-duration: 0.5s;
-}
-@-moz-keyframes dropHeader {
-    0% {
-        top: -30px;
-    }
-    100% {
-        top: 0;
-    }
-}
-@-webkit-keyframes dropHeader {
-    0% {
-        top: -30px;
-    }
-    100% {
-        top: 0;
-    }
-}
 footer {
 
     position: relative;
@@ -167,10 +155,10 @@ footer {
 	height: 400px;
 }
 section[role="odd"] aside .hi-icon-effect-9 .hi-icon-draw:after {
-	box-shadow: 0 0 0 8px @gray-tiny;
+	box-shadow: 0 0 0 5px @gray-tiny;
 }
 section[role="even"] aside .hi-icon-effect-9 .hi-icon-draw:after {
-	box-shadow: 0 0 0 8px @gray-hard;
+	box-shadow: 0 0 0 5px @gray-tiny;
 }
 .hi-icon-effect-9 .hi-icon-draw:after {
 	height: 400px;
@@ -188,19 +176,19 @@ section[role="even"] aside .hi-icon-effect-9 .hi-icon-draw:after {
 .no-touch .hi-icon-effect-9a .hi-icon-draw:hover:after {
 	height: 400px;
 
-	-webkit-transform: scale(0.85);
-	-moz-transform: scale(0.85);
-	-ms-transform: scale(0.85);
-	transform: scale(0.85);
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
 
-	opacity: 0.5;
+	opacity: 0.7;
 	.radius-full;	
 }
 section[role="odd"] aside .hi-icon-effect-9a .hi-icon-draw:hover {
-	box-shadow: 0 0 0 14px @gray-tiny;
+	box-shadow: 0 0 0 8px @green;
 }
 section[role="even"] aside .hi-icon-effect-9a .hi-icon-draw:hover {
-	box-shadow: 0 0 0 14px @gray-hard;
+	box-shadow: 0 0 0 8px @green;
 }
 .no-touch .hi-icon-effect-9a .hi-icon-draw:hover {
 	height: 400px;

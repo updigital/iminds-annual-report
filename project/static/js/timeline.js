@@ -189,7 +189,7 @@ $(function() {
 							factor 	= ( ( ( rowT + rowH / 2 ) - winCenter ) / ( winSize.height / 2 + rowH / 2 ) ),
 							// value for the left / right of each side of the row.
 							// 0% is the limit
-							val		= Math.max( factor * 50, 0 );
+							val		= Math.max( factor * 35, 0 );
 							
 						if( val <= 0 ) {
 						

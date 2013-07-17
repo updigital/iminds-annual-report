@@ -1,11 +1,35 @@
 {% if april %}
 {% for april in april %}
-<section role="even" id="april">
+<section role="even" id="april" class="section-container">
+
+    <header class="main full">
+    <div class="row">
+
+        <nav class="navigator ss-links months push_eight twenty-five columns">
+            <ul>
+                <li><a href="#january">jan</a></li>
+                <li><a href="#february">feb</a></li>
+                <li><a href="#march">mar</a></li>
+                <li><a class="selected" href="#april">apr</a></li>
+                <li><a href="#may">may</a></li>
+                <li><a href="#june">jun</a></li>
+                <li><a href="#july">jul</a></li>
+                <li><a href="#august">aug</a></li>
+                <li><a href="#september">sep</a></li>
+                <li><a href="#october">oct</a></li>
+                <li><a href="#november">nov</a></li>
+                <li><a href="#december">dec</a></li>
+            </ul>
+        </nav>
+    
+    </div>
+    </header>
 
     <aside class="ss-container content">
         <div class="ss-row row">
                 
             <header class="seven columns">
+                <span>{{ april.report }}</span>
                 <div class="ss-left">
                     <h2 class="four columns alpha">{{ april.get_month_display }}</h2>
                 </div>
@@ -13,18 +37,38 @@
             </header>
 
             <div class="line one columns"></div>
+            
+          
 
             <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
-                <div class="ss-left push_two eighteen columns">
-                    <h3>{{ april.title }}</h3>
-                    <div class="text arrow-right fifteen columns">
-                        <p>{{ april.description }}</p>
+                <div class="ss-left sixteen columns">
+                    
+                    <div class="wrap-text seventeen columns">
+                    <div class="text arrow-right seventeen columns">
+                        <h3>{{ april.title }}</h3>
+                        <p>"{{ april.description }}"</p>
                         
+                        <nav>
                         <div id="rb-grid" class="rb-grid">
                             <li>
-                                <button class="hi-icon">to the article ></button>
+                                <ul class="nav">
+                                    <button class="go-to-article">P</button>
+                                <button class="go-to-article">I</button>
+                                <button class="go-to-article">
+
+<svg 
+     width="12px" height="12px" viewBox="0 0 100 100" fill="#eee">
+<path d="M5.9,9.777C5.9,4.377,10.276,0,15.676,0c1.677,0,2.74,0.438,4.61,1.182l68.577,39.9c3.189,1.89,4.666,4.927,5.236,8.428
+    v0.982c-0.57,3.499-2.047,6.537-5.236,8.428L20.287,98.818c-1.871,0.746-2.934,1.182-4.61,1.182c-5.4,0-9.776-4.377-9.776-9.777
+    L5.9,9.777L5.9,9.777z"/>
+</svg>
+
+                                </button>
+                                <button class="go-to-article">+</button>
+                                </ul>
+
                                 <div class="rb-overlay">
-                                    <span class="rb-close">back to report</span>
+                                    <span class="rb-close">X</span>
                                     <div class="rb-week">
                                         <article>
                                             <header>
@@ -38,21 +82,26 @@
                                 </div>
                             </li>
                         </div>
+                        </nav>
+
+                    </div>
                     </div>
                 </div>
             </aside>
             
             <div class="ss-right seventeen columns">
-                <aside class="draw push_one hi-icon-effect-9 hi-icon-effect-9a">
+                <aside class="draw push_five hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-draw">
                         <img src="{{ MEDIA_URL }}{{ april.milestone }}" />
                     </figure>
                 </aside>
-            </div>
+            </div> 
 
         </div>
     </aside>
 
+
+    
 </section>
 {% endfor %}
 {% else %}

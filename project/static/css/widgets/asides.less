@@ -63,55 +63,41 @@ aside.content {
 	margin-top: -4em;
 	padding-top: 4em;
 }
-section[role="odd"] aside.content .text nav {
-	opacity: 0;
-	margin-top: 20px;
-
-}
 section[role="odd"] aside.content .text,
 section[role="even"] aside.content .text {
 	height: 270px;
-	background: #eff2f5; /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZjJmNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top,  #eff2f5 0%, #ffffff 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eff2f5), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #eff2f5 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #eff2f5 0%,#ffffff 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #eff2f5 0%,#ffffff 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #eff2f5 0%,#ffffff 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eff2f5', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
-
 	margin-top: 45px;
 	color: @black;
 	padding: 10px 30px 30px 30px;
-	.align-left;
-
+	
 	border-radius: 6px;
 
 	.transition-basic;
-	
+}
+section[role="odd"] aside.content .text {
+	border-left: 2px solid @gray-tiny;
+	.align-left;
+}
+section[role="even"] aside.content .text {
+	border-right: 2px solid @gray-tiny;
+	.align-right;
 }
 section[role="home"] aside.text p {
-	line-height: 18px;
+	line-height: 21px;
 	font-size: 12px;
 }
 section[role="home"] aside.text h3 {
 	margin-top: 29px;
-	margin-bottom: 186px;
-}
-section[role="odd"] aside.content .text:hover nav {
-	-webkit-transition: all 0.8s linear;
-	-moz-transition: all 0.8s linear;
-	-o-transition: all 0.8s linear;
-	transition: all 0.8s linear;
-	opacity: 1;
-	.relative;
-	left: 70px;
+	margin-bottom: 164px;
 }
 section[role="odd"] aside.content .text:hover,
 section[role="even"] aside.content .text:hover {
-	background: @white;
+	background: @gray-tiny;
+}
+section[role="odd"] aside.content .text:hover {
+	margin: 45px 0 0 20px;
+}
+section[role="even"] aside.content .text:hover {
 	margin: 45px 0 0 -20px;
 }
 aside.content .text p {
@@ -128,13 +114,26 @@ aside.content .wrap-text {
 aside.content .wrap-text .text ul.nav {
 	display: none;
 }
-aside.content .wrap-text .text ul.nav {
-	width: 200px;
-	height: 30px;
-	background: @gray-hard;
+aside.content .wrap-text .text ul.nav button {
+	font-size: 12px;
+	letter-spacing: 1px;
 	color: @gray-hard;
+	.uppercase;
+}
+	aside.content .wrap-text .text ul.nav:hover button:hover {
+		border-bottom: 1px solid @gray-tiny;
+	}
 
-	border-radius: 6px;
+
+
+aside.content .wrap-text .text ul.nav {
+	width: 180px;
+	height: 24px;
+	color: @gray-tiny;
+
+	text-align: center;
+
+	border-radius: 5px;
 
 	letter-spacing: 2px;
 
@@ -143,15 +142,29 @@ aside.content .wrap-text .text ul.nav {
 	.uppercase;
 	.relative;
 	margin-right: 10px;
-	top: -100px;
-	left: 230px;
+	top: 15px;
+	left: 50px;
+	box-shadow: 0 0 2px @white;
 	.block;
 	.left;
 }
-aside.content .wrap-text:hover .text button.go-to-article:hover {
-	background: @white;
-	border: 2px solid @white;
-	color: @gray-hard;
+section[role="odd"] aside.content .text nav,
+section[role="even"] aside.content .text nav {
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	animation-play-state: paused;
+
+	opacity: 0;
+}
+section[role="odd"] aside.content .text:hover nav,
+section[role="even"] aside.content .text:hover nav {
+	-webkit-transition: all 0.8s ease-in-out;
+	-moz-transition: all 0.8s ease-in-out;
+	-o-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
+	opacity: 1;
+	left: 195px;
+	.relative;
 }
 aside.reports {
 	
@@ -179,19 +192,6 @@ aside.draw {
 	margin-top: 7.5em;
 	margin-left: 0;
 }
-aside.draw figure img {
-	border: 4px solid @gray-hard;
-	box-shadow: -8px 2px 0 @gray-tiny;
-	.radius-full;
-	.transition-basic;
-}
-aside.draw figure img:hover {
-	border: 4px solid @gray-hard;
-	box-shadow: -12px -2px 0 @black;
-	.radius-full;
-	margin-left: 10px;
-	margin-top: 8px;
-}
 
 section[role="odd"] aside.draw img,
 section[role="even"] aside.draw img {
@@ -202,3 +202,23 @@ section[role="start"] aside.text {
 	max-height: 13em;
 
 }
+
+
+/* other need refactoring */
+section[role="odd"] aside.tooltip-article,
+section[role="even"] aside.tooltip-article {}
+	section[role="odd"] aside.tooltip-article h3,
+	section[role="even"] aside.tooltip-article h3 {
+		color: @black;
+		.relative;
+		.open-sans-condensed;
+		.uppercase;
+		letter-spacing: 2px;
+	}
+
+	section[role="odd"] aside.tooltip-article h3 {
+		.align-left;
+	}
+	section[role="even"] aside.tooltip-article h3 {
+		.align-right;
+	}

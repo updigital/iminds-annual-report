@@ -47,20 +47,19 @@
         <aside class="text twenty-four columns omega">
             <h3 class="alpha">Annual Report <strong>{{ report.year }}</strong></h3>
 
-            <p>{{ report.description|safe|truncatechars:"1500" }}</p>
+            <p>{{ report.description|safe|truncatechars:"1410" }}</p>
 
-            <button class="download thirteen columns omega">
-                <div class="two columns">
-
+            <button class="download tt-wrapper twelve columns omega">
+                <div>
+                    <a href="{{ report.pdf.url }}" target="_blank">download printable version ({{ report.pdf.size|filesizeformat }})
+                        <span><img src="{{ MEDIA_URL }}{{ report.pdf_image}}" /></span>
+                    </a>
                 </div>
-                <div class="text ten columns">
-                    <a href="{{ report.pdf.url }}" target="_blank">download printable version ({{ report.pdf.size|filesizeformat }})</a></div>
             </button> 
 
         </aside>
         {% endfor %}
 
-        
         </div>
     </div>
 
@@ -79,20 +78,18 @@
 </section>
 <footer>
         <div class="row">
-        <div class="push_two thirty-six columns">
-            <div class="eighteen columns">
-                <div class="two columns">iMinds</div>
-                Zuiderpoort Office Park | Gaston Crommenlaan 8 (box 102)
+        <div class="push_two thirty-six columns alpha">
+
+            <div class="seven columns">
+                <div class="two columns">© iMinds |</div> <a href="mailto:info@iminds.be">info@iminds.be</a>
             </div>
 
-                <div class="fourteen columns">B-9050 Ghent-Ledeberg Belgium Route Description info@iminds.be</div>
-
-        </div>
+            <div class="twenty-eight columns omega">Zuiderpoort Office Park Gaston Crommenlaan 8 (box 102) B-9050 Ghent-Ledeberg Belgium - <a href="http://www.iminds.be/userfiles/files/Route%20description%20EN.pdf" target="_blank">Route Description</a> | T +32 9 331 48 00 F +32 9 331 48 05</div>
         </div>
     </footer>
 </section>
 
-<!--{% include "sections/january.html" %}
+{% include "sections/january.html" %}
 {% include "sections/february.html" %}
 {% include "sections/march.html" %}
 {% include "sections/april.html" %}
@@ -103,7 +100,7 @@
 {% include "sections/september.html" %}
 {% include "sections/october.html" %}
 {% include "sections/november.html" %}
-{% include "sections/december.html" %}-->
+{% include "sections/december.html" %}
 
 {% endif %}
 {% endblock %}

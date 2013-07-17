@@ -32,13 +32,45 @@ $(function() {
     
 });
 
+// section_january = $("section#january").addClass("old");
 
+// $(window).scroll(function(d,h) {
+//     section_january.each(function(i) {
+//         a = $(this).offset().top + $(this).height();
+//         b = $(window).scrollTop() + $(window).height();
+//         if (a = b) $(this).addClass("new");
+//         if (b < a) $(this).removeClass("new");
+//     });
+// });
+
+// section_february = $("section#february").addClass("old");
+
+// $(window).scroll(function(d,h) {
+//     section_february.each(function(i) {
+//         a = $(this).offset().top + $(this).height();
+//         b = $(window).scrollTop() + $(window).height();
+//         if (a < b) $(this).addClass("new");
+//         if (a < b) $(this).removeClass("new");
+//     });
+// });
+
+// $(document).ready(function(){       
+//             var scroll_pos = 700;
+//             $(document).scroll(function() { 
+//                 scroll_pos = $(this).scrollTop();
+//                 if(scroll_pos = 1400) {
+//                     $("section").css('background-color', '');
+//                 } else {
+//                     $("section").css('background-color', '#fc0');
+//                 }
+//             });
+//         });
 
 // $(function() {
 
 //     // Do our DOM lookups beforehand
-//     var nav_container = $(".nav-container");
-//     var nav = $("nav");
+//     var nav_container = $("");
+//     var nav = $("section");
     
 //     var top_spacing = 15;
 //     var waypoint_offset = 50;
@@ -65,7 +97,7 @@ $(function() {
 //     });
     
 //     var sections = $("section");
-//     var navigation_links = $("nav a");
+//     var navigation_links = $("section");
     
 //     sections.waypoint({
 //         handler: function(event, direction) {

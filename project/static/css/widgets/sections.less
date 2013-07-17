@@ -11,6 +11,8 @@ section[role="list"] {
 section[role="odd"],
 section[role="even"] {
 	padding: 0;
+	height: 120%;
+	z-index: 2;
 }
 section[role="home"],
 section[role="odd"],
@@ -28,53 +30,23 @@ section[role="list"] {
 /* ==========================================================================
 Section: odd, even; etc etc
 ========================================================================== */
-section[role="odd"] {
-	box-shadow: inset 0 -4px 80px @gray-tiny;
-	background: @white;
-	// background-image: url(../img/pattern_black.png);
+section[role="odd"]#january {
+	box-shadow: inset 0 8px 200px @gray-hard;
 }
 section[role="even"] {
-	box-shadow: inset 0 -4px 80px @gray-tiny;
+	box-shadow: inset 0 4px 120px @gray-tiny;
 	background: @white;
-	// background-image: url(../img/pattern_white.png);
+}
+section[role="odd"] {
+	box-shadow: inset 0 4px 200px @gray-hard;
+	background: @gray-tiny;
 }
 
 /* ==========================================================================
 Exceptions?
 ========================================================================== */
-// section[role="start"] figure.iminds-ceo:hover img {
-// 	border: 2px solid @white;
-// 	box-shadow: -8px 10px 0 @black;
-// 	.radius-full;
-// 	margin: -6px 0 0 6px;
-
-// }
-
-section[role="start"] figure.iminds-ceo:hover figcaption {
-	margin-top: -110px;
-	color: @white;
-	font-size: 20px;
-	text-shadow: 1px 1px 0 @black;
-}
-
-section[role="start"] figure.iminds-ceo img {
-	border: 2px solid @white;
-	box-shadow: -3px 5px 0 @gray-hard;
-	.radius-full;
-	.transition-basic;
-	margin-top: 120px;
-}
-section[role="start"] figure.iminds-ceo figcaption {
-	font-size: 12px;
-	margin-top: 20px;
-	.bold;
-	.italic;
-	.align-center;
-	.transition-basic;
-}
 section[role="start"] figure.iminds-ceo {
-
-    position: relative;
+    .relative;
 
     -moz-animation-name: dropFigure;
     -moz-animation-iteration-count: once;
@@ -86,24 +58,22 @@ section[role="start"] figure.iminds-ceo {
     -webkit-animation-timing-function: ease-out;
     -webkit-animation-duration: 1.3s;
 }
-@-moz-keyframes dropFigure {
-    0% {
-        left: -600px;
-        opacity: 0;
-    }
-    100% {
-        left: 0;
-        opacity: 1;
-    }
-}
-@-webkit-keyframes dropFigure {
-    0% {
-        left: -600px;
-        opacity: 0;
-    }
-    100% {
-        left: 0;
-        opacity: 1;
-    }
-}
+	section[role="start"] figure.iminds-ceo img {
+		border: 2px solid @white;
+		box-shadow: -3px 5px 0 @gray-hard;
+		.radius-full;
+		margin-top: 120px;
+	}
+		section[role="start"] figure.iminds-ceo:hover img {
+			box-shadow: -2px 3px 0 @pink;
+		}
+	section[role="start"] figure.iminds-ceo figcaption {
+		font-size: 13px;
+		margin-top: 40px;
+		.bold;
+		.italic;
+		.align-center;
+		.transition-basic;
+	}
+
 

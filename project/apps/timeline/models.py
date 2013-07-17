@@ -21,6 +21,10 @@ class Report(models.Model):
 
 	description = models.TextField(max_length=200)
 	pdf = models.FileField(upload_to='pdf')
+
+	pdf_image = ImageWithThumbsField(
+			upload_to='images',
+			sizes=((105,120),))
 	
 	class Meta:
 		verbose_name = _(u'Annual Report')

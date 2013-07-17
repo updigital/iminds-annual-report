@@ -1,6 +1,6 @@
 {% if january %}
 {% for january in january %}
-<section role="odd" id="january">
+<section role="odd" id="january" class="section-container">
 
     <header class="main full">
     <div class="row">
@@ -37,10 +37,10 @@
             </header>
 
             <div class="line one columns"></div>
-    
+            
             <div class="ss-left eighteen columns">
-                <aside class="draw">
-                    <figure>
+                <aside class="draw hi-icon-effect-9 hi-icon-effect-9a">
+                    <figure class="hi-icon-draw">
                         <img src="{{ MEDIA_URL }}{{ january.milestone }}" />
                     </figure>
                 </aside>
@@ -58,19 +58,7 @@
                         <div id="rb-grid" class="rb-grid">
                             <li>
                                 <ul class="nav">
-                                    <button class="go-to-article">P</button>
-                                <button class="go-to-article">I</button>
-                                <button class="go-to-article">
-
-<svg 
-     width="12px" height="12px" viewBox="0 0 100 100" fill="#eee">
-<path d="M5.9,9.777C5.9,4.377,10.276,0,15.676,0c1.677,0,2.74,0.438,4.61,1.182l68.577,39.9c3.189,1.89,4.666,4.927,5.236,8.428
-    v0.982c-0.57,3.499-2.047,6.537-5.236,8.428L20.287,98.818c-1.871,0.746-2.934,1.182-4.61,1.182c-5.4,0-9.776-4.377-9.776-9.777
-    L5.9,9.777L5.9,9.777z"/>
-</svg>
-
-                                </button>
-                                <button class="go-to-article">+</button>
+                                    <button class="go-to-article">go to the article</button>
                                 </ul>
 
                                 <div class="rb-overlay">
