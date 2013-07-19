@@ -3,6 +3,7 @@ from django.db import models
 from datetime import datetime
 from django.core.urlresolvers import reverse
 from thumbs import ImageWithThumbsField
+from redactor.fields import RedactorField
 from django.utils.translation import ugettext_lazy as _
 from django.db.models import signals
 from django.template.defaultfilters import slugify
@@ -59,10 +60,8 @@ class Month(models.Model):
 	milestone = ImageWithThumbsField(
 			upload_to='images',
 			sizes=((160,160),(200,200)))
-	pdf = models.FileField(upload_to='pdf')
 
-	article = models.CharField(max_length=120)
-	content = models.TextField(max_length=840)
+	content = RedactorField(verbose_name=u'Content', help_text='&nbsp;*Use HTML mode')
 
 	def __unicode__(self):
 		return self.title
@@ -71,4 +70,3 @@ def slug_pre_save(signal, instance, sender, **kwargs):
     instance.slug = slugify(instance.year)
 
 signals.pre_save.connect(slug_pre_save, sender=Report)
-

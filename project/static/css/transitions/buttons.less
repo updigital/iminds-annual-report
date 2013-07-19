@@ -1,3 +1,34 @@
+// All transitions CORE
+.transition-fast {
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+
+@-moz-keyframes asideRight {
+    0% {
+        right: -650px;
+        opacity: 0;
+    }
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes asideRight {
+    0% {
+        right: -650px;
+        opacity: 0;
+    }
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+
 @-moz-keyframes dropFigure {
 	    0% {
 	        left: -600px;
@@ -155,7 +186,7 @@ footer {
 	height: 400px;
 }
 section[role="odd"] aside .hi-icon-effect-9 .hi-icon-draw:after {
-	box-shadow: 0 0 0 5px @gray-tiny;
+	box-shadow: 0 0 0 5px @gray-hard;
 }
 section[role="even"] aside .hi-icon-effect-9 .hi-icon-draw:after {
 	box-shadow: 0 0 0 5px @gray-tiny;

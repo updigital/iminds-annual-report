@@ -20,11 +20,7 @@ section[role="even"] {
 	color: @white;
 	.relative;
 }
-/* ==========================================================================
-Section: Statrt; etc etc
-========================================================================== */
-section[role="list"] {
-	padding-top: 30px;
+section[role="home"] {
 	border-top: 3px solid @gray-hard;
 }
 /* ==========================================================================
@@ -45,7 +41,7 @@ section[role="odd"] {
 /* ==========================================================================
 Exceptions?
 ========================================================================== */
-section[role="start"] figure.iminds-ceo {
+section[role="home"] figure.iminds-ceo {
     .relative;
 
     -moz-animation-name: dropFigure;
@@ -58,22 +54,23 @@ section[role="start"] figure.iminds-ceo {
     -webkit-animation-timing-function: ease-out;
     -webkit-animation-duration: 1.3s;
 }
-	section[role="start"] figure.iminds-ceo img {
+	section[role="home"] figure.iminds-ceo img {
+		top: 11.2em;
 		border: 2px solid @white;
 		box-shadow: -3px 5px 0 @gray-hard;
 		.radius-full;
-		margin-top: 120px;
+		.relative;
 	}
-		section[role="start"] figure.iminds-ceo:hover img {
+		section[role="home"] figure.iminds-ceo:hover img {
 			box-shadow: -2px 3px 0 @pink;
 		}
-	section[role="start"] figure.iminds-ceo figcaption {
+	section[role="home"] figure.iminds-ceo figcaption {
 		font-size: 13px;
-		margin-top: 40px;
+		color: @black;
+		top: 14.5em;
+		.relative;
 		.bold;
 		.italic;
 		.align-center;
 		.transition-basic;
 	}
-
-

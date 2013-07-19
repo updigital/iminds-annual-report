@@ -21,7 +21,7 @@ class MonthAdmin(admin.ModelAdmin):
 
 class ReportInline(admin.StackedInline):
     model = Month
-    extra = 1
+    extra = 0
     max_num = 24
 
 class ReportAdmin(admin.ModelAdmin):

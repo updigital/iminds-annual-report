@@ -102,6 +102,9 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,'template/base'),
 )
 
+REDACTOR_OPTIONS = {'lang': 'en'}
+REDACTOR_UPLOAD = 'uploads/'
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -113,6 +116,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'redactor',
     'project.apps.timeline',
 )
 

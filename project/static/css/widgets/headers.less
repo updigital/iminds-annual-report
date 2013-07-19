@@ -2,66 +2,21 @@
 Section: 'start';
 Elements: 'h1' > 'a.logo';
 ========================================================================== */
-section[role="start"] h1 a.logo,
-section[role="list"] h1 a.logo {
-	height: 1.7em;
+section[role="home"] header.main {
+	height: 5em;
+}
+h1 a.logo {
+	height: 40px;
+	margin-top: 1.6em;
 	.hidden;
 	.block;
-	margin-top: -80px;
 }
-section[role="start"],
-section[role="list"]
-    h3 {
+section[role="home"] h2 {
+	margin-top: 1.05em;
     font-size: 36px;
-    margin: 0.45em 0 0.85em 0;
-}
-
-section[role="start"] aside.text {
-	margin-top: 30px;
-}
-section[role="start"] aside.text h3 {
-	font-size: 35px;
-}
-section[role="list"] h2 {
-	.uppercase;
-}
-
-section[role="init"]
-    header h1 {
-    font-size: 48px;
-    margin: 0.45em 0 0.85em 0;
-    color: @pink;
-}
-section[role="init"]
-    p {
-    font-size: 14px;
-}
-
-section[role="init"]
-    a {
-    font-size: 22px;
-    padding: 0 10px;
-    height: 50px;
-    display: block;
-    margin: 0.45em 10px 0.85em 0;
-    padding: 10px;
-    color: @gray-hard;
-    background: @gray-tiny;
-}
-
-/* ==========================================================================
-Section: 'home', 'odd, 'even';
-Elements: 'header.main';
-========================================================================= */
-section[role="home"] header.main,
-section[role="odd"] header.main,
-section[role="even"] header.main {
-	height: 50px;
-	padding-top: 12px;
-}
-
-section[role="home"] {
-	border-top: 3px solid @gray-hard;
+    color: @black;
+    .open-sans-condensed;
+    .uppercase;
 }
 
 /* ==========================================================================
@@ -77,7 +32,7 @@ section[role="even"] .content header {
 }
 	section[role="odd"] .content header h2,
 	section[role="even"] .content header h2 {
-		top: 2.6em;
+		top: 5.75em;
 		left: 370px;
 		.open-sans-condensed;
 		font-size: 20px;
@@ -93,10 +48,9 @@ section[role="even"] .content header {
 		width: 54px;
 		height: 54px;
 		padding: 13px 17px;
-		top: 1.7em;
+		top: 4.2em;
 		left: 357px;
 		z-index: 9;
-		background: @gray-tiny;
 		box-shadow: 0 2px 0 @gray-tiny;
 		.bold;
 		.font-size-medium;
@@ -104,16 +58,27 @@ section[role="even"] .content header {
 		.right;
 		.relative;
 	}
+	section[role="odd"] .content header h3 {
+		background: @gray-hard;
+	}
+	section[role="even"] .content header h3 {
+		background: @gray-tiny;
+	}
 	section[role="odd"] .content div.line,
 	section[role="even"] .content div.line {
 		width: 2px;
-		height: 52.5em;
-		top: -50px;
+		height: 60em;
+		top: -5em;
 		left: 490px;
-		border: 1px dashed @gray-tiny;
 		opacity: 1;
 		.relative;
 		z-index: 1;
+	}
+	section[role="odd"] .content div.line {
+		border: 1px dashed @gray-hard;
+	}
+	section[role="even"] .content div.line {
+		border: 1px dashed @gray-tiny;
 	}
 
 	section[role="even"]#december .content div.line {
@@ -126,11 +91,10 @@ section[role="even"] .content header {
 	Elements: 'section > odd > #january', '~#january > header > span';
 ========================================================================== */
 section[role="odd"]#january .content div.line {
-	top: 5em;
-	height: 50em;
+	top: 10em;
 }
 aside.content header span {
-	top: 0.5em;
+	top: 2.3em;
 	left: 480px;
 	.relative;
 	font-size: 32px;

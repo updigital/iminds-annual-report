@@ -45,7 +45,11 @@ Arrows: 'left', 'right' etc;
 ========================================================================== */
 
 /* Left */
-.arrow-left:after {
+section[role="odd"] .arrow-left:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-right-color: @gray-hard;
+}
+section[role="even"] .arrow-left:after {
 	border-color: rgba(136, 183, 213, 0);
 	border-right-color: @gray-tiny;
 }

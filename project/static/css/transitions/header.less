@@ -2,29 +2,29 @@ header {
 
     position: relative;
 
-    -moz-animation-name: dropHeader;
+    -moz-animation-name: Fade;
     -moz-animation-iteration-count: once;
     -moz-animation-timing-function: ease-in;
     -moz-animation-duration: 0.5s;
 
-    -webkit-animation-name: dropHeader;
+    -webkit-animation-name: Fade;
     -webkit-animation-iteration-count: once;
     -webkit-animation-timing-function: ease-in;
     -webkit-animation-duration: 0.5s;
 }
-@-moz-keyframes dropHeader {
+@-moz-keyframes Fade {
     0% {
-        top: -30px;
+        opacity: 0;
     }
     100% {
-        top: 0;
+        opacity: 1;
     }
 }
-@-webkit-keyframes dropHeader {
+@-webkit-keyframes Fade {
     0% {
-        top: -30px;
+        opacity: 0;
     }
     100% {
-        top: 0;
+        opacity: 1;
     }
 }

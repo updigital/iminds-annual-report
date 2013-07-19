@@ -38,8 +38,9 @@
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/style.css" />
+
     <!--<link rel="stylesheet/less" type="text/less" media="all" href="{{ STATIC_URL }}css/style.less" />-->
+    <link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/style.css" />
 
     <script src="{{ STATIC_URL }}js/libs/min/modernizr-2.6.2.min.js"></script>
     
@@ -50,99 +51,28 @@
     {% block section %}{% endblock %}
     
     <!-- JavaScript at the bottom for fast page loading -->
-
-    <script src="{{ STATIC_URL }}js/libs/min/less-1.3.3.min.js"></script>
-
+    <!--<script src="{{ STATIC_URL }}js/libs/min/less-1.3.3.min.js"></script>-->
+    
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/min/jquery-1.9.1.min.js"><\/script>')</script>
 
     <script src="{{ STATIC_URL }}js/libs/min/gumby.min.js"></script>
 
     <script src="{{ STATIC_URL }}js/plugins.js"></script>
     <!-- Lib: Effects -->
-    
-    <script type="text/javascript" src="{{ STATIC_URL }}js/libs/jquery.lettering.js"></script>
 
-    <script type="text/javascript" src="{{ STATIC_URL }}js/timeline.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/libs/jquery.easing.1.3.js"></script>
+    <script src="{{ STATIC_URL }}js/libs/min/jquery.easing.1.3.min.js"></script>
+    <script src="{{ STATIC_URL }}js/libs/min/jquery.mousewheel-3.0.6.min.js"></script>
 
-    <script src="{{ STATIC_URL }}js/jquery.fittext.js"></script>
-    <script src="{{ STATIC_URL }}js/boxgrid.js"></script>
-    
-    <script src="{{ STATIC_URL }}js/waypoints.js"></script>
-    <script src="{{ STATIC_URL }}js/waypoints-sticky.js"></script>
+    <script src="{{ STATIC_URL }}js/min/timeline.min.js"></script>
 
-    <script src="{{ STATIC_URL }}js/jquery.pfold.js"></script>
+    <script src="{{ STATIC_URL }}js/min/jquery.fittext.min.js"></script>
+    <script src="{{ STATIC_URL }}js/min/boxgrid.min.js"></script>
+
+    <script src="{{ STATIC_URL }}js/min/jquery.flowslider.min.js"></script>
 
     <script src="{{ STATIC_URL }}js/main.js"></script>
-
-    <script type="text/javascript">
-            $(function() {
-
-                // say we want to have only one item opened at one moment
-                var opened = false;
-
-                $( '#grid > div.uc-container' ).each( function( i ) {
-
-                    var $item = $( this ), direction;
-
-                    switch( i ) {
-                        case 0 : direction = ['right','bottom']; break;
-                        case 1 : direction = ['left','bottom']; break;
-                        case 2 : direction = ['right','top']; break;
-                        case 3 : direction = ['left','top']; break;
-                    }
-                    
-                    var pfold = $item.pfold( {
-                        folddirection : direction,
-                        speed : 300,
-                        onEndFolding : function() { opened = false; },
-                        centered : true
-                    } );
-
-                    $item.find( 'span.icon-eye' ).on( 'click', function() {
-
-                        if( !opened ) {
-                            opened = true;
-                            pfold.unfold();
-                        }
-
-
-                    } ).end().find( 'span.icon-cancel' ).on( 'click', function() {
-
-                        pfold.fold();
-
-                    } );
-
-                } );
-                
-            });
-        </script>
-
-        <script src="{{ STATIC_URL }}js/classie.js"></script>
-        <script src="{{ STATIC_URL }}js/cbpAnimatedHeader.min.js"></script>
-
-    <script src="{{ STATIC_URL }}js/jquery.mousewheel.min.js"></script>
-    <script src="{{ STATIC_URL }}js/flowslider.jquery.js"></script>
-
-
-        <script src="{{ STATIC_URL }}js/cbpTooltipMenu.min.js"></script>
-        <script>
-            var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
-        </script>
-
-        <script>
-        jQuery(document).ready(function($) {
-            $("#slider").FlowSlider({
-                animation: "jQuery"                
-                
-            }); 
-        });
-    </script>
-
-
-
     <!-- end scripts-->
 
 </body>

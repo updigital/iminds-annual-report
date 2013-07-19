@@ -1,32 +1,10 @@
-/* ==========================================================================
-Section: 'odd', 'even'.
-Aside: 'content';
+/* oi
 ========================================================================== */
-section[role="odd"] .content,
-		section[role="even"] .content {}
-			
-
-/* ==========================================================================
-Section: '#january'.
-Aside: 'content';
-========================================================================== */
-	section[role="odd"]#january {}
-		section[role="odd"]#january .content {}
-
-/* ==========================================================================
-Section: ''.
-Aside: 'content' > 'text';
-========================================================================== */
-section[role="home"] aside.text button.months {
-	position: relative;
-	right: -300px;
-	top: -50px;
-
-}
 section[role="home"] aside.text {
-	top: -100px;
-	.relative;
-
+	height: 26em;
+	color: @black;
+	top: 11.1em;
+	margin-right: 50px;
     -moz-animation-name: asideRight;
     -moz-animation-iteration-count: once;
     -moz-animation-timing-function: ease-out;
@@ -36,37 +14,27 @@ section[role="home"] aside.text {
     -webkit-animation-iteration-count: once;
     -webkit-animation-timing-function: ease-out;
     -webkit-animation-duration: 1.2s;
-}
-@-moz-keyframes asideRight {
-    0% {
-        right: -600px;
-        opacity: 0;
-    }
-    100% {
-        right: 0;
-        opacity: 1;
-    }
-}
-@-webkit-keyframes asideRight {
-    0% {
-        right: -600px;
-        opacity: 0;
-    }
-    100% {
-        right: 0;
-        opacity: 1;
-    }
-}
 
-
-aside.content {
-	margin-top: -4em;
-	padding-top: 4em;
+    .relative;
 }
+section[role="home"] aside.text {
+	text-shadow: 1px 1px 0 #fff;
+	max-height: 13em;
+
+}
+	section[role="home"] aside.text p {
+		line-height: 1.8em;
+		font-size: 12px;
+	}
+	section[role="home"] aside.text h3 {
+		margin-top: 29px;
+		margin-bottom: 164px;
+	}
+
 section[role="odd"] aside.content .text,
 section[role="even"] aside.content .text {
 	height: 270px;
-	margin-top: 45px;
+	margin-top: 7em;
 	color: @black;
 	padding: 10px 30px 30px 30px;
 	
@@ -75,33 +43,21 @@ section[role="even"] aside.content .text {
 	.transition-basic;
 }
 section[role="odd"] aside.content .text {
-	border-left: 2px solid @gray-tiny;
+	background: @gray-tiny;
+	border-left: 2px solid @gray-hard;
 	.align-left;
 }
 section[role="even"] aside.content .text {
 	border-right: 2px solid @gray-tiny;
 	.align-right;
 }
-section[role="home"] aside.text p {
-	line-height: 21px;
-	font-size: 12px;
-}
-section[role="home"] aside.text h3 {
-	margin-top: 29px;
-	margin-bottom: 164px;
-}
-section[role="odd"] aside.content .text:hover,
-section[role="even"] aside.content .text:hover {
-	background: @gray-tiny;
-}
-section[role="odd"] aside.content .text:hover {
-	margin: 45px 0 0 20px;
-}
-section[role="even"] aside.content .text:hover {
-	margin: 45px 0 0 -20px;
-}
+	section[role="odd"] aside.content .text:hover {
+		margin-left: 20px;
+	}
+	section[role="even"] aside.content .text:hover {
+		margin-left: -20px;
+	}
 aside.content .text p {
-	
 	font-size: 16px;
 	.open-sans-condensed;
 	.italic;
@@ -123,7 +79,6 @@ aside.content .wrap-text .text ul.nav button {
 	aside.content .wrap-text .text ul.nav:hover button:hover {
 		border-bottom: 1px solid @gray-tiny;
 	}
-
 
 
 aside.content .wrap-text .text ul.nav {
@@ -189,19 +144,10 @@ Aside: 'draw';
 aside.draw {
 	width: 400px;
 	height: 400px;
-	margin-top: 7.5em;
+	margin-top: 13em;
 	margin-left: 0;
 }
 
-section[role="odd"] aside.draw img,
-section[role="even"] aside.draw img {
-}
-
-section[role="start"] aside.text {
-	text-shadow: 1px 1px 0 #fff;
-	max-height: 13em;
-
-}
 
 
 /* other need refactoring */
@@ -209,10 +155,13 @@ section[role="odd"] aside.tooltip-article,
 section[role="even"] aside.tooltip-article {}
 	section[role="odd"] aside.tooltip-article h3,
 	section[role="even"] aside.tooltip-article h3 {
+		font-size: 20px;
 		color: @black;
+		margin-bottom: 1em;
 		.relative;
 		.open-sans-condensed;
 		.uppercase;
+		.bold;
 		letter-spacing: 2px;
 	}
 
