@@ -33,26 +33,38 @@ section[role="home"] aside.text {
 
 section[role="odd"] aside.content .text,
 section[role="even"] aside.content .text {
+	background: none;
 	height: 270px;
 	margin-top: 7em;
 	color: @black;
 	padding: 10px 30px 30px 30px;
-	
-	border-radius: 6px;
-
 	.transition-basic;
 }
 section[role="odd"] aside.content .text {
-	background: @gray-tiny;
 	border-left: 2px solid @gray-hard;
+}
+section[role="odd"].new aside.content .text {
+	border-left: 2px solid @gray-tiny;
+}
+section[role="even"] aside.content .text {
+	border-right: 2px solid @gray-hard;
+}
+section[role="even"].new aside.content .text {
+	border-right: 2px solid @gray-tiny;
+}
+section[role="odd"] aside.content .text {
 	.align-left;
 }
 section[role="even"] aside.content .text {
-	border-right: 2px solid @gray-tiny;
 	.align-right;
 }
 	section[role="odd"] aside.content .text:hover {
 		margin-left: 20px;
+	}
+	section[role="odd"].new aside.content .text:hover,
+	section[role="even"].new aside.content .text:hover {
+		background: @gray-tiny;
+		border-radius: 5px;
 	}
 	section[role="even"] aside.content .text:hover {
 		margin-left: -20px;
@@ -70,38 +82,42 @@ aside.content .wrap-text {
 aside.content .wrap-text .text ul.nav {
 	display: none;
 }
-aside.content .wrap-text .text ul.nav button {
+aside.content .wrap-text .text ul.nav button.go-to-article {
 	font-size: 12px;
 	letter-spacing: 1px;
-	color: @gray-hard;
+	.open-sans-condensed;
+	color: @gray-tiny;
 	.uppercase;
+	.bold;
 }
-	aside.content .wrap-text .text ul.nav:hover button:hover {
-		border-bottom: 1px solid @gray-tiny;
-	}
 
 
 aside.content .wrap-text .text ul.nav {
 	width: 180px;
-	height: 24px;
-	color: @gray-tiny;
-
-	text-align: center;
-
-	border-radius: 5px;
-
-	letter-spacing: 2px;
-
-	font-size: 18px;
+	height: 34px;
+	.align-center;
 	.open-sans-condensed;
+	border-radius: 5px;
+	letter-spacing: 2px;
+	font-size: 18px;
 	.uppercase;
 	.relative;
 	margin-right: 10px;
 	top: 15px;
-	left: 50px;
-	box-shadow: 0 0 2px @white;
+	background: @gray-hard;
+	border: 2px solid @gray-tiny;
 	.block;
 	.left;
+}
+section[role="odd"] aside.content .wrap-text .text ul.nav {
+	left: 500px;
+}
+section[role="even"] aside.content .wrap-text .text ul.nav {
+	right: 500px;
+}
+aside.content .wrap-text .text ul.nav:hover {
+	background: @black;
+	border: 2px solid @white;
 }
 section[role="odd"] aside.content .text nav,
 section[role="even"] aside.content .text nav {
@@ -118,8 +134,13 @@ section[role="even"] aside.content .text:hover nav {
 	-o-transition: all 0.8s ease-in-out;
 	transition: all 0.8s ease-in-out;
 	opacity: 1;
-	left: 195px;
 	.relative;
+}
+section[role="odd"] aside.content .text:hover nav {
+	left: -300px;
+}
+section[role="even"] aside.content .text:hover nav {
+	right: -500px;
 }
 aside.reports {
 	
@@ -148,16 +169,14 @@ aside.draw {
 	margin-left: 0;
 }
 
-
-
 /* other need refactoring */
 section[role="odd"] aside.tooltip-article,
 section[role="even"] aside.tooltip-article {}
 	section[role="odd"] aside.tooltip-article h3,
 	section[role="even"] aside.tooltip-article h3 {
-		font-size: 20px;
+		font-size: 28px;
 		color: @black;
-		margin-bottom: 1em;
+		margin-bottom: 0.75em;
 		.relative;
 		.open-sans-condensed;
 		.uppercase;

@@ -106,10 +106,10 @@ $(function() {
 						$rowsViewport.each( function() {
 						
 							$(this).find('div.ss-left')
-								   .css({ left   : '0%' })
+								   .css({ left   : '-900%' })
 								   .end()
 								   .find('div.ss-right')
-								   .css({ right  : '0%' })
+								   .css({ right  : '-900%' })
 								   .end()
 								   .find('a.ss-circle')
 								   .addClass('ss-circle-deco');
@@ -189,7 +189,7 @@ $(function() {
 							factor 	= ( ( ( rowT + rowH / 2 ) - winCenter ) / ( winSize.height / 2 + rowH / 2 ) ),
 							// value for the left / right of each side of the row.
 							// 0% is the limit
-							val		= Math.max( factor * 35, 0 );
+							val		= Math.max( factor * 305, 0 );
 							
 						if( val <= 0 ) {
 						

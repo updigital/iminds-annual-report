@@ -11,7 +11,7 @@ section[role="list"] {
 section[role="odd"],
 section[role="even"] {
 	padding: 0;
-	height: 120%;
+	height: 99.8%;
 	z-index: 2;
 }
 section[role="home"],
@@ -30,14 +30,25 @@ section[role="odd"]#january {
 	box-shadow: inset 0 8px 200px @gray-hard;
 }
 section[role="even"] {
-	box-shadow: inset 0 4px 120px @gray-tiny;
-	background: @white;
+	box-shadow: inset 0 4px 120px @gray-hard;
+	background: url('../img/noise.png') @white;
 }
 section[role="odd"] {
 	box-shadow: inset 0 4px 200px @gray-hard;
-	background: @gray-tiny;
+	background: url('../img/noise.png') @gray-tiny;
 }
 
+section[role="odd"].old,
+section[role="even"].old {
+	background: url('../img/noise.png') @white;
+	.transition-normal;
+}
+section[role="odd"].new,
+section[role="even"].new {
+	box-shadow: inset 0 0 100px @black!important;
+	background: url('../img/noise.png') @gray-hard;
+	.transition-normal;
+}
 /* ==========================================================================
 Exceptions?
 ========================================================================== */

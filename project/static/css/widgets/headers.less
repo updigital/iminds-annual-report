@@ -43,6 +43,10 @@ section[role="even"] .content header {
 		.bold;
 		color: @gray-hard;
 	}
+	section[role="odd"].new .content header h2,
+	section[role="even"].new .content header h2 {
+		color: @gray-tiny;
+	}
 	section[role="odd"] .content header h3,
 	section[role="even"] .content header h3 {
 		width: 54px;
@@ -51,18 +55,17 @@ section[role="even"] .content header {
 		top: 4.2em;
 		left: 357px;
 		z-index: 9;
-		box-shadow: 0 2px 0 @gray-tiny;
+		background: @gray-hard;
 		.bold;
 		.font-size-medium;
 		.radius-full;
 		.right;
 		.relative;
 	}
-	section[role="odd"] .content header h3 {
-		background: @gray-hard;
-	}
-	section[role="even"] .content header h3 {
-		background: @gray-tiny;
+	section[role="odd"].new .content header h3,
+	section[role="even"].new .content header h3 {
+		background: @white;
+		color: @gray-hard;
 	}
 	section[role="odd"] .content div.line,
 	section[role="even"] .content div.line {
@@ -74,10 +77,12 @@ section[role="even"] .content header {
 		.relative;
 		z-index: 1;
 	}
-	section[role="odd"] .content div.line {
+	section[role="odd"] .content div.line,
+	section[role="even"] .content div.line {
 		border: 1px dashed @gray-hard;
 	}
-	section[role="even"] .content div.line {
+	section[role="odd"].new .content div.line,
+	section[role="even"].new .content div.line {
 		border: 1px dashed @gray-tiny;
 	}
 
@@ -93,13 +98,45 @@ section[role="even"] .content header {
 section[role="odd"]#january .content div.line {
 	top: 10em;
 }
-aside.content header span {
+section[role="odd"] aside.content header span {
 	top: 2.3em;
 	left: 480px;
 	.relative;
 	font-size: 32px;
 	.bold;
+	color: @gray-hard;
+}
+section[role="odd"].new aside.content header span {
+	color: @white;
 }
 
 
-		
+
+
+.cbp-af-header {
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: @white;
+	box-shadow: 0 0 7px @black;
+	z-index: 3;
+	height: 0;
+	opacity: 0;
+	.hidden;
+	.transition-basic;
+	.fixed;
+}
+
+.cbp-af-header .cbp-af-inner {
+	width: 90%;
+	max-width: 69em;
+	margin: 0 auto;
+}
+
+.cbp-af-header.cbp-af-header-shrink {
+	height: 43px;
+	opacity: 0.7;
+}
+.cbp-af-header.cbp-af-header-shrink:hover {
+	opacity: 1;
+}

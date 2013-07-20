@@ -14,8 +14,8 @@
 
     <title>iMinds - Annual Report</title>
     
-    <meta name="description" content="{{ site.description }}" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="{{ report.description }}" />
+    <meta name="keywords" content="{{ report.keywords }}" />
     <meta name="author" content="humans.txt">
 
     <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.png" type="image/x-icon" />
@@ -31,10 +31,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <!--Facebook Metadata /-->
-    <meta property="fb:page_id" content="{{ social.facebook }}" />
+    <meta property="fb:page_id" content="https://www.facebook.com/iMinds.be" />
     <meta property="og:image" content="" />
     <meta property="og:description" content=""/>
-    <meta property="og:title" content=""/>
+    <meta property="og:title" content="iMinds - Annual Report {{ report.year }}"/>
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -65,12 +65,26 @@
     <script src="{{ STATIC_URL }}js/libs/min/jquery.easing.1.3.min.js"></script>
     <script src="{{ STATIC_URL }}js/libs/min/jquery.mousewheel-3.0.6.min.js"></script>
 
-    <script src="{{ STATIC_URL }}js/min/timeline.min.js"></script>
+    <script src="{{ STATIC_URL }}js/timeline.js"></script>
 
     <script src="{{ STATIC_URL }}js/min/jquery.fittext.min.js"></script>
     <script src="{{ STATIC_URL }}js/min/boxgrid.min.js"></script>
 
     <script src="{{ STATIC_URL }}js/min/jquery.flowslider.min.js"></script>
+
+    <script src="{{ STATIC_URL }}js/classie.js"></script>
+    <script src="{{ STATIC_URL }}js/cbpAnimatedHeader.js"></script>
+
+    <script src="{{ STATIC_URL }}js/perfect-scrollbar.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function ($) {
+        $('.scrollbar').perfectScrollbar({
+          wheelSpeed: 20,
+          wheelPropagation: false
+        });
+      });
+    </script>
 
     <script src="{{ STATIC_URL }}js/main.js"></script>
     <!-- end scripts-->

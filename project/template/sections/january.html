@@ -2,29 +2,6 @@
 {% for january in january %}
 <section role="odd" id="january" class="section-container">
 
-    <header class="main full">
-    <div class="row">
-
-        <nav class="navigator ss-links months push_eight twenty-five columns">
-            <ul>
-                <li><a class="selected" href="#january">jan</a></li>
-                <li><a href="#february">feb</a></li>
-                <li><a href="#march">mar</a></li>
-                <li><a href="#april">apr</a></li>
-                <li><a href="#may">may</a></li>
-                <li><a href="#june">jun</a></li>
-                <li><a href="#july">jul</a></li>
-                <li><a href="#august">aug</a></li>
-                <li><a href="#september">sep</a></li>
-                <li><a href="#october">oct</a></li>
-                <li><a href="#november">nov</a></li>
-                <li><a href="#december">dec</a></li>
-            </ul>
-        </nav>
-    
-    </div>
-    </header>
-
     <aside class="ss-container content">
         <div class="ss-row row">
                 
@@ -58,18 +35,18 @@
                         <div id="rb-grid" class="rb-grid">
                             <li>
                                 <ul class="nav">
-                                    <button class="go-to-article">go to the article</button>
+                                    <button class="go-to-article">go to the article ></button>
                                 </ul>
 
                                 <div class="rb-overlay">
                                     <span class="rb-close">X</span>
                                     <div class="rb-week">
-                                        <article>
+                                        <article class="scrollbar">
                                             <header>
                                                 <h1>{{ january.article }}</h1>
                                             </header>
-                                            <aside class="">
-                                                <p>{{ january.content }}</p>
+                                            <aside>
+                                                <p>{{ january.content|safe }}</p>
                                             </aside>
                                         </article>
                                     </div>

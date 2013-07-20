@@ -26,7 +26,7 @@ $(function() {
     $(function() {
 
         Boxgrid.init();
-    
+        
     });
 
 });
@@ -39,24 +39,24 @@ if(typeof define == "function" && define.amd) {
 	define(window.Gumby);
 }
 
-// section_january = $("section#january").addClass("old");
+sectionOdd = $("section[role='odd']").addClass("old");
 
-// $(window).scroll(function(d,h) {
-//     section_january.each(function(i) {
-//         a = $(this).offset().top + $(this).height();
-//         b = $(window).scrollTop() + $(window).height();
-//         if (a = b) $(this).addClass("new");
-//         if (b < a) $(this).removeClass("new");
-//     });
-// });
+$(window).scroll(function(d,h) {
+    sectionOdd.each(function(i) {
+        a = $(this).offset().top + $(this).height();
+        b = $(window).scrollTop() + $(window).height();
+        if (a <= b) $(this).addClass("new");
+        if (a > b) $(this).removeClass("new");
+    });
+});
 
-// section_february = $("section#february").addClass("old");
+sectionEven = $("section[role='even']").addClass("old");
 
-// $(window).scroll(function(d,h) {
-//     section_february.each(function(i) {
-//         a = $(this).offset().top + $(this).height();
-//         b = $(window).scrollTop() + $(window).height();
-//         if (a < b) $(this).addClass("new");
-//         if (a < b) $(this).removeClass("new");
-//     });
-// });
+$(window).scroll(function(d,h) {
+    sectionEven.each(function(i) {
+        a = $(this).offset().top + $(this).height();
+        b = $(window).scrollTop() + $(window).height();
+        if (a <= b) $(this).addClass("new");
+        if (a >= b) $(this).removeClass("new");
+    });
+});
