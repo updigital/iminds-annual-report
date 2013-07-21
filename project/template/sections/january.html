@@ -32,7 +32,7 @@
                         <p>"{{ january.description }}"</p>
                         
                         <nav>
-                        <div id="rb-grid" class="rb-grid">
+                        <div id="rb-grid" class="rb-grid" style="position: absolute; z-index: 9999999;">
                             <li>
                                 <ul class="nav">
                                     <button class="go-to-article">go to the article ></button>
@@ -42,12 +42,17 @@
                                     <span class="rb-close">X</span>
                                     <div class="rb-week">
                                         <article class="scrollbar">
-                                            <header>
-                                                <h1>{{ january.article }}</h1>
-                                            </header>
-                                            <aside>
-                                                <p>{{ january.content|safe }}</p>
+
+                                            <aside class="milestone">
+                                                <img src="{{ STATIC_URL }}img/milestones/small/02-mix_launch.small.png" />
+                                                <div class="m-line"></div>
                                             </aside>
+
+                                            <header>
+                                                <h1>Strategy Milestone: Demand-driven innovation with maximum impact</h1>
+                                            </header>
+
+                                            <div class="o-content">{{ january.content|safe }}</div>
                                         </article>
                                     </div>
                                 </div>

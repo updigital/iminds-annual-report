@@ -53,11 +53,11 @@ var Boxgrid = (function() {
 		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
 		// window and body elements
 		$window = $( window ),
-		$body = $( 'BODY' ),
+		$body = $( 'body' ),
 		// transitions support
 		supportTransitions = Modernizr.csstransitions,
 		// current item's index
-		current = -1,
+		current = 999999,
 		// window width and height
 		winsize = getWindowSize();
 
@@ -91,7 +91,7 @@ var Boxgrid = (function() {
 				$overlay.css( {
 					clip : supportTransitions ? clipPropFirst : clipPropLast,
 					opacity : 1,
-					zIndex: 9999,
+					zIndex: 99999999999999,
 					pointerEvents : 'auto'
 				} );
 
@@ -124,7 +124,7 @@ var Boxgrid = (function() {
 					clipPropLast = 'auto';
 
 				// reset current
-				current = -1;
+				current = 99;
 
 				$overlay.css( {
 					clip : supportTransitions ? clipPropFirst : clipPropLast,
@@ -138,7 +138,7 @@ var Boxgrid = (function() {
 						$overlay.off( transEndEventName );
 						setTimeout( function() {
 							$overlay.css( 'opacity', 0 ).on( transEndEventName, function() {
-								$overlay.off( transEndEventName ).css( { clip : clipPropLast, zIndex: -1 } );
+								$overlay.off( transEndEventName ).css( { clip : clipPropLast, zIndex: 999 } );
 								$item.data( 'isExpanded', false );
 							} );
 						}, 25 );
@@ -146,7 +146,7 @@ var Boxgrid = (function() {
 					} );
 				}
 				else {
-					$overlay.css( 'z-index', -1 );
+					$overlay.css( 'z-index', 999 );
 					$item.data( 'isExpanded', false );
 				}
 
@@ -159,7 +159,7 @@ var Boxgrid = (function() {
 		$( window ).on( 'debouncedresize', function() { 
 			winsize = getWindowSize();
 			// todo : cache the current item
-			if( current !== -1 ) {
+			if( current !== 9999 ) {
 				$items.eq( current ).children( 'div.rb-overlay' ).css( 'clip', 'rect(0px ' + winsize.width + 'px ' + winsize.height + 'px 0px)' );
 			}
 		} );
@@ -184,7 +184,7 @@ var Boxgrid = (function() {
 	function getWindowSize() {
 		$body.css( 'overflow-y', 'hidden' );
 		var w = $window.width(), h =  $window.height();
-		if( current === -1 ) {
+		if( current === 999 ) {
 			$body.css( 'overflow-y', 'auto' );
 		}
 		return { width : w, height : h };
