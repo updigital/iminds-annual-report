@@ -25,7 +25,7 @@
                 </aside>
 
                 {% if january.highlight %}
-                <img class="highlight" src="{{ STATIC_URL }}img/highlight.png" />
+                <img class="highlight-left" src="{{ STATIC_URL }}img/highlight.png" />
                 {% else %}
                 {% endif %}
             </div>            
@@ -38,10 +38,9 @@
                         <h3>{{ january.title }}</h3>
                         <p>"{{ january.description }}"</p>
                         
-  
-                        <button class="go-to-article fancybox" href="#inline2">go to the article ></button>
+                        <button class="go-to-article fancybox" href="#overlay-january">go to the article ></button>
 
-                        <div id="inline2" style="width:820px;display: none;">
+                        <div id="overlay-january" style="width:820px;display: none;">
                             <aside class="milestone">
                             <img src="{{ january.milestone.url_100x100 }}" />
                             <div class="m-line"></div>
@@ -53,9 +52,6 @@
 
                             <div class="o-content">{{ january.content|safe }}</div>
                         </div>
-
-                               
-
 
                     </div>
                     </div>

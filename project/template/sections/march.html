@@ -22,6 +22,11 @@
                         <img src="{{ MEDIA_URL }}{{ march.milestone }}" />
                     </figure>
                 </aside>
+
+                {% if march.highlight %}
+                <img class="highlight-left" src="{{ STATIC_URL }}img/highlight.png" />
+                {% else %}
+                {% endif %}
             </div>            
 
             <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
@@ -32,29 +37,20 @@
                         <h3>{{ march.title }}</h3>
                         <p>"{{ march.description }}"</p>
                         
-                        <nav>
-                        <div id="rb-grid" class="rb-grid">
-                            <li>
-                                <ul class="nav">
-                                    <button class="go-to-article">go to the article ></button>
-                                </ul>
+                        <button class="go-to-article fancybox" href="#overlay-march">go to the article ></button>
 
-                                <div class="rb-overlay">
-                                    <span class="rb-close">X</span>
-                                    <div class="rb-week">
-                                        <article class="scrollbar">
-                                            <header>
-                                                <h1>{{ march.article }}</h1>
-                                            </header>
-                                            <aside>
-                                                <p>{{ march.content|safe }}</p>
-                                            </aside>
-                                        </article>
-                                    </div>
-                                </div>
-                            </li>
+                        <div id="overlay-march" style="width:820px;display: none;">
+                            <aside class="milestone">
+                            <img src="{{ march.milestone.url_100x100 }}" />
+                            <div class="m-line"></div>
+                            </aside>
+
+                            <header>
+                            <h1>Strategy Milestone: Demand-driven innovation with maximum impact</h1>
+                            </header>
+
+                            <div class="o-content">{{ march.content|safe }}</div>
                         </div>
-                        </nav>
 
                     </div>
                     </div>

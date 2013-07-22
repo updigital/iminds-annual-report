@@ -1870,6 +1870,9 @@ section[role="even"] .content header h2 {
   font-weight: bold;
   color: #b8c4ce;
 }
+section[role="odd"]#january .content header h2 {
+  top: 7.4em;
+}
 section[role="odd"].new .content header h2,
 section[role="even"].new .content header h2 {
   color: #eff2f5;
@@ -1925,7 +1928,7 @@ section[role="odd"]#january .content div.line {
 }
 section[role="odd"] aside.content header span {
   top: 2.3em;
-  left: 480px;
+  left: 392px;
   position: relative;
   font-size: 32px;
   font-weight: bold;
@@ -2114,8 +2117,17 @@ section[role="odd"] aside.tooltip-article h3 {
 section[role="even"] aside.tooltip-article h3 {
   text-align: right;
 }
-.highlight {
+.highlight-left {
   position: relative;
+  top: -6.4em;
+  z-index: 9;
+  border: 3px solid #ffffff;
+  border-radius: 100%;
+  background: #ffffff;
+}
+.highlight-right {
+  position: relative;
+  left: 410px;
   top: -6.4em;
   z-index: 9;
   border: 3px solid #ffffff;

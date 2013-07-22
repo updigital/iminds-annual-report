@@ -26,29 +26,20 @@
                         <h3>{{ june.title }}</h3>
                         <p>"{{ june.description }}"</p>
                         
-                        <nav>
-                        <div id="rb-grid" class="rb-grid">
-                            <li>
-                                <ul class="nav">
-                                    <button class="go-to-article">go to the article ></button>
-                                </ul>
+                        <button class="go-to-article fancybox" href="#overlay-june">go to the article ></button>
 
-                                <div class="rb-overlay">
-                                    <span class="rb-close">X</span>
-                                    <div class="rb-week">
-                                        <article class="scrollbar">
-                                            <header>
-                                                <h1>{{ june.article }}</h1>
-                                            </header>
-                                            <aside>
-                                                <p>{{ june.content|safe }}</p>
-                                            </aside>
-                                        </article>
-                                    </div>
-                                </div>
-                            </li>
+                        <div id="overlay-june" style="width:820px;display: none;">
+                            <aside class="milestone">
+                            <img src="{{ june.milestone.url_100x100 }}" />
+                            <div class="m-line"></div>
+                            </aside>
+
+                            <header>
+                            <h1>Strategy Milestone: Demand-driven innovation with maximum impact</h1>
+                            </header>
+
+                            <div class="o-content">{{ june.content|safe }}</div>
                         </div>
-                        </nav>
 
                     </div>
                     </div>
@@ -61,13 +52,16 @@
                         <img src="{{ MEDIA_URL }}{{ june.milestone }}" />
                     </figure>
                 </aside>
+
+                {% if june.highlight %}
+                <img class="highlight-right" src="{{ STATIC_URL }}img/highlight.png" />
+                {% else %}
+                {% endif %}
             </div> 
 
         </div>
     </aside>
 
-
-    
 </section>
 {% endfor %}
 {% else %}
