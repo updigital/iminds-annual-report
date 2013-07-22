@@ -17,8 +17,8 @@ class Report(models.Model):
 	language = models.CharField(max_length=2, choices=LANGUAGE)
 	created_at = models.DateTimeField(auto_now=True)
 
-	slug = models.SlugField(max_length=4, unique=True, editable=False)
-	year = models.CharField(max_length=4, help_text='This is year', unique=True)
+	slug = models.SlugField(max_length=4, editable=False)
+	year = models.CharField(max_length=4, help_text='This is year')
 
 	description = models.TextField(max_length=200)
 	pdf = models.FileField(upload_to='pdf')
@@ -59,12 +59,49 @@ class Month(models.Model):
 	description = models.TextField(max_length=140)
 	milestone = ImageWithThumbsField(
 			upload_to='images',
-			sizes=((160,160),(200,200)))
+			sizes=((100,100),(400,400)))
+
+	HIGHLIGHT = (
+		('01', _('Yes')),
+	)
+	highlight = models.CharField(max_length=2, choices=HIGHLIGHT, blank=True)
 
 	content = RedactorField(verbose_name=u'Content', help_text='&nbsp;*Use HTML mode')
 
 	def __unicode__(self):
 		return self.title
+
+# class Highlight(models.Model):
+# 	language = models.CharField(max_length=2, choices=LANGUAGE)
+# 	created_at = models.DateTimeField(auto_now=True)
+
+# 	MONTH = (
+# 		('01', _('January')),
+# 		('02', _('February')),
+# 		('03', _('March')),
+# 		('04', _('April')),
+# 		('05', _('May')),
+# 		('06', _('June')),
+# 		('07', _('July')),
+# 		('08', _('August')),
+# 		('09', _('September')),
+# 		('10', _('October')),
+# 		('11', _('November')),
+# 		('12', _('December')),
+# 	)
+
+# 	report = models.ForeignKey('Report')
+# 	month = models.CharField(max_length=2, choices=MONTH)
+# 	title = models.CharField(max_length=140)
+# 	description = models.TextField(max_length=140)
+# 	milestone = ImageWithThumbsField(
+# 			upload_to='images',
+# 			sizes=((160,160),(200,200)))
+
+# 	content = RedactorField(verbose_name=u'Content', help_text='&nbsp;*Use HTML mode')
+
+# 	def __unicode__(self):
+# 		return self.title
 
 def slug_pre_save(signal, instance, sender, **kwargs):
     instance.slug = slugify(instance.year)

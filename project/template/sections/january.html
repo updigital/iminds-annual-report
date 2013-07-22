@@ -8,7 +8,9 @@
             <header class="seven columns">
                 <span>{{ january.report }}</span>
                 <div class="ss-left">
-                    <h2 class="four columns alpha">{{ january.get_month_display }}</h2>
+                    <h2 class="four columns alpha">
+                        {% if nl %}januari{% else %}{{ january.get_month_display }}{% endif %}
+                    </h2>
                 </div>
                 <h3>01</h3>
             </header>
@@ -21,6 +23,11 @@
                         <img src="{{ MEDIA_URL }}{{ january.milestone }}" />
                     </figure>
                 </aside>
+
+                {% if january.highlight %}
+                <img src="{{ STATIC_URL }}img/highlight.png" />
+                {% else %}
+                {% endif %}
             </div>            
 
             <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
@@ -44,7 +51,7 @@
                                         <article class="scrollbar">
 
                                             <aside class="milestone">
-                                                <img src="{{ STATIC_URL }}img/milestones/small/02-mix_launch.small.png" />
+                                                <img src="{{ january.milestone.url_100x100 }}" />
                                                 <div class="m-line"></div>
                                             </aside>
 

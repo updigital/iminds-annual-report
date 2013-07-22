@@ -47,6 +47,20 @@
                         <div class="row">
                             <nav class="navigator ss-links months push_eight twenty-five columns">
                                 <ul>
+                                    {% if nl %}
+                                    <li><a href="#january">jan</a></li>
+                                    <li><a href="#february">feb</a></li>
+                                    <li><a href="#march">maa</a></li>
+                                    <li><a href="#april">apr</a></li>
+                                    <li><a href="#may">mei</a></li>
+                                    <li><a href="#june">jun</a></li>
+                                    <li><a href="#july">jul</a></li>
+                                    <li><a href="#august">aug</a></li>
+                                    <li><a href="#september">sep</a></li>
+                                    <li><a href="#october">okt</a></li>
+                                    <li><a href="#november">nov</a></li>
+                                    <li><a href="#december">dec</a></li>
+                                    {% else %}
                                     <li><a href="#january">jan</a></li>
                                     <li><a href="#february">feb</a></li>
                                     <li><a href="#march">mar</a></li>
@@ -59,6 +73,7 @@
                                     <li><a href="#october">oct</a></li>
                                     <li><a href="#november">nov</a></li>
                                     <li><a href="#december">dec</a></li>
+                                    {% endif %}
                                 </ul>
                             </nav>
                         
@@ -80,7 +95,9 @@
 
                 <button class="download tt-wrapper twelve columns omega">
                     <div>
-                        <a href="{{ report.pdf.url }}" target="_blank">download printable version ({{ report.pdf.size|filesizeformat }})
+                        <a href="{{ report.pdf.url }}" target="_blank">
+                            {% if nl%}downloaden printversie
+                            {% else %}download printable version{% endif %} ({{ report.pdf.size|filesizeformat }})
                             <span><img src="{{ MEDIA_URL }}{{ report.pdf_image}}" /></span>
                         </a>
                     </div>
@@ -92,7 +109,7 @@
     </div>
     {% include "base/footer.html" %}
 </section>
-
+    
         {% include "sections/january.html" %}
         {% include "sections/february.html" %}
         {% include "sections/march.html" %}
@@ -105,6 +122,7 @@
         {% include "sections/october.html" %}
         {% include "sections/november.html" %}
         {% include "sections/december.html" %}
+  
 
     {% endfor %}
 {% endblock %}

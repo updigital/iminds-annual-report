@@ -7,7 +7,9 @@
                 
             <header class="seven columns">
                 <div class="ss-left">
-                    <h2 class="four columns alpha">{{ july.get_month_display }}</h2>
+                    <h2 class="four columns alpha">
+                        {% if nl %}juli{% else %}{{ july.get_month_display }}{% endif %}
+                    </h2>
                 </div>
                 <h3>07</h3>
             </header>

@@ -60,3 +60,11 @@ $(window).scroll(function(d,h) {
         if (a >= b) $(this).removeClass("new");
     });
 });
+
+
+$(document).ready(function ($) {
+        $('.scrollbar').perfectScrollbar({
+          wheelSpeed: 20,
+          wheelPropagation: false
+        });
+      });
