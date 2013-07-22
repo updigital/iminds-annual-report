@@ -63,7 +63,7 @@ section[role="even"] aside.content .text {
 	}
 	section[role="odd"].new aside.content .text:hover,
 	section[role="even"].new aside.content .text:hover {
-		background: @gray-tiny;
+
 		border-radius: 5px;
 	}
 	section[role="even"] aside.content .text:hover {
@@ -79,10 +79,9 @@ aside.content .wrap-text {
 	background: none;
 	margin-top: 10em;
 }
-aside.content .wrap-text .text ul.nav {
-	display: none;
-}
-aside.content .wrap-text .text ul.nav button.go-to-article {
+
+aside.content .wrap-text .text button.go-to-article {
+	// display: none;
 	font-size: 12px;
 	letter-spacing: 1px;
 	.open-sans-condensed;
@@ -92,56 +91,56 @@ aside.content .wrap-text .text ul.nav button.go-to-article {
 }
 
 
-aside.content .wrap-text .text ul.nav {
-	width: 180px;
-	height: 34px;
-	.align-center;
-	.open-sans-condensed;
-	border-radius: 5px;
-	letter-spacing: 2px;
-	font-size: 18px;
-	.uppercase;
-	.relative;
-	margin-right: 10px;
-	top: 15px;
-	background: @gray-hard;
-	border: 2px solid @gray-tiny;
-	.block;
-	.left;
-}
-section[role="odd"] aside.content .wrap-text .text ul.nav {
-	left: 500px;
-}
-section[role="even"] aside.content .wrap-text .text ul.nav {
-	right: 500px;
-}
-aside.content .wrap-text .text ul.nav:hover {
-	background: @black;
-	border: 2px solid @white;
-}
-section[role="odd"] aside.content .text nav,
-section[role="even"] aside.content .text nav {
-	-webkit-animation-play-state: paused;
-	-moz-animation-play-state: paused;
-	animation-play-state: paused;
+// aside.content .wrap-text .text ul.nav {
+// 	width: 180px;
+// 	height: 34px;
+// 	.align-center;
+// 	.open-sans-condensed;
+// 	border-radius: 5px;
+// 	letter-spacing: 2px;
+// 	font-size: 18px;
+// 	.uppercase;
+// 	.relative;
+// 	margin-right: 10px;
+// 	top: 15px;
+// 	background: @gray-hard;
+// 	border: 2px solid @gray-tiny;
+// 	.block;
+// 	.left;
+// }
+// section[role="odd"] aside.content .wrap-text .text ul.nav {
+// 	left: 500px;
+// }
+// section[role="even"] aside.content .wrap-text .text ul.nav {
+// 	right: 500px;
+// }
+// aside.content .wrap-text .text ul.nav:hover {
+// 	background: @black;
+// 	border: 2px solid @white;
+// }
+// section[role="odd"] aside.content .text nav,
+// section[role="even"] aside.content .text nav {
+// 	-webkit-animation-play-state: paused;
+// 	-moz-animation-play-state: paused;
+// 	animation-play-state: paused;
 
-	opacity: 0;
-}
-section[role="odd"] aside.content .text:hover nav,
-section[role="even"] aside.content .text:hover nav {
-	-webkit-transition: all 0.8s ease-in-out;
-	-moz-transition: all 0.8s ease-in-out;
-	-o-transition: all 0.8s ease-in-out;
-	transition: all 0.8s ease-in-out;
-	opacity: 1;
-	.relative;
-}
-section[role="odd"] aside.content .text:hover nav {
-	left: -300px;
-}
-section[role="even"] aside.content .text:hover nav {
-	right: -500px;
-}
+// 	opacity: 0;
+// }
+// section[role="odd"] aside.content .text:hover nav,
+// section[role="even"] aside.content .text:hover nav {
+// 	-webkit-transition: all 0.8s ease-in-out;
+// 	-moz-transition: all 0.8s ease-in-out;
+// 	-o-transition: all 0.8s ease-in-out;
+// 	transition: all 0.8s ease-in-out;
+// 	opacity: 1;
+// 	.relative;
+// }
+// section[role="odd"] aside.content .text:hover nav {
+// 	left: -300px;
+// }
+// section[role="even"] aside.content .text:hover nav {
+// 	right: -500px;
+// }
 aside.reports {
 	
 }
@@ -190,3 +189,12 @@ section[role="even"] aside.tooltip-article {}
 	section[role="even"] aside.tooltip-article h3 {
 		.align-right;
 	}
+
+.highlight {
+	.relative;
+	top: -6.4em;
+	z-index: 9;
+	border: 3px solid @white;
+	.radius-full;
+	background: @white;
+}

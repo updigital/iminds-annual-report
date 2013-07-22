@@ -4,7 +4,7 @@
 
     <aside class="ss-container content">
         <div class="ss-row row">
-                
+            
             <header class="seven columns">
                 <span>{{ january.report }}</span>
                 <div class="ss-left">
@@ -25,7 +25,7 @@
                 </aside>
 
                 {% if january.highlight %}
-                <img src="{{ STATIC_URL }}img/highlight.png" />
+                <img class="highlight" src="{{ STATIC_URL }}img/highlight.png" />
                 {% else %}
                 {% endif %}
             </div>            
@@ -38,34 +38,24 @@
                         <h3>{{ january.title }}</h3>
                         <p>"{{ january.description }}"</p>
                         
-                        <nav>
-                        <div id="rb-grid" class="rb-grid" style="position: absolute; z-index: 9999999;">
-                            <li>
-                                <ul class="nav">
-                                    <button class="go-to-article">go to the article ></button>
-                                </ul>
+  
+                        <button class="go-to-article fancybox" href="#inline2">go to the article ></button>
 
-                                <div class="rb-overlay">
-                                    <span class="rb-close">X</span>
-                                    <div class="rb-week">
-                                        <article class="scrollbar">
+                        <div id="inline2" style="width:820px;display: none;">
+                            <aside class="milestone">
+                            <img src="{{ january.milestone.url_100x100 }}" />
+                            <div class="m-line"></div>
+                            </aside>
 
-                                            <aside class="milestone">
-                                                <img src="{{ january.milestone.url_100x100 }}" />
-                                                <div class="m-line"></div>
-                                            </aside>
+                            <header>
+                            <h1>Strategy Milestone: Demand-driven innovation with maximum impact</h1>
+                            </header>
 
-                                            <header>
-                                                <h1>Strategy Milestone: Demand-driven innovation with maximum impact</h1>
-                                            </header>
-
-                                            <div class="o-content">{{ january.content|safe }}</div>
-                                        </article>
-                                    </div>
-                                </div>
-                            </li>
+                            <div class="o-content">{{ january.content|safe }}</div>
                         </div>
-                        </nav>
+
+                               
+
 
                     </div>
                     </div>

@@ -65,6 +65,7 @@ class Month(models.Model):
 		('01', _('Yes')),
 	)
 	highlight = models.CharField(max_length=2, choices=HIGHLIGHT, blank=True)
+	highlight_title = models.CharField(max_length=140, verbose_name=u'Highlight Title', blank=True)
 
 	content = RedactorField(verbose_name=u'Content', help_text='&nbsp;*Use HTML mode')
 
