@@ -2117,6 +2117,9 @@ section[role="odd"] aside.content .text {
 section[role="odd"] aside.content .text-highlight {
   border-right: 2px solid #b8c4ce;
 }
+section[role="odd"]#july aside.content .text-highlight {
+  border-left: 2px solid #b8c4ce;
+}
 section[role="odd"].new aside.content .text {
   border-left: 2px solid #eff2f5;
 }
