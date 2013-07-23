@@ -26,6 +26,13 @@
 
                 {% if january.highlight %}
                 <img class="highlight-left" src="{{ STATIC_URL }}img/highlight.png" />
+
+                {{ january.highlight_title }}
+
+                {{ january.highlight_title_2 }}
+
+                {{ january.highlight_title_3 }}
+                
                 {% else %}
                 {% endif %}
             </div>            
@@ -45,10 +52,6 @@
                             <img src="{{ january.milestone.url_100x100 }}" />
                             <div class="m-line"></div>
                             </aside>
-
-                            <header>
-                            <h1>Strategy Milestone: Demand-driven innovation with maximum impact</h1>
-                            </header>
 
                             <div class="o-content">{{ january.content|safe }}</div>
                         </div>
