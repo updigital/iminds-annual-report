@@ -23,10 +23,6 @@
                     </figure>
                 </aside>
 
-                {% if march.highlight %}
-                <img class="highlight-left" src="{{ STATIC_URL }}img/highlight.png" />
-                {% else %}
-                {% endif %}
             </div>            
 
             <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
@@ -53,7 +49,7 @@
                 </div>
             </aside>
 
-            <div class="ss-left ten columns">
+            <div class="ss-right ten columns" style="position: relative; left: -18em; top: 3em">
                 <aside class="hightlight-draw push_twelve hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-highlight-draw">
                         <img src="{{ STATIC_URL }}img/highlight.png" />
@@ -63,11 +59,11 @@
 
 
             <aside class="tooltip-article-highlight hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
-                <div class="ss-right sixteen columns">
+                <div class="ss-left sixteen columns" style="position: relative">
                     
-                    <div class="wrap-text seventeen columns">
-                    <div class="text-highlight arrow-left seventeen columns">
-                        <h3>{{ february.title }} >></h3>
+                    <div class="wrap-text twelve columns">
+                    <div class="text-highlight arrow-left twelve columns">
+                        <h3>Lorem ipsum >></h3>
                         
                         <button class="go-to-article fancybox" href="#overlay-february">go to the article >></button>
 
