@@ -1523,8 +1523,8 @@ footer {
 }
 .hi-icon-draw:after {
   pointer-events: none;
-  width: 400px;
-  height: 400px;
+  width: 360px;
+  height: 360px;
   content: '';
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -1540,8 +1540,8 @@ footer {
   -moz-transition: box-shadow 0.2s;
   transition: box-shadow 0.2s;
   border-radius: 100%;
-  width: 400px;
-  height: 400px;
+  width: 360px;
+  height: 360px;
 }
 section[role="odd"] aside .hi-icon-effect-9 .hi-icon-draw:after,
 section[role="even"] aside .hi-icon-effect-9 .hi-icon-draw:after {
@@ -1552,7 +1552,7 @@ section[role="even"].new aside .hi-icon-effect-9 .hi-icon-draw:after {
   box-shadow: 0 0 0 5px #eff2f5;
 }
 .hi-icon-effect-9 .hi-icon-draw:after {
-  height: 400px;
+  height: 360px;
   top: 0;
   left: 0;
   padding: 0;
@@ -1562,7 +1562,7 @@ section[role="even"].new aside .hi-icon-effect-9 .hi-icon-draw:after {
   border-radius: 100%;
 }
 .no-touch .hi-icon-effect-9a .hi-icon-draw:hover:after {
-  height: 400px;
+  height: 360px;
   -webkit-transform: scale(0.9);
   -moz-transform: scale(0.9);
   -ms-transform: scale(0.9);
@@ -1577,7 +1577,71 @@ section[role="even"] aside .hi-icon-effect-9a .hi-icon-draw:hover {
   box-shadow: 0 0 0 8px #65be5d;
 }
 .no-touch .hi-icon-effect-9a .hi-icon-draw:hover {
-  height: 400px;
+  height: 360px;
+  border-radius: 100%;
+}
+.hi-icon-highlight-draw {
+  z-index: 1;
+  position: relative;
+  border-radius: 100%;
+}
+.hi-icon-highlight-draw:after {
+  pointer-events: none;
+  width: 90px;
+  height: 90px;
+  content: '';
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border-radius: 100%;
+  position: absolute;
+}
+.hi-icon-highlight-draw:before {
+  display: block;
+}
+.hi-icon-effect-9 .hi-icon-highlight-draw {
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  border-radius: 100%;
+  width: 90px;
+  height: 90px;
+}
+section[role="odd"] aside .hi-icon-effect-9 .hi-icon-highlight-draw:after,
+section[role="even"] aside .hi-icon-effect-9 .hi-icon-highlight-draw:after {
+  box-shadow: 0 0 0 5px #b8c4ce;
+}
+section[role="odd"].new aside .hi-icon-effect-9 .hi-icon-highlight-draw:after,
+section[role="even"].new aside .hi-icon-effect-9 .hi-icon-highlight-draw:after {
+  box-shadow: 0 0 0 5px #eff2f5;
+}
+.hi-icon-effect-9 .hi-icon-highlight-draw:after {
+  height: 90px;
+  top: 0;
+  left: 0;
+  padding: 0;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
+  border-radius: 100%;
+}
+.no-touch .hi-icon-effect-9a .hi-icon-highlight-draw:hover:after {
+  height: 90px;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+  opacity: 0.7;
+  border-radius: 100%;
+}
+section[role="odd"] aside .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
+  box-shadow: 0 0 0 8px #ec008c;
+}
+section[role="even"] aside .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
+  box-shadow: 0 0 0 8px #ec008c;
+}
+.no-touch .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
+  height: 90px;
   border-radius: 100%;
 }
 .tt-wrapper div a {
@@ -1865,7 +1929,7 @@ section[role="even"] .content header {
 }
 section[role="odd"] .content header h2,
 section[role="even"] .content header h2 {
-  top: 5.75em;
+  top: 3.3em;
   left: 370px;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 20px;
@@ -1885,7 +1949,7 @@ section[role="even"] .content header h3 {
   width: 54px;
   height: 54px;
   padding: 13px 17px;
-  top: 4.2em;
+  top: 2.2em;
   left: 357px;
   z-index: 9;
   background: #b8c4ce;
@@ -2024,7 +2088,21 @@ section[role="odd"] aside.content .text,
 section[role="even"] aside.content .text {
   background: none;
   height: 270px;
-  margin-top: 7em;
+  margin-top: 1.3em;
+  color: #404040;
+  padding: 10px 30px 30px 30px;
+  -webkit-appearance: none;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+section[role="odd"] aside.content .text-highlight,
+section[role="even"] aside.content .text-highlight {
+  background: none;
+  height: 110px;
+  margin-top: -10.5em;
+  margin-left: 17em;
   color: #404040;
   padding: 10px 30px 30px 30px;
   -webkit-appearance: none;
@@ -2036,14 +2114,23 @@ section[role="even"] aside.content .text {
 section[role="odd"] aside.content .text {
   border-left: 2px solid #b8c4ce;
 }
+section[role="odd"] aside.content .text-highlight {
+  border-right: 2px solid #b8c4ce;
+}
 section[role="odd"].new aside.content .text {
   border-left: 2px solid #eff2f5;
+}
+section[role="even"] aside.content .text-highlight {
+  border-left: 2px solid #b8c4ce;
 }
 section[role="even"] aside.content .text {
   border-right: 2px solid #b8c4ce;
 }
 section[role="even"].new aside.content .text {
   border-right: 2px solid #eff2f5;
+}
+section[role="even"].new aside.content .text-highlight {
+  border-left: 2px solid #eff2f5;
 }
 section[role="odd"] aside.content .text {
   text-align: left;
@@ -2071,7 +2158,8 @@ aside.content .wrap-text {
   background: none;
   margin-top: 10em;
 }
-aside.content .wrap-text .text button.go-to-article {
+aside.content .wrap-text .text button.go-to-article,
+aside.content .wrap-text .text-highlight button.go-to-article {
   font-size: 12px;
   letter-spacing: 1px;
   font-family: 'Open Sans Condensed', sans-serif;
@@ -2099,7 +2187,7 @@ Aside: 'draw';
 aside.draw {
   width: 400px;
   height: 400px;
-  margin-top: 13em;
+  margin-top: 8em;
   margin-left: 0;
 }
 /* other need refactoring */
@@ -2119,6 +2207,23 @@ section[role="odd"] aside.tooltip-article h3 {
 }
 section[role="even"] aside.tooltip-article h3 {
   text-align: right;
+}
+section[role="odd"] aside.tooltip-article-highlight h3,
+section[role="even"] aside.tooltip-article-highlight h3 {
+  font-size: 22px;
+  color: #404040;
+  margin-bottom: 0.75em;
+  position: relative;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+section[role="odd"] aside.tooltip-article-highlight h3 {
+  text-align: right;
+}
+section[role="even"] aside.tooltip-article-highlight h3 {
+  text-align: left;
 }
 .highlight-left {
   position: relative;
@@ -2228,6 +2333,7 @@ section[role="odd"],
 section[role="even"] {
   padding: 0;
   height: 99.8%;
+  padding-bottom: 20%;
   z-index: 2;
 }
 section[role="home"],

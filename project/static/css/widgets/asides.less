@@ -35,7 +35,17 @@ section[role="odd"] aside.content .text,
 section[role="even"] aside.content .text {
 	background: none;
 	height: 270px;
-	margin-top: 7em;
+	margin-top: 1.3em;
+	color: @black;
+	padding: 10px 30px 30px 30px;
+	.transition-basic;
+}
+section[role="odd"] aside.content .text-highlight,
+section[role="even"] aside.content .text-highlight {
+	background: none;
+	height: 110px;
+	margin-top: -10.5em;
+	margin-left: 17em;
 	color: @black;
 	padding: 10px 30px 30px 30px;
 	.transition-basic;
@@ -43,14 +53,23 @@ section[role="even"] aside.content .text {
 section[role="odd"] aside.content .text {
 	border-left: 2px solid @gray-hard;
 }
+section[role="odd"] aside.content .text-highlight {
+	border-right: 2px solid @gray-hard;
+}
 section[role="odd"].new aside.content .text {
 	border-left: 2px solid @gray-tiny;
+}
+section[role="even"] aside.content .text-highlight {
+	border-left: 2px solid @gray-hard;
 }
 section[role="even"] aside.content .text {
 	border-right: 2px solid @gray-hard;
 }
 section[role="even"].new aside.content .text {
 	border-right: 2px solid @gray-tiny;
+}
+section[role="even"].new aside.content .text-highlight {
+	border-left: 2px solid @gray-tiny;
 }
 section[role="odd"] aside.content .text {
 	.align-left;
@@ -80,7 +99,8 @@ aside.content .wrap-text {
 	margin-top: 10em;
 }
 
-aside.content .wrap-text .text button.go-to-article {
+aside.content .wrap-text .text button.go-to-article,
+aside.content .wrap-text .text-highlight button.go-to-article {
 	// display: none;
 	font-size: 12px;
 	letter-spacing: 1px;
@@ -164,7 +184,7 @@ Aside: 'draw';
 aside.draw {
 	width: 400px;
 	height: 400px;
-	margin-top: 13em;
+	margin-top: 8em;
 	margin-left: 0;
 }
 
@@ -188,6 +208,27 @@ section[role="even"] aside.tooltip-article {}
 	}
 	section[role="even"] aside.tooltip-article h3 {
 		.align-right;
+	}
+
+section[role="odd"] aside.tooltip-article-highlight,
+section[role="even"] aside.tooltip-article-highlight {}
+	section[role="odd"] aside.tooltip-article-highlight h3,
+	section[role="even"] aside.tooltip-article-highlight h3 {
+		font-size: 22px;
+		color: @black;
+		margin-bottom: 0.75em;
+		.relative;
+		.open-sans-condensed;
+		.uppercase;
+		.bold;
+		letter-spacing: 2px;
+	}
+
+	section[role="odd"] aside.tooltip-article-highlight h3 {
+		.align-right;
+	}
+	section[role="even"] aside.tooltip-article-highlight h3 {
+		.align-left;
 	}
 
 .highlight-left {
