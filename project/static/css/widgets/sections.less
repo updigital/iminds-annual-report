@@ -20,7 +20,6 @@ section[role="even"] {
 	padding: 0;
 	height: 99.8%;
 	padding-bottom: 20%;
-	z-index: 2;
 }
 section[role="home"],
 section[role="odd"],
@@ -30,6 +29,9 @@ section[role="even"] {
 }
 section[role="home"] {
 	border-top: 3px solid @gray-hard;
+}
+section[role="odd"]#february {
+	z-index: 0;
 }
 /* ==========================================================================
 Section: odd, even; etc etc

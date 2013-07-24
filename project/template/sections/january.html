@@ -31,18 +31,13 @@
                     <div class="wrap-text seventeen columns">
                     <div class="text arrow-left seventeen columns">
                         <h3>{{ january.title }}</h3>
-                        <p>"{{ january.description }}"</p>
-                        
-                        <button class="go-to-article fancybox" href="#overlay-january">go to the article ></button>
+                        <p>{{ january.description }}</p>
 
-                        <div id="overlay-january" style="width:820px;display: none;">
-                            <aside class="milestone">
-                            <img class="milestone" src="{{ january.milestone.url_100x100 }}" />
-                            <div class="m-line"></div>
-                            </aside>
+                        {% include "overlays/milestones/january.html" %}
+        
+                        <button class="md-trigger" data-modal="milestone-january">go to the article ></button>
 
-                            <div class="o-content">{{ january.content|safe }}</div>
-                        </div>
+                        <div class="md-overlay"></div>
 
                     </div>
                     </div>

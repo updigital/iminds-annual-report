@@ -718,17 +718,17 @@ button.home:hover {
   background: #b8c4ce;
 }
 .button-down {
-  top: 86%;
+  top: 83%;
   left: 46.75%;
   position: fixed;
   display: block;
-  z-index: 1;
+  z-index: 0;
   -webkit-transition: all 0.8s;
   -moz-transition: all 0.8s;
   transition: all 0.8s;
 }
 .button-down:hover {
-  top: 88%;
+  top: 85%;
   -webkit-transition: all 0.8s;
   -moz-transition: all 0.8s;
   transition: all 0.8s;
@@ -1125,253 +1125,6 @@ section[role="home"] p {
   font-size: 12px;
   line-height: 24px;
 }
-#inline1 {
-  z-index: 9999999;
-  position: relative;
-}
-/*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
-.fancybox-wrap,
-.fancybox-skin,
-.fancybox-outer,
-.fancybox-inner,
-.fancybox-image,
-.fancybox-wrap iframe,
-.fancybox-wrap object,
-.fancybox-nav,
-.fancybox-nav span,
-.fancybox-tmp {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  outline: none;
-  vertical-align: top;
-}
-.fancybox {
-  cursor: pointer;
-}
-.fancybox-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 8020;
-}
-.fancybox-skin {
-  position: relative;
-  background: #eff2f5;
-  color: #444;
-  text-shadow: none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-.fancybox-opened {
-  z-index: 8030;
-}
-.fancybox-outer,
-.fancybox-inner {
-  position: relative;
-}
-.fancybox-inner {
-  overflow: hidden;
-}
-.fancybox-type-iframe .fancybox-inner {
-  -webkit-overflow-scrolling: touch;
-}
-.fancybox-error {
-  color: #444;
-  margin: 0;
-  padding: 15px;
-  white-space: nowrap;
-}
-.fancybox-image,
-.fancybox-iframe {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.fancybox-image {
-  max-width: 100%;
-  max-height: 100%;
-}
-#fancybox-loading,
-.fancybox-close,
-.fancybox-prev span,
-.fancybox-next span {
-  background-image: url('../img/fancybox/fancybox_sprite.png');
-}
-#fancybox-loading {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -22px;
-  margin-left: -22px;
-  background-position: 0 -108px;
-  opacity: 0.8;
-  cursor: pointer;
-  z-index: 8060;
-}
-#fancybox-loading div {
-  width: 44px;
-  height: 44px;
-  background: url('../img/fancybox/fancybox_loading.gif') center center no-repeat;
-}
-.fancybox-close {
-  position: absolute;
-  top: -18px;
-  right: -18px;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  z-index: 8040;
-}
-.fancybox-nav {
-  position: absolute;
-  top: 0;
-  width: 40%;
-  height: 100%;
-  cursor: pointer;
-  text-decoration: none;
-  background: transparent url('../img/fancybox/blank.gif');
-  /* helps IE */
-
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  z-index: 8040;
-}
-.fancybox-prev {
-  left: 0;
-}
-.fancybox-next {
-  right: 0;
-}
-.fancybox-nav span {
-  position: absolute;
-  top: 50%;
-  width: 36px;
-  height: 34px;
-  margin-top: -18px;
-  cursor: pointer;
-  z-index: 8040;
-  visibility: hidden;
-}
-.fancybox-prev span {
-  left: 10px;
-  background-position: 0 -36px;
-}
-.fancybox-next span {
-  right: 10px;
-  background-position: 0 -72px;
-}
-.fancybox-nav:hover span {
-  visibility: visible;
-}
-.fancybox-tmp {
-  position: absolute;
-  top: -99999px;
-  left: -99999px;
-  visibility: hidden;
-  max-width: 99999px;
-  max-height: 99999px;
-  overflow: visible !important;
-}
-/* Overlay helper */
-.fancybox-lock {
-  overflow: hidden !important;
-  width: auto;
-}
-.fancybox-lock body {
-  overflow: hidden !important;
-}
-.fancybox-lock-test {
-  overflow-y: hidden !important;
-}
-.fancybox-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  display: none;
-  z-index: 8010;
-  background: url('../img/fancybox/fancybox_overlay.png');
-}
-.fancybox-overlay-fixed {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-}
-.fancybox-lock .fancybox-overlay {
-  overflow: auto;
-  overflow-y: scroll;
-}
-/* Title helper */
-.fancybox-title {
-  visibility: hidden;
-  position: relative;
-  text-shadow: none;
-  z-index: 8050;
-}
-.fancybox-opened .fancybox-title {
-  visibility: visible;
-}
-.fancybox-title-float-wrap {
-  position: absolute;
-  bottom: 0;
-  right: 50%;
-  margin-bottom: -35px;
-  z-index: 8050;
-  text-align: center;
-}
-.fancybox-title-float-wrap .child {
-  display: inline-block;
-  margin-right: -100%;
-  padding: 2px 20px;
-  background: transparent;
-  /* Fallback for web browsers that doesn't support RGBa */
-
-  background: rgba(0, 0, 0, 0.8);
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  text-shadow: 0 1px 2px #222;
-  color: #FFF;
-  font-weight: bold;
-  line-height: 24px;
-  white-space: nowrap;
-}
-.fancybox-title-outside-wrap {
-  position: relative;
-  margin-top: 10px;
-  color: #fff;
-}
-.fancybox-title-inside-wrap {
-  padding-top: 10px;
-}
-.fancybox-title-over-wrap {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  color: #fff;
-  padding: 10px;
-  background: #fff;
-  background: rgba(0, 0, 0, 0.8);
-}
-/*Retina graphics!*/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  #fancybox-loading,
-  .fancybox-close,
-  .fancybox-prev span,
-  .fancybox-next span {
-    background-image: url('../img/fancybox/fancybox_sprite@2x.png');
-    background-size: 44px 152px;
-    /*The size of the normal image, half the size of the hi-res image*/
-  
-  }
-  #fancybox-loading div {
-    background-image: url('../img/fancybox/fancybox_loading@2x.gif');
-    background-size: 24px 24px;
-    /*The size of the normal image, half the size of the hi-res image*/
-  
-  }
-}
 .transition-fast {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -1709,6 +1462,298 @@ section[role="even"] aside .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
 }
 .ss-left {
   float: left;
+}
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+.jspContainer {
+  overflow: hidden;
+  position: relative;
+}
+.jspPane {
+  position: absolute;
+}
+.jspVerticalBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 100%;
+  background: red;
+}
+.jspHorizontalBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: red;
+}
+.jspVerticalBar *,
+.jspHorizontalBar * {
+  margin: 0;
+  padding: 0;
+}
+.jspCap {
+  display: none;
+}
+.jspHorizontalBar .jspCap {
+  float: left;
+}
+.jspTrack {
+  background: #F2F4F8;
+  position: relative;
+}
+.jspDrag {
+  background: #79a1b5;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  border: 1px solid #56839a;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag {
+  float: left;
+  height: 100%;
+}
+.jspArrow {
+  background: #50506d;
+  text-indent: -20000px;
+  display: block;
+  cursor: pointer;
+}
+.jspArrow.jspDisabled {
+  cursor: default;
+  background: #80808d;
+}
+.jspVerticalBar .jspArrow {
+  height: 16px;
+}
+.jspHorizontalBar .jspArrow {
+  width: 16px;
+  float: left;
+  height: 100%;
+}
+.jspVerticalBar .jspArrow:focus {
+  outline: none;
+}
+.jspCorner {
+  background: #eeeef4;
+  float: left;
+  height: 100%;
+}
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner {
+  margin: 0 -3px 0 0;
+}
+.jp-container {
+  width: 94%;
+  height: 600px;
+  padding: 30px;
+  position: fixed;
+  background: #eff2f5;
+  float: left;
+}
+.md-perspective,
+.md-perspective body {
+  height: 100%;
+  overflow: hidden;
+}
+.md-perspective body {
+  background: #222;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  perspective: 600px;
+}
+.container {
+  background: #ffffff;
+  min-height: 100%;
+}
+.md-modal {
+  position: fixed;
+  top: 10%;
+  left: 46%;
+  width: 70%;
+  height: auto;
+  z-index: 2000;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.md-show {
+  visibility: visible;
+}
+.md-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  background: #ffffff;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.md-show ~ .md-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+/* Content styles */
+.md-content {
+  color: #000;
+  background: #ffffff;
+  position: relative;
+  border-radius: 3px;
+  margin: 0 auto;
+}
+.md-content h3 {
+  margin: 0;
+  padding: 0.4em;
+  text-align: center;
+  font-size: 2.4em;
+  font-weight: 300;
+  opacity: 0.8;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px 3px 0 0;
+}
+.md-content > div {
+  padding: 15px 40px 30px;
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.15em;
+}
+.md-content > div p {
+  margin: 0;
+  padding: 10px 0;
+}
+.md-content > div ul {
+  margin: 0;
+  padding: 0 0 30px 20px;
+}
+.md-content > div ul li {
+  padding: 5px 0;
+}
+.md-content button {
+  display: block;
+  margin: 0 auto;
+  font-size: 0.8em;
+}
+/* Individual modal styles with animations/transitions */
+/* Effect 1: Fade in and scale up */
+.md-effect-1 .md-content {
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.md-show.md-effect-1 .md-content {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+@-webkit-keyframes slit {
+  50% {
+    -webkit-transform: translateZ(-250px) rotateY(89deg);
+    opacity: .5;
+    -webkit-animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+@-moz-keyframes slit {
+  50% {
+    -moz-transform: translateZ(-250px) rotateY(89deg);
+    opacity: .5;
+    -moz-animation-timing-function: ease-out;
+  }
+  100% {
+    -moz-transform: translateZ(0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+@keyframes slit {
+  50% {
+    transform: translateZ(-250px) rotateY(89deg);
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateZ(0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rotateRightSideFirst {
+  50% {
+    -webkit-transform: translateZ(-50px) rotateY(5deg);
+    -webkit-animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateZ(-200px);
+  }
+}
+@-moz-keyframes rotateRightSideFirst {
+  50% {
+    -moz-transform: translateZ(-50px) rotateY(5deg);
+    -moz-animation-timing-function: ease-out;
+  }
+  100% {
+    -moz-transform: translateZ(-200px);
+  }
+}
+@keyframes rotateRightSideFirst {
+  50% {
+    transform: translateZ(-50px) rotateY(5deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateZ(-200px);
+  }
+}
+@-webkit-keyframes OpenTop {
+  50% {
+    -webkit-transform: rotateX(10deg);
+    -webkit-animation-timing-function: ease-out;
+  }
+}
+@-moz-keyframes OpenTop {
+  50% {
+    -moz-transform: rotateX(10deg);
+    -moz-animation-timing-function: ease-out;
+  }
+}
+@keyframes OpenTop {
+  50% {
+    transform: rotateX(10deg);
+    animation-timing-function: ease-out;
+  }
+}
+@media screen and (max-width: 32em) {
+  body {
+    font-size: 75%;
+  }
 }
 h1.pink,
 h2.pink,
@@ -2386,7 +2431,6 @@ section[role="even"] {
   padding: 0;
   height: 99.8%;
   padding-bottom: 20%;
-  z-index: 2;
 }
 section[role="home"],
 section[role="odd"],
@@ -2396,6 +2440,9 @@ section[role="even"] {
 }
 section[role="home"] {
   border-top: 3px solid #b8c4ce;
+}
+section[role="odd"]#february {
+  z-index: 0;
 }
 /* ==========================================================================
 Section: odd, even; etc etc
