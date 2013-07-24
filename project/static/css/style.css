@@ -1725,13 +1725,18 @@ aside.milestone div.m-line {
   position: absolute;
   top: 4.5em;
 }
-aside.milestone img {
+aside.milestone img.milestone {
   margin-left: 330px;
   margin-top: 1.2em;
   border-radius: 100%;
   border: 2px solid #b8c4ce;
   position: absolute;
   z-index: 9;
+}
+aside.milestone div.o-content img {
+  border-radius: none!important;
+  margin: 0!important;
+  border: none!important;
 }
 div.o-content header {
   width: 700px;
