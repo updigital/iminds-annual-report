@@ -803,10 +803,9 @@ button.select-month {
 button.go {
   height: 36px;
   color: #ffffff;
-  border-radius: 6px;
   font-size: 12px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  background: #b8c4ce;
 }
 button.download {
   height: 32px;
@@ -1549,10 +1548,6 @@ section[role="even"] aside .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
   float: left;
   height: 100%;
 }
-/* Yuk! CSS Hack for IE6 3 pixel bug :( */
-* html .jspCorner {
-  margin: 0 -3px 0 0;
-}
 .jp-container {
   width: 94%;
   height: 600px;
@@ -1576,10 +1571,14 @@ section[role="even"] aside .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
   background: #ffffff;
   min-height: 100%;
 }
+.md-close {
+  margin-left: 97%;
+  font-size: 18px;
+}
 .md-modal {
   position: fixed;
-  top: 10%;
-  left: 46%;
+  top: 6%;
+  left: 50%;
   width: 70%;
   height: auto;
   z-index: 2000;
@@ -1615,45 +1614,10 @@ section[role="even"] aside .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
 }
 /* Content styles */
 .md-content {
-  color: #000;
   background: #ffffff;
   position: relative;
-  border-radius: 3px;
   margin: 0 auto;
 }
-.md-content h3 {
-  margin: 0;
-  padding: 0.4em;
-  text-align: center;
-  font-size: 2.4em;
-  font-weight: 300;
-  opacity: 0.8;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 3px 3px 0 0;
-}
-.md-content > div {
-  padding: 15px 40px 30px;
-  margin: 0;
-  font-weight: 300;
-  font-size: 1.15em;
-}
-.md-content > div p {
-  margin: 0;
-  padding: 10px 0;
-}
-.md-content > div ul {
-  margin: 0;
-  padding: 0 0 30px 20px;
-}
-.md-content > div ul li {
-  padding: 5px 0;
-}
-.md-content button {
-  display: block;
-  margin: 0 auto;
-  font-size: 0.8em;
-}
-/* Individual modal styles with animations/transitions */
 /* Effect 1: Fade in and scale up */
 .md-effect-1 .md-content {
   -webkit-transform: scale(0.7);
@@ -1672,138 +1636,55 @@ section[role="even"] aside .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
   transform: scale(1);
   opacity: 1;
 }
-@-webkit-keyframes slit {
-  50% {
-    -webkit-transform: translateZ(-250px) rotateY(89deg);
-    opacity: .5;
-    -webkit-animation-timing-function: ease-out;
-  }
-  100% {
-    -webkit-transform: translateZ(0) rotateY(0deg);
-    opacity: 1;
-  }
-}
-@-moz-keyframes slit {
-  50% {
-    -moz-transform: translateZ(-250px) rotateY(89deg);
-    opacity: .5;
-    -moz-animation-timing-function: ease-out;
-  }
-  100% {
-    -moz-transform: translateZ(0) rotateY(0deg);
-    opacity: 1;
-  }
-}
-@keyframes slit {
-  50% {
-    transform: translateZ(-250px) rotateY(89deg);
-    opacity: 1;
-    animation-timing-function: ease-in;
-  }
-  100% {
-    transform: translateZ(0) rotateY(0deg);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes rotateRightSideFirst {
-  50% {
-    -webkit-transform: translateZ(-50px) rotateY(5deg);
-    -webkit-animation-timing-function: ease-out;
-  }
-  100% {
-    -webkit-transform: translateZ(-200px);
-  }
-}
-@-moz-keyframes rotateRightSideFirst {
-  50% {
-    -moz-transform: translateZ(-50px) rotateY(5deg);
-    -moz-animation-timing-function: ease-out;
-  }
-  100% {
-    -moz-transform: translateZ(-200px);
-  }
-}
-@keyframes rotateRightSideFirst {
-  50% {
-    transform: translateZ(-50px) rotateY(5deg);
-    animation-timing-function: ease-out;
-  }
-  100% {
-    transform: translateZ(-200px);
-  }
-}
-@-webkit-keyframes OpenTop {
-  50% {
-    -webkit-transform: rotateX(10deg);
-    -webkit-animation-timing-function: ease-out;
-  }
-}
-@-moz-keyframes OpenTop {
-  50% {
-    -moz-transform: rotateX(10deg);
-    -moz-animation-timing-function: ease-out;
-  }
-}
-@keyframes OpenTop {
-  50% {
-    transform: rotateX(10deg);
-    animation-timing-function: ease-out;
-  }
-}
-@media screen and (max-width: 32em) {
-  body {
-    font-size: 75%;
-  }
-}
-h1.pink,
-h2.pink,
-h3.pink,
-p.pink {
-  color: #ec008c;
-}
 aside.milestone {
   width: 600px;
-  height: 8em;
-}
-aside.milestone div.m-line {
-  width: 700px;
-  margin-left: 30px;
-  height: 2px;
-  background: #b8c4ce;
-  position: absolute;
-  top: 4.5em;
+  height: 200px;
 }
 aside.milestone img.milestone {
-  margin-left: 330px;
-  margin-top: 1.2em;
+  margin-left: 40%;
+  margin-top: -2px;
   border-radius: 100%;
   border: 2px solid #b8c4ce;
   position: absolute;
   z-index: 9;
+}
+aside.milestone div.m-line {
+  width: 94%;
+  height: 2px;
+  background: #b8c4ce;
+  position: absolute;
+  top: 83px;
+}
+div.o-content header {
+  width: 93%;
+  text-align: center;
+  height: 30px;
+  margin-left: 30px;
+  border-bottom: 1px solid #b8c4ce;
+  font-size: 22px;
+  margin-top: 170px;
+  display: block;
+  font-weight: bold;
+}
+div.o-content p {
+  margin-top: 10px;
+  line-height: 1.4em;
+  font-style: normal!important;
 }
 div.o-content img {
   border-radius: 0%!important;
   margin: 0!important;
   border: none!important;
 }
-div.o-content header {
-  width: 700px;
-  text-align: center;
-  height: 22px;
-  margin-left: 30px;
-  border-bottom: 1px solid #b8c4ce;
-  font-size: 22px;
-  margin-top: 6.8em;
-  top: 20px;
-  display: block;
-  font-weight: bold;
-  position: absolute;
-}
 div.o-content header h1 {
   font-weight: bold;
 }
 div.o-content a {
-  line-height: 10px;
+  font-weight: bold;
+  color: #404040;
+}
+div.o-content a:hover {
+  border-bottom: 1px solid #b8c4ce;
 }
 div.o-content h3 {
   font-weight: bold;
@@ -1813,22 +1694,7 @@ div.o-content h3 {
   font-size: 12px!important;
 }
 div.o-content {
-  width: 740px;
-  padding: 0 30px;
-  margin-top: 5em;
-  line-height: 0.5em;
-}
-div.o-content p {
-  font-size: 13px!important;
-  line-height: 1.2em;
-  font-style: normal!important;
-  margin-bottom: 1.4em;
-}
-div.o-content img {
-  float: left;
-  border: 4px solid #b8c4ce;
-  border-radius: 100%;
-  margin-bottom: 3em;
+  width: 100%;
 }
 div.o-content blockquote {
   margin-top: 2em;
@@ -1845,82 +1711,6 @@ div.o-content blockquote h4 {
 div.o-content blockquote p {
   font-size: 13px;
   font-weight: bold;
-}
-.scrollbar {
-  position: absolute;
-  overflow: hidden;
-}
-.rb-grid li {
-  cursor: pointer;
-  display: block;
-  position: relative;
-  z-index: 9;
-}
-.rb-overlay:hover .cbp-af-header {
-  display: none!important;
-}
-.rb-overlay {
-  color: #ffffff;
-  top: 0;
-  left: 0;
-  width: 100%;
-  margin-top: 0;
-  margin-left: 0;
-  padding: 4% 20%;
-  height: 100%;
-  background: #ffffff;
-  opacity: 0;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  z-index: 99999999999999999999;
-  pointer-events: none;
-  cursor: default;
-  position: fixed;
-}
-.rb-close {
-  width: 30px;
-  background: #e7ebef;
-  top: 4em;
-  right: 17em;
-  padding-top: 1px;
-  height: 30px;
-  text-indent: -9000px;
-  cursor: pointer;
-  z-index: 999999999;
-  font-weight: bold;
-  position: absolute;
-  border-radius: 100%;
-}
-.rb-close::before {
-  content: 'X';
-  text-indent: 0px;
-  top: 0;
-  padding-top: 10px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 22px;
-  line-height: 0.6;
-  color: #b8c4ce;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: normal;
-  position: absolute;
-  text-align: center;
-}
-.rb-week {
-  width: 700px;
-  height: 100%;
-}
-.rb-week > article {
-  width: 760px;
-  height: 100%;
-  float: left;
-  position: relative;
-  background: #eff2f5;
-  color: #404040;
-  border-radius: 6px;
-  display: block;
 }
 header {
   position: relative;
@@ -2203,10 +1993,6 @@ section[role="even"] aside.content .text {
 }
 section[role="odd"] aside.content .text:hover {
   margin-left: 20px;
-}
-section[role="odd"].new aside.content .text:hover,
-section[role="even"].new aside.content .text:hover {
-  border-radius: 5px;
 }
 section[role="even"] aside.content .text:hover {
   margin-left: -20px;

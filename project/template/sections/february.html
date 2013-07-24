@@ -22,18 +22,13 @@
                     <div class="wrap-text seventeen columns">
                     <div class="text arrow-right seventeen columns">
                         <h3>{{ february.title }}</h3>
-                        <p>"{{ february.description }}"</p>
+                        <p>{{ february.description }}</p>
                         
-                        <button class="go-to-article fancybox" href="#overlay-february">go to the article ></button>
+                        {% include "overlays/milestones/february.html" %}
+        
+                        <button class="md-trigger go" data-modal="milestone-february">go to the article</button>
 
-                        <div id="overlay-february" style="width:820px;display: none;">
-                            <aside class="milestone">
-                            <img class="milestone" class="milestone" src="{{ february.milestone.url_100x100 }}" />
-                            <div class="m-line"></div>
-                            </aside>
-
-                            <div class="o-content">{{ february.content|safe }}</div>
-                        </div>
+                        <div class="md-overlay"></div>
 
                     </div>
                     </div>
@@ -64,31 +59,14 @@
                     
                     <div class="wrap-text seventeen columns">
                     <div class="text-highlight arrow-left seventeen columns">
-                        <h3 class="fancybox" href="#overlay-highlight-february">iMinds Projects per Market Segments</h3>
+                        
+                        {% include "overlays/highlights/february.html" %}
+        
+                        <h3>iMinds Projects per Market Segments</h3>
 
-                        <div id="overlay-highlight-february" style="width:820px;display: none;">
-                            <aside class="milestone">
-                            <img class="milestone" src="{{ STATIC_URL }}img/highlight.png" />
-                            <div class="m-line"></div>
-                            </aside>
+                        <button class="md-trigger go" data-modal="highlight-february">go to the article</button>
 
-                            <div class="o-content">
-                                <header>
-                                    <h1>iMinds Projects per Market Segments</h1>
-                                </header>
-                                <p>When we look at the Market Segments in which ICON projects are situated, we see a clear preponderance of the media and the health sectors. Building on that expertise, iMinds founded in 2012 a Media Innovation Center – MiX – that focuses specifically on the media sector. For 2013, iMinds predicts a similar initiative for the medical and healthcare sector, given the high demand for projects in the field.</p>
-                                <br><br>
-                                <p><b>Approved ICON projects per market segment</b></p>
-                                <img src="{{ STATIC_URL }}img/other/graph-01-hl-feb.jpg" />
-                                <br><br>
-                                <p class="twenty-six columns">When it comes to budgeted commitment, the ratio of investments among iMinds, External Partners and IWT (the Flemish agency for Innovation by Science and Technology) is very well balanced throughout the six market segments. It is clear, however, that the highest investment from the three parties is in Media – which justifies the launch of iMinds’ MiX, since such a high demand in the field was identified. Manufacturing has demanded the lowest number of research projects, and therefore investments, among the six. Below, you may find the investment of each contributor per market segment.</p>
-                                <br><br><br><br>
-                                <p class="twenty-six columns"><b>Budget commitment for ICON (2009 – 2012) by segment</b></p>
-                                <br><br>
-                                <img src="{{ STATIC_URL }}img/other/graph-02-hl-feb.jpg" />
-
-                            </div>
-                        </div>
+                        <div class="md-overlay"></div>
 
                     </div>
                     </div>
