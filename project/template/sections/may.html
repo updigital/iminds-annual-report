@@ -23,10 +23,6 @@
                     </figure>
                 </aside>
 
-                {% if may.highlight %}
-                <img class="highlight-left" src="{{ STATIC_URL }}img/highlight.png" />
-                {% else %}
-                {% endif %}
             </div>            
 
             <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
@@ -68,17 +64,27 @@
                     
                     <div class="wrap-text twelve columns">
                     <div class="text-highlight arrow-right twelve columns">
-                        <h3>{{ february.title }} >></h3>
-                        
-                        <button class="go-to-article fancybox" href="#overlay-february">go to the article >></button>
+                        <h3 class="fancybox" href="#overlay-highlight-may">ICON Facts & Figures</h3>
 
-                        <div id="overlay-february" style="width:820px;display: none;">
+                        <div id="overlay-highlight-may" style="width:820px;display: none;">
                             <aside class="milestone">
-                            <img src="{{ february.milestone.url_100x100 }}" />
+                            <img class="milestone" src="{{ STATIC_URL }}img/highlight.png" />
                             <div class="m-line"></div>
                             </aside>
 
-                            <div class="o-content">{{ february.content|safe }}</div>
+                            <div class="o-content">
+                                <header>
+                                    <h1>ICON Facts & Figures</h1>
+                                </header>
+
+                                <img src="{{ STATIC_URL }}img/other/facts-01-hl-may.png" /><br><br>
+                                <p class="twenty-six columns">2012 was another successful year for ICON. There were 14 new projects approved for a total
+￼Budget of 27.77 million euros. In addition, there were six projects approved on the newly
+￼launched MiX-ICON call - which summed alone a total budget of 6.67 million euros</p>
+
+<p class="twenty-six columns"><b>Number of projects and budget ICON 2005 - 2012</b><br><br>
+    <img src="{{ STATIC_URL }}img/other/graph-01-hl-may.png" />
+                            </div>
                         </div>
 
                     </div>

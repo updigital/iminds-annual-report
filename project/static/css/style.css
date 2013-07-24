@@ -1146,6 +1146,9 @@ section[role="home"] p {
   outline: none;
   vertical-align: top;
 }
+.fancybox {
+  cursor: pointer;
+}
 .fancybox-wrap {
   position: absolute;
   top: 0;
@@ -1972,6 +1975,10 @@ section[role="even"].new .content header h3 {
   background: #ffffff;
   color: #b8c4ce;
 }
+section[role="odd"]#january .content div.line {
+  height: 60em;
+  top: 7em!important;
+}
 section[role="odd"] .content div.line,
 section[role="even"] .content div.line {
   width: 2px;
@@ -2002,7 +2009,7 @@ section[role="odd"]#january .content div.line {
   top: 10em;
 }
 section[role="odd"] aside.content header span {
-  top: 2.3em;
+  top: 1.6em;
   left: 480px;
   position: relative;
   font-size: 32px;
@@ -2261,11 +2268,19 @@ section[role="odd"]#may .ss-right .text-highlight {
   border-right: 3px solid #ffffff !important;
   text-align: left!important;
 }
-section[role="odd"]#march .ss-right .text-highlight {
+section[role="odd"]#march .ss-left .text-highlight {
   border-right: 3px solid #ffffff !important;
-  text-align: right!important;
+  text-align: left!important;
 }
 section[role="odd"]#july .ss-left .text-highlight {
+  border-right: 3px solid #ffffff !important;
+  text-align: left!important;
+}
+section[role="odd"]#june .ss-right .text-highlight {
+  border-left: 3px solid #ffffff !important;
+  text-align: left!important;
+}
+section[role="odd"]#june .ss-left .text-highlight {
   border-right: 3px solid #ffffff !important;
   text-align: left!important;
 }
@@ -2359,6 +2374,9 @@ section[role="even"],
 section[role="list"] {
   height: 100%;
   position: relative;
+}
+section[role="even"]#april {
+  height: 180%;
 }
 section[role="even"]#october {
   height: 210%;

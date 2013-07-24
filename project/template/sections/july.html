@@ -30,17 +30,15 @@
                     
                     <div class="wrap-text twelve columns">
                     <div style class="text-highlight arrow-right twelve columns">
-                        <h3>Lorem ipsum dolor >></h3>
-                        
-                        <button class="go-to-article fancybox" href="#overlay-february">go to the article >></button>
+                        <h3 class="fancybox" href="#overlay-july">{{ july.title }}</h3>
 
-                        <div id="overlay-february" style="width:820px;display: none;">
+                        <div id="overlay-july" style="width:820px;display: none;">
                             <aside class="milestone">
-                            <img class="milestone" src="{{ february.milestone.url_100x100 }}" />
+                            <img class="milestone" src="{{ STATIC_URL }}img/highlight.png" />
                             <div class="m-line"></div>
                             </aside>
 
-                            <div class="o-content">{{ february.content|safe }}</div>
+                            <div class="o-content">{{ july.content|safe }}</div>
                         </div>
 
                     </div>
