@@ -34,7 +34,11 @@
                         <h3>{{ may.title }}</h3>
                         <p>"{{ may.description }}"</p>
                         
-                        <button class="go-to-article fancybox" href="#overlay-may">go to the article ></button>
+                        {% include "overlays/milestones/february.html" %}
+        
+                        <button class="md-trigger go" data-modal="milestone-february">go to the article</button>
+
+                        <div class="md-overlay"></div>
 
                         <div id="overlay-may" style="width:820px;display: none;">
                             <aside class="milestone">

@@ -1556,6 +1556,7 @@ section[role="even"] aside .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
   position: fixed;
   background: #eff2f5;
   float: left;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 .md-perspective,
 .md-perspective body {
@@ -1661,7 +1662,6 @@ div.o-content header {
   text-align: center;
   height: 30px;
   margin-left: 30px;
-  border-bottom: 1px solid #b8c4ce;
   font-size: 22px;
   margin-top: 170px;
   display: block;
@@ -1671,6 +1671,7 @@ div.o-content p {
   margin-top: 10px;
   line-height: 1.4em;
   font-style: normal!important;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 div.o-content img {
   border-radius: 0%!important;
