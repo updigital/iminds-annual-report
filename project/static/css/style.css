@@ -695,6 +695,7 @@ section[role="odd"].new .arrow-right:after {
   border-color: rgba(136, 183, 213, 0);
   border-left-color: #eff2f5;
 }
+section[role="even"]#april .arrow-right:after,
 section[role="even"].new .arrow-right:after {
   border-color: rgba(136, 183, 213, 0);
   border-left-color: #eff2f5;
@@ -1637,15 +1638,15 @@ section[role="even"] aside .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
   opacity: 1;
 }
 aside.milestone {
-  width: 600px;
+  width: 90%;
   height: 200px;
 }
 aside.milestone img.milestone {
-  margin-left: 40%;
   margin-top: -2px;
   border-radius: 100%;
   border: 2px solid #b8c4ce;
-  position: absolute;
+  left: 50%;
+  position: relative;
   z-index: 9;
 }
 aside.milestone div.m-line {
@@ -1805,6 +1806,7 @@ section[role="even"] .content header h3 {
   float: right;
   position: relative;
 }
+section[role="even"]#april .content header h3,
 section[role="odd"].new .content header h3,
 section[role="even"].new .content header h3 {
   background: #ffffff;
@@ -1813,6 +1815,9 @@ section[role="even"].new .content header h3 {
 section[role="odd"]#january .content div.line {
   height: 60em;
   top: 7em!important;
+}
+section[role="even"]#april .content div.line {
+  border: 1px dashed #eff2f5;
 }
 section[role="odd"] .content div.line,
 section[role="even"] .content div.line {
@@ -1938,7 +1943,6 @@ section[role="odd"] aside.content .text,
 section[role="even"] aside.content .text {
   background: none;
   height: 270px;
-  margin-top: 1.3em;
   color: #404040;
   padding: 10px 30px 30px 30px;
   -webkit-appearance: none;
@@ -1951,8 +1955,6 @@ section[role="odd"] aside.content .text-highlight,
 section[role="even"] aside.content .text-highlight {
   background: none;
   height: 110px;
-  margin-top: -10.5em;
-  margin-left: 17em;
   color: #404040;
   padding: 10px 30px 30px 30px;
   -webkit-appearance: none;
@@ -2001,33 +2003,6 @@ aside.content .text p {
   font-size: 16px;
   font-family: 'Open Sans Condensed', sans-serif;
   font-style: italic;
-}
-aside.content .wrap-text {
-  height: 320px;
-  background: none;
-  margin-top: 10em;
-}
-aside.content .wrap-text .text button.go-to-article,
-aside.content .wrap-text .text-highlight button.go-to-article {
-  font-size: 12px;
-  letter-spacing: 1px;
-  font-family: 'Open Sans Condensed', sans-serif;
-  color: #eff2f5;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-aside.reports a {
-  color: #404040;
-  border-right: 3px solid #b8c4ce;
-  padding: 3px;
-  font-size: 20px;
-  font-weight: bold;
-}
-aside.reports a svg {
-  fill: #b8c4ce;
-}
-aside.reports p {
-  font-size: 12px;
 }
 /* ==========================================================================
 Section: ''.
@@ -2093,6 +2068,10 @@ section[role="even"] aside.tooltip-article-highlight h3 {
 }
 section[role="odd"]#july .ss-right .text-highlight {
   border-left: 3px solid #ffffff !important;
+  text-align: left!important;
+}
+section[role="even"]#april .ss-left .text {
+  border-right: 3px solid #ffffff !important;
   text-align: left!important;
 }
 section[role="odd"]#may .ss-right .text-highlight {
@@ -2279,6 +2258,9 @@ section[role="even"]#october.old {
   -o-transition: all 0.8s linear;
   -ms-transition: all 0.8s linear;
   transition: all 0.8s linear;
+}
+section[role="even"]#april {
+  background: #b8c4ce;
 }
 div.wrapper-months {
   position: fixed;

@@ -35,7 +35,6 @@ section[role="odd"] aside.content .text,
 section[role="even"] aside.content .text {
 	background: none;
 	height: 270px;
-	margin-top: 1.3em;
 	color: @black;
 	padding: 10px 30px 30px 30px;
 	.transition-basic;
@@ -44,8 +43,6 @@ section[role="odd"] aside.content .text-highlight,
 section[role="even"] aside.content .text-highlight {
 	background: none;
 	height: 110px;
-	margin-top: -10.5em;
-	margin-left: 17em;
 	color: @black;
 	padding: 10px 30px 30px 30px;
 	.transition-basic;
@@ -80,101 +77,19 @@ section[role="odd"] aside.content .text {
 section[role="even"] aside.content .text {
 	.align-right;
 }
-	section[role="odd"] aside.content .text:hover {
-		margin-left: 20px;
-	}
-	section[role="even"] aside.content .text:hover {
-		margin-left: -20px;
-	}
+section[role="odd"] aside.content .text:hover {
+	margin-left: 20px;
+}
+section[role="even"] aside.content .text:hover {
+	margin-left: -20px;
+}
+
 aside.content .text p {
 	font-size: 16px;
 	.open-sans-condensed;
 	.italic;
 }
-aside.content .wrap-text {
-	height: 320px;
-	background: none;
-	margin-top: 10em;
-}
 
-aside.content .wrap-text .text button.go-to-article,
-aside.content .wrap-text .text-highlight button.go-to-article {
-	// display: none;
-	font-size: 12px;
-	letter-spacing: 1px;
-	.open-sans-condensed;
-	color: @gray-tiny;
-	.uppercase;
-	.bold;
-}
-
-
-// aside.content .wrap-text .text ul.nav {
-// 	width: 180px;
-// 	height: 34px;
-// 	.align-center;
-// 	.open-sans-condensed;
-// 	border-radius: 5px;
-// 	letter-spacing: 2px;
-// 	font-size: 18px;
-// 	.uppercase;
-// 	.relative;
-// 	margin-right: 10px;
-// 	top: 15px;
-// 	background: @gray-hard;
-// 	border: 2px solid @gray-tiny;
-// 	.block;
-// 	.left;
-// }
-// section[role="odd"] aside.content .wrap-text .text ul.nav {
-// 	left: 500px;
-// }
-// section[role="even"] aside.content .wrap-text .text ul.nav {
-// 	right: 500px;
-// }
-// aside.content .wrap-text .text ul.nav:hover {
-// 	background: @black;
-// 	border: 2px solid @white;
-// }
-// section[role="odd"] aside.content .text nav,
-// section[role="even"] aside.content .text nav {
-// 	-webkit-animation-play-state: paused;
-// 	-moz-animation-play-state: paused;
-// 	animation-play-state: paused;
-
-// 	opacity: 0;
-// }
-// section[role="odd"] aside.content .text:hover nav,
-// section[role="even"] aside.content .text:hover nav {
-// 	-webkit-transition: all 0.8s ease-in-out;
-// 	-moz-transition: all 0.8s ease-in-out;
-// 	-o-transition: all 0.8s ease-in-out;
-// 	transition: all 0.8s ease-in-out;
-// 	opacity: 1;
-// 	.relative;
-// }
-// section[role="odd"] aside.content .text:hover nav {
-// 	left: -300px;
-// }
-// section[role="even"] aside.content .text:hover nav {
-// 	right: -500px;
-// }
-aside.reports {
-	
-}
-aside.reports a {
-	color: @black;
-	border-right: 3px solid @gray-hard;
-	padding: 3px;
-	font-size: 20px;
-	font-weight: bold;
-}
-aside.reports a svg {
-	fill: @gray-hard;
-}
-aside.reports p {
-	font-size: 12px;
-}
 /* ==========================================================================
 Section: ''.
 Aside: 'draw';
@@ -248,6 +163,10 @@ section[role="even"] aside.tooltip-article-highlight {}
 }
 section[role="odd"]#july .ss-right .text-highlight {
 	border-left: 3px solid @white!important;
+	text-align: left!important;
+}
+section[role="even"]#april .ss-left .text {
+	border-right: 3px solid @white!important;
 	text-align: left!important;
 }
 section[role="odd"]#may .ss-right .text-highlight {
