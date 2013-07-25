@@ -69,30 +69,13 @@
                     
                     <div class="wrap-text twelve columns">
                     <div class="text-highlight arrow-right twelve columns">
-                        <h3 class="fancybox" href="#overlay-highlight-may">ICON Facts & Figures</h3>
+                        <h3 class="fancybox" href="#overlay-highlight-may">ICON facts & figures</h3>
 
-                        <button class="md-trigger go" data-modal="milestone-february">go to the article</button>
-                        
-                        <div id="overlay-highlight-may" style="width:820px;display: none;">
-                            <aside class="milestone">
-                            <img class="milestone" src="{{ STATIC_URL }}img/highlight.png" />
-                            <div class="m-line"></div>
-                            </aside>
+                        {% include "overlays/highlights/may.html" %}
+        
+                        <button class="md-trigger go" data-modal="highlight-may">go to the article</button>
 
-                            <div class="o-content">
-                                <header>
-                                    <h1>ICON Facts & Figures</h1>
-                                </header>
-
-                                <img src="{{ STATIC_URL }}img/other/facts-01-hl-may.png" /><br><br>
-                                <p class="twenty-six columns">2012 was another successful year for ICON. There were 14 new projects approved for a total
-￼Budget of 27.77 million euros. In addition, there were six projects approved on the newly
-￼launched MiX-ICON call - which summed alone a total budget of 6.67 million euros</p>
-
-<p class="twenty-six columns"><b>Number of projects and budget ICON 2005 - 2012</b><br><br>
-    <img src="{{ STATIC_URL }}img/other/graph-01-hl-may.png" />
-                            </div>
-                        </div>
+                        <div class="md-overlay"></div>
 
                     </div>
                     </div>
