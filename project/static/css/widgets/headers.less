@@ -32,7 +32,7 @@ section[role="even"] .content header {
 }
 	section[role="odd"] .content header h2,
 	section[role="even"] .content header h2 {
-		top: 5.75em;
+		top: 3.3em;
 		left: 370px;
 		.open-sans-condensed;
 		font-size: 20px;
@@ -52,7 +52,7 @@ section[role="even"] .content header {
 		width: 54px;
 		height: 54px;
 		padding: 13px 17px;
-		top: 4.2em;
+		top: 2.2em;
 		left: 357px;
 		z-index: 9;
 		background: @gray-hard;
@@ -62,10 +62,18 @@ section[role="even"] .content header {
 		.right;
 		.relative;
 	}
+	section[role="even"]#april .content header h3,
 	section[role="odd"].new .content header h3,
 	section[role="even"].new .content header h3 {
 		background: @white;
 		color: @gray-hard;
+	}
+	section[role="odd"]#january .content div.line {
+		height: 60em;
+		top: 7em!important;
+	}
+	section[role="even"]#april .content div.line {
+		border: 1px dashed @gray-tiny;
 	}
 	section[role="odd"] .content div.line,
 	section[role="even"] .content div.line {
@@ -99,7 +107,7 @@ section[role="odd"]#january .content div.line {
 	top: 10em;
 }
 section[role="odd"] aside.content header span {
-	top: 2.3em;
+	top: 1.6em;
 	left: 480px;
 	.relative;
 	font-size: 32px;

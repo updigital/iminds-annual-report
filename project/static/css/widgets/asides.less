@@ -23,7 +23,7 @@ section[role="home"] aside.text {
 
 }
 	section[role="home"] aside.text p {
-		line-height: 1.8em;
+		line-height: 1.6em;
 		font-size: 12px;
 	}
 	section[role="home"] aside.text h3 {
@@ -35,7 +35,14 @@ section[role="odd"] aside.content .text,
 section[role="even"] aside.content .text {
 	background: none;
 	height: 270px;
-	margin-top: 7em;
+	color: @black;
+	padding: 10px 30px 30px 30px;
+	.transition-basic;
+}
+section[role="odd"] aside.content .text-highlight,
+section[role="even"] aside.content .text-highlight {
+	background: none;
+	height: 110px;
 	color: @black;
 	padding: 10px 30px 30px 30px;
 	.transition-basic;
@@ -43,8 +50,17 @@ section[role="even"] aside.content .text {
 section[role="odd"] aside.content .text {
 	border-left: 2px solid @gray-hard;
 }
+section[role="odd"] aside.content .text-highlight {
+	border-right: 2px solid @gray-hard;
+}
+section[role="odd"]#july aside.content .text-highlight {
+	border-left: 2px solid @gray-hard;
+}
 section[role="odd"].new aside.content .text {
 	border-left: 2px solid @gray-tiny;
+}
+section[role="even"] aside.content .text-highlight {
+	border-left: 2px solid @gray-hard;
 }
 section[role="even"] aside.content .text {
 	border-right: 2px solid @gray-hard;
@@ -52,111 +68,28 @@ section[role="even"] aside.content .text {
 section[role="even"].new aside.content .text {
 	border-right: 2px solid @gray-tiny;
 }
+section[role="even"].new aside.content .text-highlight {
+	border-left: 2px solid @gray-tiny;
+}
 section[role="odd"] aside.content .text {
 	.align-left;
 }
 section[role="even"] aside.content .text {
 	.align-right;
 }
-	section[role="odd"] aside.content .text:hover {
-		margin-left: 20px;
-	}
-	section[role="odd"].new aside.content .text:hover,
-	section[role="even"].new aside.content .text:hover {
+section[role="odd"] aside.content .text:hover {
+	margin-left: 20px;
+}
+section[role="even"] aside.content .text:hover {
+	margin-left: -20px;
+}
 
-		border-radius: 5px;
-	}
-	section[role="even"] aside.content .text:hover {
-		margin-left: -20px;
-	}
 aside.content .text p {
 	font-size: 16px;
 	.open-sans-condensed;
 	.italic;
 }
-aside.content .wrap-text {
-	height: 320px;
-	background: none;
-	margin-top: 10em;
-}
 
-aside.content .wrap-text .text button.go-to-article {
-	// display: none;
-	font-size: 12px;
-	letter-spacing: 1px;
-	.open-sans-condensed;
-	color: @gray-tiny;
-	.uppercase;
-	.bold;
-}
-
-
-// aside.content .wrap-text .text ul.nav {
-// 	width: 180px;
-// 	height: 34px;
-// 	.align-center;
-// 	.open-sans-condensed;
-// 	border-radius: 5px;
-// 	letter-spacing: 2px;
-// 	font-size: 18px;
-// 	.uppercase;
-// 	.relative;
-// 	margin-right: 10px;
-// 	top: 15px;
-// 	background: @gray-hard;
-// 	border: 2px solid @gray-tiny;
-// 	.block;
-// 	.left;
-// }
-// section[role="odd"] aside.content .wrap-text .text ul.nav {
-// 	left: 500px;
-// }
-// section[role="even"] aside.content .wrap-text .text ul.nav {
-// 	right: 500px;
-// }
-// aside.content .wrap-text .text ul.nav:hover {
-// 	background: @black;
-// 	border: 2px solid @white;
-// }
-// section[role="odd"] aside.content .text nav,
-// section[role="even"] aside.content .text nav {
-// 	-webkit-animation-play-state: paused;
-// 	-moz-animation-play-state: paused;
-// 	animation-play-state: paused;
-
-// 	opacity: 0;
-// }
-// section[role="odd"] aside.content .text:hover nav,
-// section[role="even"] aside.content .text:hover nav {
-// 	-webkit-transition: all 0.8s ease-in-out;
-// 	-moz-transition: all 0.8s ease-in-out;
-// 	-o-transition: all 0.8s ease-in-out;
-// 	transition: all 0.8s ease-in-out;
-// 	opacity: 1;
-// 	.relative;
-// }
-// section[role="odd"] aside.content .text:hover nav {
-// 	left: -300px;
-// }
-// section[role="even"] aside.content .text:hover nav {
-// 	right: -500px;
-// }
-aside.reports {
-	
-}
-aside.reports a {
-	color: @black;
-	border-right: 3px solid @gray-hard;
-	padding: 3px;
-	font-size: 20px;
-	font-weight: bold;
-}
-aside.reports a svg {
-	fill: @gray-hard;
-}
-aside.reports p {
-	font-size: 12px;
-}
 /* ==========================================================================
 Section: ''.
 Aside: 'draw';
@@ -164,7 +97,7 @@ Aside: 'draw';
 aside.draw {
 	width: 400px;
 	height: 400px;
-	margin-top: 13em;
+	margin-top: 8em;
 	margin-left: 0;
 }
 
@@ -190,6 +123,26 @@ section[role="even"] aside.tooltip-article {}
 		.align-right;
 	}
 
+section[role="odd"] aside.tooltip-article-highlight,
+section[role="even"] aside.tooltip-article-highlight {}
+	section[role="odd"] aside.tooltip-article-highlight h3,
+	section[role="even"] aside.tooltip-article-highlight h3 {
+		font-size: 22px;
+		color: @black;
+		margin-bottom: 0.75em;
+		.relative;
+		.open-sans-condensed;
+		.bold;
+		letter-spacing: 2px;
+	}
+
+	section[role="odd"] aside.tooltip-article-highlight h3 {
+		.align-right;
+	}
+	section[role="even"] aside.tooltip-article-highlight h3 {
+		.align-left;
+	}
+
 .highlight-left {
 	.relative;
 	top: -6.4em;
@@ -206,4 +159,36 @@ section[role="even"] aside.tooltip-article {}
 	border: 3px solid @white;
 	.radius-full;
 	background: @white;
+}
+section[role="odd"]#july .ss-right .text-highlight {
+	border-left: 3px solid @white!important;
+	text-align: left!important;
+}
+section[role="even"]#april .ss-left .text {
+	border-right: 3px solid @white!important;
+	text-align: left!important;
+}
+section[role="odd"]#may .ss-right .text-highlight {
+	border-right: 3px solid @white!important;
+	text-align: left!important;
+}
+section[role="odd"]#march .ss-left .text-highlight {
+	border-right: 3px solid @white!important;
+	text-align: left!important;
+}
+section[role="odd"]#july .ss-left .text-highlight {
+	border-right: 3px solid @white!important;
+	text-align: left!important;
+}
+section[role="odd"]#june .ss-right .text-highlight {
+	border-left: 3px solid @white!important;
+	text-align: left!important;
+}
+section[role="odd"]#june .ss-left .text-highlight {
+	border-right: 3px solid @white!important;
+	text-align: left!important;
+}
+section[role="odd"]#august .ss-right .text-highlight {
+	border-left: 3px solid @white!important;
+	text-align: left!important;
 }

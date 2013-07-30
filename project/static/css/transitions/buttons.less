@@ -172,8 +172,8 @@ footer {
 
 .hi-icon-draw:after {
 	pointer-events: none;
-	width: 400px;
-	height: 400px;
+	width: 360px;
+	height: 360px;
 	content: '';
 	-webkit-box-sizing: content-box; 
 	-moz-box-sizing: content-box; 
@@ -190,8 +190,8 @@ footer {
 	-moz-transition: box-shadow 0.2s;
 	transition: box-shadow 0.2s;
 	.radius-full;
-	width: 400px;
-	height: 400px;
+	width: 360px;
+	height: 360px;
 }
 section[role="odd"] aside .hi-icon-effect-9 .hi-icon-draw:after,
 section[role="even"] aside .hi-icon-effect-9 .hi-icon-draw:after {
@@ -202,7 +202,7 @@ section[role="even"].new aside .hi-icon-effect-9 .hi-icon-draw:after {
 	box-shadow: 0 0 0 5px @gray-tiny;
 }
 .hi-icon-effect-9 .hi-icon-draw:after {
-	height: 400px;
+	height: 360px;
 	top: 0;
 	left: 0;
 	padding: 0;
@@ -215,7 +215,7 @@ section[role="even"].new aside .hi-icon-effect-9 .hi-icon-draw:after {
 }
 
 .no-touch .hi-icon-effect-9a .hi-icon-draw:hover:after {
-	height: 400px;
+	height: 360px;
 
 	-webkit-transform: scale(0.9);
 	-moz-transform: scale(0.9);
@@ -232,6 +232,82 @@ section[role="even"] aside .hi-icon-effect-9a .hi-icon-draw:hover {
 	box-shadow: 0 0 0 8px @green;
 }
 .no-touch .hi-icon-effect-9a .hi-icon-draw:hover {
-	height: 400px;
+	height: 360px;
+	.radius-full;
+}
+
+
+
+
+
+.hi-icon-highlight-draw {
+	z-index: 1;
+	.relative;
+	.radius-full;
+}
+
+.hi-icon-highlight-draw:after {
+	pointer-events: none;
+	width: 90px;
+	height: 90px;
+	content: '';
+	-webkit-box-sizing: content-box; 
+	-moz-box-sizing: content-box; 
+	box-sizing: content-box;
+	.radius-full;
+	.absolute;
+}
+.hi-icon-highlight-draw:before {
+	.block;
+}
+
+.hi-icon-effect-9 .hi-icon-highlight-draw {
+	-webkit-transition: box-shadow 0.2s;
+	-moz-transition: box-shadow 0.2s;
+	transition: box-shadow 0.2s;
+	.radius-full;
+	width: 90px;
+	height: 90px;
+}
+section[role="odd"] aside .hi-icon-effect-9 .hi-icon-highlight-draw:after,
+section[role="even"] aside .hi-icon-effect-9 .hi-icon-highlight-draw:after {
+	box-shadow: 0 0 0 5px @gray-hard;
+}
+section[role="odd"].new aside .hi-icon-effect-9 .hi-icon-highlight-draw:after,
+section[role="even"].new aside .hi-icon-effect-9 .hi-icon-highlight-draw:after {
+	box-shadow: 0 0 0 5px @gray-tiny;
+}
+.hi-icon-effect-9 .hi-icon-highlight-draw:after {
+	height: 90px;
+	top: 0;
+	left: 0;
+	padding: 0;
+
+	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.2s, opacity 0.2s;
+	transition: transform 0.2s, opacity 0.2s;
+
+	.radius-full;
+}
+
+.no-touch .hi-icon-effect-9a .hi-icon-highlight-draw:hover:after {
+	height: 90px;
+
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+
+	opacity: 0.7;
+	.radius-full;	
+}
+section[role="odd"] aside .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
+	box-shadow: 0 0 0 8px @pink;
+}
+section[role="even"] aside .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
+	box-shadow: 0 0 0 8px @pink;
+}
+.no-touch .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
+	height: 90px;
 	.radius-full;
 }

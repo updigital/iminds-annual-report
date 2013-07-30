@@ -8,11 +8,18 @@ section[role="list"] {
 	height: 100%;
 	.relative;
 }
+section[role="even"]#april {
+	height: 180%;
+}
+section[role="even"]#october {
+	height: 210%;
+}
+
 section[role="odd"],
 section[role="even"] {
 	padding: 0;
 	height: 99.8%;
-	z-index: 2;
+	padding-bottom: 20%;
 }
 section[role="home"],
 section[role="odd"],
@@ -22,6 +29,9 @@ section[role="even"] {
 }
 section[role="home"] {
 	border-top: 3px solid @gray-hard;
+}
+section[role="odd"]#february {
+	z-index: 0;
 }
 /* ==========================================================================
 Section: odd, even; etc etc
@@ -45,9 +55,21 @@ section[role="even"].old {
 }
 section[role="odd"].new,
 section[role="even"].new {
-	box-shadow: inset 0 0 100px @black!important;
+	box-shadow: inset 0 0 110px @black!important;
 	background: url('../img/noise.png') @gray-hard;
 	.transition-normal;
+}
+section[role="even"]#october.new {
+	background: url('../img/noise.png') @white;
+	.transition-normal;
+}
+section[role="even"]#october.old {
+	box-shadow: inset 0 0 110px @black!important;
+	background: url('../img/noise.png') @gray-hard;
+	.transition-normal;
+}
+section[role="even"]#april {
+	background: @gray-hard;
 }
 div.wrapper-months {
 	.fixed;

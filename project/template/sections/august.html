@@ -1,6 +1,6 @@
 {% if august %}
 {% for august in august %}
-<section role="even" id="august" class="section-container">
+<section role="odd" id="august" class="section-container">
 
     <aside class="ss-container content">
         <div class="ss-row row">
@@ -16,27 +16,29 @@
 
             <div class="line one columns"></div>
             
-          
+            <div class="ss-left ten columns" style="margin-top: 21em;">
+                <aside class="hightlight-draw push_twelve hi-icon-effect-9 hi-icon-effect-9a">
+                    <figure class="hi-icon-highlight-draw">
+                        <img src="{{ STATIC_URL }}img/highlight.png" />
+                    </figure>
+                </aside>
+            </div>
 
-            <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
-                <div class="ss-left sixteen columns">
+
+            <aside class="tooltip-article-highlight hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" style="margin-top: 21em; position: relative; left: 17em">
+                <div class="ss-right sixteen columns">
                     
-                    <div class="wrap-text seventeen columns">
-                    <div class="text arrow-right seventeen columns">
+                    <div class="wrap-text twelve columns">
+                    <div style class="text-highlight arrow-left twelve columns">
                         <h3>{{ august.title }}</h3>
-                        <p>"{{ august.description }}"</p>
                         
-                        <button class="go-to-article fancybox" href="#overlay-august">go to the article ></button>
+                        <button class="md-trigger go" data-modal="milestone-january">go to the article</button>
 
                         <div id="overlay-august" style="width:820px;display: none;">
                             <aside class="milestone">
-                            <img src="{{ august.milestone.url_100x100 }}" />
+                            <img class="milestone" src="{{ august.milestone.url_100x100 }}" />
                             <div class="m-line"></div>
                             </aside>
-
-                            <header>
-                            <h1>Strategy Milestone: Demand-driven innovation with maximum impact</h1>
-                            </header>
 
                             <div class="o-content">{{ august.content|safe }}</div>
                         </div>
@@ -45,24 +47,9 @@
                     </div>
                 </div>
             </aside>
-            
-            <div class="ss-right seventeen columns">
-                <aside class="draw push_five hi-icon-effect-9 hi-icon-effect-9a">
-                    <figure class="hi-icon-draw">
-                        <img src="{{ MEDIA_URL }}{{ august.milestone }}" />
-                    </figure>
-                </aside>
-
-                {% if august.highlight %}
-                <img class="highlight-right" src="{{ STATIC_URL }}img/highlight.png" />
-                {% else %}
-                {% endif %}
-            </div> 
-
+        
         </div>
     </aside>
-
-
     
 </section>
 {% endfor %}

@@ -16,54 +16,66 @@
 
             <div class="line one columns"></div>
             
-          
-
-            <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
+            <!-- MILESTONE -->
+            <aside class="tooltip-article" style="margin-top: 12em;">
                 <div class="ss-left sixteen columns">
                     
                     <div class="wrap-text seventeen columns">
                     <div class="text arrow-right seventeen columns">
                         <h3>{{ february.title }}</h3>
-                        <p>"{{ february.description }}"</p>
+                        <p>{{ february.description }}</p>
                         
-                        <button class="go-to-article fancybox" href="#overlay-february">go to the article ></button>
+                        {% include "overlays/milestones/february.html" %}
+        
+                        <button class="md-trigger go" data-modal="milestone-february">go to the article</button>
 
-                        <div id="overlay-february" style="width:820px;display: none;">
-                            <aside class="milestone">
-                            <img src="{{ february.milestone.url_100x100 }}" />
-                            <div class="m-line"></div>
-                            </aside>
-
-                            <header>
-                            <h1>Strategy Milestone: Demand-driven innovation with maximum impact</h1>
-                            </header>
-
-                            <div class="o-content">{{ february.content|safe }}</div>
-                        </div>
+                        <div class="md-overlay"></div>
 
                     </div>
                     </div>
                 </div>
             </aside>
             
-            <div class="ss-right seventeen columns">
+            <div class="ss-right seventeen columns" style="margin-top: -11em;">
                 <aside class="draw push_five hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-draw">
-                        <img src="{{ MEDIA_URL }}{{ february.milestone }}" />
+                        <img width="360" height="360" src="{{ MEDIA_URL }}{{ february.milestone }}" />
                     </figure>
                 </aside>
 
-                {% if february.highlight %}
-                <img class="highlight-right" src="{{ STATIC_URL }}img/highlight.png" />
-                {% else %}
-                {% endif %}
-            </div> 
+            </div>
 
+            <!-- HIGHLIGHT -->
+            <div class="ss-left ten columns push_two">
+                <aside class="hightlight-draw push_twelve hi-icon-effect-9 hi-icon-effect-9a">
+                    <figure class="hi-icon-highlight-draw">
+                        <img src="{{ STATIC_URL }}img/highlight.png" />
+                    </figure>
+                </aside>
+            </div>
+
+            <aside class="tooltip-article-highlight" style="position: relative; left: 14.5em; top: -1em">
+                <div class="ss-right seventeen columns">
+                    
+                    <div class="wrap-text seventeen columns">
+                    <div class="text-highlight arrow-left seventeen columns">
+                        
+                        {% include "overlays/highlights/february.html" %}
+        
+                        <h3>iMinds Projects by Market Segments</h3>
+
+                        <button class="md-trigger go" data-modal="highlight-february">go to the article</button>
+
+                        <div class="md-overlay"></div>
+
+                    </div>
+                    </div>
+                </div>
+            </aside>
+            
         </div>
     </aside>
 
-
-    
 </section>
 {% endfor %}
 {% else %}

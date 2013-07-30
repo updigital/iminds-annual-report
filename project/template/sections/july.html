@@ -15,39 +15,30 @@
             </header>
 
             <div class="line one columns"></div>
-            
-            <div class="ss-left eighteen columns">
-                <aside class="draw hi-icon-effect-9 hi-icon-effect-9a">
-                    <figure class="hi-icon-draw">
-                        <img src="{{ MEDIA_URL }}{{ july.milestone }}" />
+
+            <div class="ss-right ten columns" style="margin-top: 21em; margin-left: 33em;">
+                <aside class="hightlight-draw hi-icon-effect-9 hi-icon-effect-9a">
+                    <figure class="hi-icon-highlight-draw">
+                        <img src="{{ STATIC_URL }}img/highlight.png" />
                     </figure>
                 </aside>
+            </div>
 
-                {% if july.highlight %}
-                <img class="highlight-left" src="{{ STATIC_URL }}img/highlight.png" />
-                {% else %}
-                {% endif %}
-            </div>            
 
-            <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
-                <div class="ss-right push_two sixteen columns">
+            <aside class="tooltip-article-highlight hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" style="position: relative; top: -5.7em; left: 8em;">
+                <div class="ss-left sixteen columns">
                     
-                    <div class="wrap-text seventeen columns">
-                    <div class="text arrow-left seventeen columns">
-                        <h3>{{ july.title }}</h3>
-                        <p>"{{ july.description }}"</p>
+                    <div class="wrap-text twelve columns">
+                    <div style class="text-highlight arrow-right twelve columns">
+                        <h3 class="fancybox" href="#overlay-july">{{ july.title }}</h3>
                         
-                        <button class="go-to-article fancybox" href="#overlay-july">go to the article ></button>
+                        <button class="md-trigger go" data-modal="milestone-january">go to the article</button>
 
                         <div id="overlay-july" style="width:820px;display: none;">
                             <aside class="milestone">
-                            <img src="{{ july.milestone.url_100x100 }}" />
+                            <img class="milestone" src="{{ STATIC_URL }}img/highlight.png" />
                             <div class="m-line"></div>
                             </aside>
-
-                            <header>
-                            <h1>Strategy Milestone: Demand-driven innovation with maximum impact</h1>
-                            </header>
 
                             <div class="o-content">{{ july.content|safe }}</div>
                         </div>
@@ -59,6 +50,8 @@
         
         </div>
     </aside>
+
+
     
 </section>
 {% endfor %}

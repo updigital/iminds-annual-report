@@ -16,6 +16,7 @@
 
             <div class="line one columns"></div>
             
+            <!-- MILESTONE -->
             <div class="ss-left eighteen columns">
                 <aside class="draw hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-draw">
@@ -23,37 +24,50 @@
                     </figure>
                 </aside>
 
-                {% if march.highlight %}
-                <img class="highlight-left" src="{{ STATIC_URL }}img/highlight.png" />
-                {% else %}
-                {% endif %}
             </div>            
 
-            <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
+            <aside class="tooltip-article" style="margin-top: 11em;">
                 <div class="ss-right push_two sixteen columns">
                     
                     <div class="wrap-text seventeen columns">
                     <div class="text arrow-left seventeen columns">
                         <h3>{{ march.title }}</h3>
-                        <p>"{{ march.description }}"</p>
+                        <p>{{ march.description }}</p>
                         
-                        <button class="go-to-article fancybox" href="#overlay-march">go to the article ></button>
+                        {% include "overlays/milestones/march.html" %}
+        
+                        <button class="md-trigger go" data-modal="milestone-march">go to the article</button>
 
-                        <div id="overlay-march" style="width:820px;display: none;">
-                            <aside class="milestone">
-                            <img src="{{ march.milestone.url_100x100 }}" />
-                            <div class="m-line"></div>
-                            </aside>
-
-                            <header>
-                            <h1>Strategy Milestone: Demand-driven innovation with maximum impact</h1>
-                            </header>
-
-                            <div class="o-content">{{ march.content|safe }}</div>
-                        </div>
+                        <div class="md-overlay"></div>
 
                     </div>
                     </div>
+                </div>
+            </aside>
+
+            <!-- HIGHLIGHT -->
+            <div class="ss-right three columns" style="position: relative; top: 6em;">
+                <aside class="hightlight-draw push_one hi-icon-effect-9 hi-icon-effect-9a">
+                    <figure class="hi-icon-highlight-draw">
+                        <img src="{{ STATIC_URL }}img/highlight.png" />
+                    </figure>
+                </aside>
+            </div>
+
+            <aside class="tooltip-article-highlight seventeen columns" style="position: relative;">
+                <div class="ss-left">
+                
+                    <div class="text-highlight arrow-right seventeen columns">
+                        <h3>Digital challenges and opportunities in Media</h3>
+
+                        {% include "overlays/highlights/march.html" %}
+
+                        <button style="position: relative; -top: 5em; left: 18.8em;" class="md-trigger go" data-modal="highlight-march">go to the article</button>
+
+                        <div class="md-overlay"></div>
+
+                    </div>
+
                 </div>
             </aside>
         
