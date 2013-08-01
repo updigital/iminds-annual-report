@@ -89,7 +89,7 @@
             </figure>
 
             {% include "base/slider.html" %}
-
+        
             <aside class="text twenty-four columns omega">
                 <p>{{ report.description|safe|truncatechars:"1550" }}</p>
 
@@ -111,10 +111,6 @@
 </section>
     
         {% include "sections/january.html" %}
-        {% include "sections/february.html" %}
-        {% include "sections/march.html" %}
-        
-  
 
     {% endfor %}
 {% endblock %}

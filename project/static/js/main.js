@@ -247,7 +247,3 @@ $(document).ready(function ($) {
         });
       });
 
-
-
-
-
