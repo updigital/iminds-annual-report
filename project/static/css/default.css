@@ -1,43 +1,113 @@
-/* ==========================================================================
-Font Family: 'Open Sans Condensed', 'Helvetica Neue';
-========================================================================== */
- @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
-.open-sans-condensed {
-    font-family: 'Open Sans Condensed', sans-serif;
+
+button.select-month {
+    width: 100px;
+    height: 38px;
+    border-radius: 6px;
+    background: @gray-hard!important;
+    float: right;
 }
-.helvetica-neue {
+button.go {
+    height: 36px;
+    color: @white;
+    font-size: 12px;
+    letter-spacing: 1px;
+    .uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+        section[role="even"] button.scroll-top {
+        height: 100px;
+        .relative;
+        z-index: 9;
+        top: -60px;
+        left: 338px;
+        border: none;
+        color: @white;
+    }
+    section[role="even"] button.scroll-top svg {
+        border: none;
+        border-radius: 0;
+    }
+        section[role="even"] button.scroll-top .text {
+            .relative;
+            .open-sans-condensed;
+            color: @white;
+            top: -4.3em;
+            left: -10px;
+            line-height: 1em;
+            height: 2.8em;
+        }
+
+
+
+section[role="home"] footer {
+    width: 100%;
+    height: 30px;
+    padding-top: 3px;
+    position: relative;
+    top: 66.8em;
+    background: #fff;
+    border-top: 1px solid #b8c4ce;
+    color: #b8c4ce;
+    font-size: 10px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: bold;
+
+    box-shadow: 0 5px 60px #b8c4ce;
 }
+    section[role="home"] footer a {
+        color: #a2adb6;
+        border-bottom: 1px solid #b8c4ce;
+    }
 
-/* ==========================================================================
-Sizes: 'normal', 'medium', 'large' etc;
-========================================================================== */
-.font-size-tiny { font-size: 0.7em }
-.font-size-small { font-size: 0.8em }
-.font-size-normal { font-size: 15px }
-.font-size-medium { font-size: 1.5em }
-.font-size-larg { font-size: 2.2em }
-.font-size-largest { font-size: 2.5em }
 
-/* ==========================================================================
-Properties: 'Bold', 'Uppercase' etc;
-========================================================================== */
-.bold { font-weight: bold }
-.uppercase { text-transform: uppercase }
-.italic { font-style: italic }
 
-/* ==========================================================================
-Aligns: 'left', 'right', 'align-left' etc;
-========================================================================== */
-.align-left { text-align: left }
-.align-right { text-align: right }
-.align-center { text-align: center }
+/* LANGUAGE
+=================================== */
+nav.language {
+    width: 52px;
+    height: 20px;
+    font-size: 12px;
+    right: 0;
+    position: absolute;
+}
+nav.language ul li {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    text-align: center;
+    display: block;
+    border-radius: 0 0 4px 4px;
+    float: left;
+    background: #fff;
+}
+nav.language ul li:hover,
+nav.language ul li.active {
+    background: #b8c4ce;
+}
+nav.language ul li:hover a,
+nav.language ul li.active a {
+    color: #fff;
+}
+nav.language ul li a {
+    color: #b8c4ce;
+    font-weight: bold;
+}
 
 /* ==========================================================================
 General: 'etc';
 ========================================================================== */
 body {
-    .open-sans-condensed;
+    font-family: 'Open Sans Condensed', sans-serif;
     background: #ffffff; /* Old browsers */
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
 background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI3MyUiIHN0b3AtY29sb3I9IiNmY2ZjZmMiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjY2JkOGUzIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -79,13 +149,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     }
 }
 
-section[role="home"] h3 {
-font-size: 2.3em;
-.uppercase; 
-}
-section[role="home"] p {
-.font-size-normal;
-}
+
 
 a {
 .decoration-none;
@@ -102,12 +166,5 @@ h3 {
 /* ==========================================================================
 Sections: 'start';
 ========================================================================== */
-section[role="home"] {
-    color: @black;
-}
 
-section[role="home"]
-    p {
-    font-size: 12px;
-    line-height: 24px;
-}
+

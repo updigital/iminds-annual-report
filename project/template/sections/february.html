@@ -1,14 +1,12 @@
-{% if february %}
-{% for february in february %}
 <section role="even" id="february" class="section-container">
-
     <aside class="ss-container content">
         <div class="ss-row row">
-                
+            
+            <!-- Header -->
             <header class="seven columns">
                 <div class="ss-left">
                     <h2 class="four columns alpha">
-                        {% if nl %}februari{% else %}{{ february.get_month_display }}{% endif %}
+                        February
                     </h2>
                 </div>
                 <h3>02</h3>
@@ -16,14 +14,14 @@
 
             <div class="line one columns"></div>
             
-            <!-- MILESTONE -->
-            <aside class="tooltip-article" style="margin-top: 12em;">
+            <!-- Milestone 01 -->
+            <aside class="tooltip-article" style="margin-top: 14em;">
                 <div class="ss-left sixteen columns">
                     
                     <div class="wrap-text seventeen columns">
                     <div class="text arrow-right seventeen columns">
-                        <h3>{{ february.title }}</h3>
-                        <p>{{ february.description }}</p>
+                        <h3>DEMAND-DRIVEN INNOVATION WITH MAXIMUM IMPACT</h3>
+                        <p>iMinds wants its research projects to provide an answer to major societal challenges and fulfill the needs of Flemish companies and organizations. At the same time, we also want to capitalize on the knowledge already present in our region and use the existing, well-developed networks to fully realize the potential of our research projects. Therefore, iMinds oriented its research programs in 2012 to six key market segments.</p>
                         
                         {% include "overlays/milestones/february.html" %}
         
@@ -39,14 +37,13 @@
             <div class="ss-right seventeen columns" style="margin-top: -11em;">
                 <aside class="draw push_five hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-draw">
-                        <img width="360" height="360" src="{{ MEDIA_URL }}{{ february.milestone }}" />
+                        <img width="360" height="360" src="{{ STATIC_URL }}img/milestones/06-new_strategies.png" />
                     </figure>
                 </aside>
-
             </div>
 
-            <!-- HIGHLIGHT -->
-            <div class="ss-left ten columns push_two">
+            <!-- Highlight 01 -->
+            <div class="ss-left ten columns">
                 <aside class="hightlight-draw push_twelve hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-highlight-draw">
                         <img src="{{ STATIC_URL }}img/highlight.png" />
@@ -54,8 +51,8 @@
                 </aside>
             </div>
 
-            <aside class="tooltip-article-highlight" style="position: relative; left: 14.5em; top: -1em">
-                <div class="ss-right seventeen columns">
+            <aside class="tooltip-article-highlight">
+                <div class="ss-right seventeen columns omega">
                     
                     <div class="wrap-text seventeen columns">
                     <div class="text-highlight arrow-left seventeen columns">
@@ -75,8 +72,4 @@
             
         </div>
     </aside>
-
 </section>
-{% endfor %}
-{% else %}
-{% endif %}

@@ -1,0 +1,142 @@
+section[role="odd"] .content header,
+section[role="even"] .content header {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+    section[role="odd"] .content header h2,
+    section[role="even"] .content header h2 {
+        top: 2.95em;
+        left: 370px;
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: right;
+        position: relative;
+        font-weight: bold;
+        color: #b8c4ce;
+    }
+    section[role="odd"].new .content header h2,
+    section[role="even"].new .content header h2 {
+        color: #eff2f5;
+    }
+    section[role="odd"] .content header h3,
+    section[role="even"] .content header h3 {
+        font-size: 20px;
+        width: 54px;
+        height: 54px;
+        padding: 15px 19.2px;
+        top: 2.2em;
+        left: 358px;
+        background: #b8c4ce;
+        font-weight: bold;
+        border-radius: 50%;
+        float: right;
+        position: relative;
+        z-index: 2;
+    }
+    section[role="even"]#april .content header h3,
+    section[role="odd"].new .content header h3,
+    section[role="even"].new .content header h3 {
+        background: #fff;
+        color: #b8c4ce;
+    }
+    section[role="odd"]#january .content div.line {
+        height: 60em;
+        top: 7em!important;
+    }
+    section[role="even"]#april .content div.line {
+        height: 70em;
+        border: 1px dashed #eff2f5;
+    }
+    section[role="odd"] .content div.line,
+    section[role="even"] .content div.line {
+        width: 2px;
+        height: 60em;
+        top: -5em;
+        left: 490px;
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+    }
+    section[role="odd"] .content div.line,
+    section[role="even"] .content div.line {
+        border: 1px dashed #b8c4ce;
+    }
+    section[role="odd"].new .content div.line,
+    section[role="even"].new .content div.line {
+        border: 1px dashed #eff2f5;
+    }
+
+    section[role="even"]#december .content div.line {
+        height: 40em;
+        top: -50px;
+    }
+
+/*  EXCEPETIONS:
+
+    Elements: 'section > odd > #january', '~#january > header > span';
+========================================================================== */
+section[role="odd"]#january .content div.line {
+    top: 10em;
+}
+section[role="odd"] aside.content header span {
+    top: 1em;
+    left: 480px;
+    position: relative;
+    font-size: 32px;
+    font-weight: bold;
+    color: #b8c4ce;
+}
+section[role="odd"].new aside.content header span {
+    color: #fff;
+}
+
+.cbp-af-header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 0 7px #404040;
+    z-index: 3;
+    height: 0;
+    opacity: 0;
+}
+    .cbp-af-header .cbp-af-inner {
+        width: 90%;
+        max-width: 69em;
+        margin: 0 auto;
+    }
+        .cbp-af-header.cbp-af-header-shrink {
+            height: 43px;
+            opacity: 0.7;
+        }
+            .cbp-af-header.cbp-af-header-shrink:hover {
+                opacity: 1;
+            }
+
+
+nav.months {
+    font-size: 17,5pt;
+    z-index: 9;
+    position: relative;
+    font-weight: bold;
+}
+    nav.months ul {
+        list-style: none;
+        margin-top: 10px;
+    }
+        nav.months ul li { float: left; }
+            nav.months ul li a {
+                width: 38px;
+                height: 0;
+                padding: 0 0 20px 0;
+                margin: 0 14px 0 0;
+                top: 2px;
+                font-size: 12px;
+                line-height: 20px;
+                position: relative;
+            }
+                nav.months ul li a:hover {
+                    font-size: 18px;
+                }

@@ -1,0 +1,243 @@
+aside.draw {
+    width: 400px;
+    height: 400px;
+    margin-left: 0;
+}
+    .hi-icon-draw {
+        z-index: 1;
+        position: relative;
+        border-radius: 50%;
+    }
+        .hi-icon-draw:after {
+            pointer-events: none;
+            width: 360px;
+            height: 360px;
+            content: '';
+            -webkit-box-sizing: content-box; 
+            -moz-box-sizing: content-box; 
+            box-sizing: content-box;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .hi-icon-draw:before {
+            display: block;
+        }
+        .hi-icon-effect-9 .hi-icon-draw {
+            -webkit-transition: box-shadow 0.2s;
+            -moz-transition: box-shadow 0.2s;
+            transition: box-shadow 0.2s;
+            border-radius: 50%;
+            width: 360px;
+            height: 360px;
+        }
+section[role="odd"] aside .hi-icon-effect-9 .hi-icon-draw:after,
+section[role="even"] aside .hi-icon-effect-9 .hi-icon-draw:after {
+    box-shadow: 0 0 0 5px #b8c4ce;
+}
+section[role="odd"].new aside .hi-icon-effect-9 .hi-icon-draw:after,
+section[role="even"].new aside .hi-icon-effect-9 .hi-icon-draw:after {
+    box-shadow: 0 0 0 5px #eff2f5;
+}
+.hi-icon-effect-9 .hi-icon-draw:after {
+    height: 360px;
+    top: 0;
+    left: 0;
+    padding: 0;
+
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+
+    border-radius: 50%;
+}
+
+.no-touch .hi-icon-effect-9a .hi-icon-draw:hover:after {
+    height: 360px;
+
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+
+    opacity: 0.7;
+    border-radius: 50%;   
+}
+section[role="odd"] aside .hi-icon-effect-9a .hi-icon-draw:hover {
+    box-shadow: 0 0 0 8px #65be5d;
+}
+section[role="even"] aside .hi-icon-effect-9a .hi-icon-draw:hover {
+    box-shadow: 0 0 0 8px #65be5d;
+}
+.no-touch .hi-icon-effect-9a .hi-icon-draw:hover {
+    height: 360px;
+    border-radius: 50%;
+}
+
+
+.hi-icon-highlight-draw {
+    z-index: 1;
+    position: relative;
+    border-radius: 50%;
+}
+
+.hi-icon-highlight-draw:after {
+    pointer-events: none;
+    width: 90px;
+    height: 90px;
+    content: '';
+    -webkit-box-sizing: content-box; 
+    -moz-box-sizing: content-box; 
+    box-sizing: content-box;
+    border-radius: 50%;
+    position: absolute;
+}
+.hi-icon-highlight-draw:before {
+    display: block;
+}
+
+.hi-icon-effect-9 .hi-icon-highlight-draw {
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+}
+section[role="odd"] aside .hi-icon-effect-9 .hi-icon-highlight-draw:after,
+section[role="even"] aside .hi-icon-effect-9 .hi-icon-highlight-draw:after {
+    box-shadow: 0 0 0 5px #b8c4ce;
+}
+section[role="odd"].new aside .hi-icon-effect-9 .hi-icon-highlight-draw:after,
+section[role="even"].new aside .hi-icon-effect-9 .hi-icon-highlight-draw:after {
+    box-shadow: 0 0 0 5px #eff2f5;
+}
+.hi-icon-effect-9 .hi-icon-highlight-draw:after {
+    height: 90px;
+    top: 0;
+    left: 0;
+    padding: 0;
+
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+
+    border-radius: 50%;
+}
+
+.no-touch .hi-icon-effect-9a .hi-icon-highlight-draw:hover:after {
+    height: 90px;
+
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+
+    opacity: 0.7;
+    border-radius: 50%;   
+}
+section[role="odd"] aside .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
+    box-shadow: 0 0 0 8px #ec008c;
+}
+section[role="even"] aside .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
+    box-shadow: 0 0 0 8px #ec008c;
+}
+.no-touch .hi-icon-effect-9a .hi-icon-highlight-draw:hover {
+    height: 90px;
+    border-radius: 50%;
+}
+
+
+/* ==========================================================================
+Properties: 'left', 'right' etc;
+========================================================================== */
+.arrow-left,
+.arrow-right {
+    background: #fff;
+    position: relative;
+}
+.arrow-left:after, .arrow-left:before,
+.arrow-right:after, .arrow-right:before {
+    height: 0;
+    width: 0;
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    pointer-events: none;
+    position: absolute;
+}
+.arrow-left:after, .arrow-left:before {
+    right: 100%;
+}
+.arrow-right:after, .arrow-right:before {
+    left: 100%;
+}
+
+/* Size */
+.arrow-left:after,
+.arrow-right:after {
+    border-width: 13px;
+    margin-top: -13px;
+}
+.arrow-left:before,
+.arrow-right:before {
+    border-width: 19px;
+    margin-top: -19px;
+}
+
+/* Position */
+.arrow-left:after, .arrow-left:before,
+.arrow-right:after, .arrow-right:before {
+    top: 50%;
+}
+/* ==========================================================================
+Arrows: 'left', 'right' etc;
+========================================================================== */
+
+/* Left */
+section[role="odd"] .arrow-left:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-right-color: #b8c4ce;
+}
+section[role="even"] .arrow-left:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-right-color: #eff2f5;
+}
+section[role="odd"].new .arrow-left:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-right-color: #eff2f5;
+}
+section[role="even"].new .arrow-left:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-right-color: #eff2f5;
+}
+/* Right */
+section[role="odd"] .arrow-right:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: #b8c4ce;
+}
+section[role="even"] .arrow-right:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: #b8c4ce;
+}
+section[role="odd"].new .arrow-right:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: #eff2f5;
+}
+section[role="even"]#april .arrow-right:after,
+section[role="even"].new .arrow-right:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: #eff2f5;
+}
+.arrow-left:before {
+    border-color: rgba(194, 225, 245, 0);
+}
+
+/* Right */
+.arrow-right:after {
+    border-color: rgba(136, 183, 213, 0);
+}
+.arrow-right:before {
+    border-color: rgba(194, 225, 245, 0);
+}
+
+

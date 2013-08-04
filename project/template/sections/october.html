@@ -1,14 +1,12 @@
-{% if october %}
-{% for october in october %}
 <section role="even" id="october" class="section-container">
-
     <aside class="ss-container content">
         <div class="ss-row row">
-                
+            
+            <!-- Header -->   
             <header class="seven columns">
                 <div class="ss-left">
                     <h2 class="four columns alpha">
-                        {% if nl %}oktober{% else %}{{ october.get_month_display }}{% endif %}
+                        October
                     </h2>
                 </div>
                 <h3>10</h3>
@@ -16,8 +14,7 @@
 
             <div class="line one columns"></div>
             
-          
-
+            <!-- Milestone 01 -->
             <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
                 <div class="ss-left sixteen columns">
                     
@@ -48,23 +45,14 @@
                         <img src="{{ MEDIA_URL }}{{ october.milestone }}" />
                     </figure>
                 </aside>
-            </div> 
-
-        </div>
-
-
-
-        <div class="ss-left ten columns" style="position: relative; top: 14em; left: 6em">
-                <aside class="hightlight-draw push_twelve hi-icon-effect-9 hi-icon-effect-9a">
-                    <figure class="hi-icon-highlight-draw">
-                        <img src="{{ STATIC_URL }}img/highlight.png" />
-                    </figure>
-                </aside>
+            </div>
+            
+            <!-- Highlight 01 -->
+            <div class="ss-left ten columns">
             </div>
 
-
             <aside class="tooltip-article-highlight hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
-                <div class="ss-right sixteen columns" style="position: relative; top: 8.3em; left: 3em">
+                <div class="ss-right sixteen columns">
                     
                     <div class="wrap-text twelve columns">
                     <div class="text-highlight arrow-left twelve columns">
@@ -84,13 +72,9 @@
                     </div>
                     </div>
                 </div>
+            </aside>
 
-
-
-
-
-
-            <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" style="position: relative; left: 55em; top: -19em">
+            <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
                 <div class="ss-right sixteen columns">
                     
                     <div class="wrap-text seventeen columns">
@@ -114,7 +98,7 @@
                 </div>
             </aside>
             
-            <div class="ss-left seventeen columns" style="position: relative; left: 13em; top: -49em">
+            <div class="ss-left seventeen columns">
                 <aside class="draw push_five hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-draw">
                         <img src="{{ MEDIA_URL }}{{ october.milestone }}" />
@@ -122,11 +106,7 @@
                 </aside>
             </div> 
 
-        </div>
-
-
-
-        <div class="ss-left ten columns" style="position: relative; top: -45em; left: 26em">
+            <div class="ss-left ten columns">
                 <aside class="hightlight-draw push_twelve hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-highlight-draw">
                         <img src="{{ STATIC_URL }}img/highlight.png" />
@@ -134,9 +114,8 @@
                 </aside>
             </div>
 
-
             <aside class="tooltip-article-highlight hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
-                <div class="ss-right sixteen columns" style="position: relative; top: -50em; left: 25em">
+                <div class="ss-right sixteen columns"
                     
                     <div class="wrap-text twelve columns">
                     <div class="text-highlight arrow-left twelve columns">
@@ -156,9 +135,8 @@
                     </div>
                     </div>
                 </div>
-
-    
+            </aside>
+        
+        </div>
+    </aside>
 </section>
-{% endfor %}
-{% else %}
-{% endif %}

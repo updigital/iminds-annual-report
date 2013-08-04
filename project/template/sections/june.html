@@ -1,14 +1,12 @@
-{% if june %}
-{% for june in june %}
 <section role="odd" id="june" class="section-container">
-
     <aside class="ss-container content">
         <div class="ss-row row">
-                
+            
+            <!-- Header -->
             <header class="seven columns">
                 <div class="ss-left">
                     <h2 class="four columns alpha">
-                        {% if nl %}june{% else %}{{ june.get_month_display }}{% endif %}
+                        June
                     </h2>
                 </div>
                 <h3>06</h3>
@@ -16,7 +14,8 @@
 
             <div class="line one columns"></div>
             
-            <div class="ss-left ten columns" style="position: relative; top: 10em">
+            <!-- Highlight 01 -->
+            <div class="ss-left ten columns">
                 <aside class="hightlight-draw push_twelve hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-highlight-draw">
                         <img src="{{ STATIC_URL }}img/highlight.png" />
@@ -24,13 +23,10 @@
                 </aside>
             </div>
 
-
-            <aside class="tooltip-article-highlight" style="position: relative; top: 8em; left: 4em">
+            <aside class="tooltip-article-highlight">
                 <div class="ss-right seventeen push_eight columns">
-                    
-                        <div style class="text-highlight arrow-left seventeen columns">
 
-
+                    <div style class="text-highlight arrow-left seventeen columns">
 
                         <h3 class="fancybox" href="#overlay-highlight-june-01">iStart.light program for student entrepreneurs: call 2012</h3>
 
@@ -40,7 +36,7 @@
 
                         <button class="md-trigger go" data-modal="highlight-february">go to the article</button>
 
-                        <div class="md-overlay"></div>
+                        <!--<div class="md-overlay"></div>
                         
                             <aside class="milestone">
                             <img class="milestone" src="{{ STATIC_URL }}img/highlight.png" />
@@ -64,13 +60,14 @@ Applicants had a proof of concept of the presented project.
 
                             <img src="{{ STATIC_URL }}img/other/50k.png" />
                             </div>
-                        </div>
+                        </div>-->
 
                     </div>
                 </div>
             </aside>
-
-            <div class="ss-right four push_twenty columns" style="margin-top: 15em;">
+            
+            <!-- Highlight 02 -->
+            <div class="ss-right four push_twenty columns">
                 <aside class="hightlight-draw hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-highlight-draw">
                         <img src="{{ STATIC_URL }}img/highlight.png" />
@@ -78,51 +75,44 @@ Applicants had a proof of concept of the presented project.
                 </aside>
             </div>
 
-
-            <aside class="tooltip-article-highlight" style="position: relative; top: -3em;">
+            <aside class="tooltip-article-highlight">
                 <div class="ss-left sixteen columns">
                     
                     <div class="wrap-text twelve columns">
-                    <div style class="text-highlight arrow-right twelve columns">
-                        <h3 class="fancybox" href="#overlay-highlight-june-02">iStart TagTagCity Rewarded!</h3>
+                        <div style class="text-highlight arrow-right twelve columns">
+                            <h3 class="fancybox" href="#overlay-highlight-june-02">iStart TagTagCity Rewarded!</h3>
 
-                        <button class="md-trigger go" data-modal="milestone-january">go to the article</button>
+                            <button class="md-trigger go" data-modal="milestone-january">go to the article</button>
 
-                        <div id="overlay-highlight-june-02" style="width:820px;display: none;">
-                            <aside class="milestone">
-                            <img class="milestone" src="{{ STATIC_URL }}img/highlight.png" />
-                            <div class="m-line"></div>
-                            </aside>
+                            <!--<div id="overlay-highlight-june-02" style="width:820px;display: none;">
+                                <aside class="milestone">
+                                <img class="milestone" src="{{ STATIC_URL }}img/highlight.png" />
+                                <div class="m-line"></div>
+                                </aside>
 
-                            <div class="o-content">
-                                <header>
-                                    <h1>iStart TagTagCity Rewarded!</h1>
-                                </header>
+                                <div class="o-content">
+                                    <header>
+                                        <h1>iStart TagTagCity Rewarded!</h1>
+                                    </header>
 
 
-                                <p>On June 26, TagTagCity was elected European start-up of the year at the European ICT Award 2012. The award is granted every year during the ICT Spring in Luxemburg. TagTagCity was selected on the 2012 call for the iStart project. It originates from the question of how one can smoothly bring multimedia content about a certain location to the Smartphone user.</p>
+                                    <p>On June 26, TagTagCity was elected European start-up of the year at the European ICT Award 2012. The award is granted every year during the ICT Spring in Luxemburg. TagTagCity was selected on the 2012 call for the iStart project. It originates from the question of how one can smoothly bring multimedia content about a certain location to the Smartphone user.</p>
 
-                                <iframe width="560" height="315" src="//www.youtube.com/embed/LL39BvWjLCw" frameborder="0" allowfullscreen=""></iframe>
+                                    <iframe width="560" height="315" src="//www.youtube.com/embed/LL39BvWjLCw" frameborder="0" allowfullscreen=""></iframe>
 
-                                <p>
-                                    <img src="{{ STATIC_URL }}img/other/researcher1.png">
-                                    We created a platform through which any shop owner or cultural organization can create a standardized mobile website in a way that is cost efficient. The sites are made accessible by means of a sticker with a QR code, with a shortened URL, and a built in NFC chip.”</p>
+                                    <p>
+                                        <img src="{{ STATIC_URL }}img/other/researcher1.png">
+                                        We created a platform through which any shop owner or cultural organization can create a standardized mobile website in a way that is cost efficient. The sites are made accessible by means of a sticker with a QR code, with a shortened URL, and a built in NFC chip.”</p>
 
-                                (Stijn Vander Plaetse, TagTagCity co-founder and initiator)
-                            </div>
+                                    (Stijn Vander Plaetse, TagTagCity co-founder and initiator)
+                                </div>
+                            </div>-->
                         </div>
+                    </div>
 
-                    </div>
-                    </div>
                 </div>
             </aside>
         
         </div>
-    </aside>
-
-
-    
+    </aside>    
 </section>
-{% endfor %}
-{% else %}
-{% endif %}

@@ -1,14 +1,12 @@
-{% if september %}
-{% for september in september %}
 <section role="odd" id="september" class="section-container">
-
     <aside class="ss-container content">
         <div class="ss-row row">
-                
+            
+            <!-- Header -->
             <header class="seven columns">
                 <div class="ss-left">
                     <h2 class="four columns alpha">
-                        {% if nl %}september{% else %}{{ september.get_month_display }}{% endif %}
+                        September
                     </h2>
                 </div>
                 <h3>09</h3>
@@ -16,17 +14,13 @@
 
             <div class="line one columns"></div>
             
+            <!-- Milestones 01 -->
             <div class="ss-left eighteen columns">
                 <aside class="draw hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-draw">
                         <img src="{{ MEDIA_URL }}{{ september.milestone }}" />
                     </figure>
                 </aside>
-
-                {% if september.highlight %}
-                <img class="highlight-left" src="{{ STATIC_URL }}img/highlight.png" />
-                {% else %}
-                {% endif %}
             </div>            
 
             <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
@@ -52,15 +46,15 @@
                     </div>
                 </div>
             </aside>
-
-            <div class="ss-right ten columns" style="position: relative; left: -15.4em; top: 3em">
+            
+            <!-- Highlight 01 -->
+            <div class="ss-right ten columns">
                 <aside class="hightlight-draw push_twelve hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-highlight-draw">
                         <img src="{{ STATIC_URL }}img/highlight.png" />
                     </figure>
                 </aside>
             </div>
-
 
             <aside class="tooltip-article-highlight hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
                 <div class="ss-right sixteen columns">
@@ -87,8 +81,4 @@
         
         </div>
     </aside>
-    
 </section>
-{% endfor %}
-{% else %}
-{% endif %}

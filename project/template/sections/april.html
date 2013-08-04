@@ -1,14 +1,12 @@
-{% if april %}
-{% for april in april %}
 <section role="even" id="april" class="section-container">
-
     <aside class="ss-container content">
         <div class="ss-row row">
-                
+            
+            <!-- Header -->
             <header class="seven columns">
                 <div class="ss-left">
                     <h2 class="four columns alpha">
-                        {% if nl %}april{% else %}{{ april.get_month_display }}{% endif %}
+                        April
                     </h2>
                 </div>
                 <h3>04</h3>
@@ -16,27 +14,19 @@
 
             <div class="line one columns"></div>
             
-            <!-- MILESTONE -->
+            <!-- Milestone 01 -->
             <aside class="tooltip-article">
                 <div class="ss-left sixteen columns">
-                    
                     <div class="wrap-text seventeen columns">
-                    <div class="text arrow-right seventeen columns">
-                        <h3>{{ april.title }}</h3>
-                        <p>Once again, 2012 was a busy year for iMinds. Our name change reflects both our evolution as an organization and the many new projects that we have launched. The new name also mirrors our ambition to stimulate and market basic digital technology research throughout Flanders together with our partners. In this way, we intend to gain international recognition for our region. I particularly want to take this.</p>
-                        
-                        <button class="go fancybox" href="#overlay-april">go to the article</button>
+                        <div class="text arrow-right seventeen columns">
+                            <h3>STIMULATING INNOVATION AND ENTREPRENEURSHIP</h3>
+                            <p>iMinds encourages researchers, entrepreneurs and businesses by creating ideal conditions for successful innovation. We pay specific attention to the needs of start-ups and SMEs. One of the main activities that iMinds carries out in this domain is iBoot, a series of workshops to help both iMinds' researchers and external idea owners discover the potential of their idea through hands-on training and coaching. The selected start-ups for iBoot 2012 were presented on 23rd April.</p>
+                            
+                            <button class="go fancybox" href="#overlay-april">go to the article</button>
 
-                        <div id="overlay-april" style="width:820px;display: none;">
-                            <aside class="milestone">
-                            <img class="milestone" src="{{ april.milestone.url_100x100 }}" />
-                            <div class="m-line"></div>
-                            </aside>
+                            <!--{% include "overlays/highlights/february.html" %}-->
 
-                            <div class="o-content">{{ april.content|safe }}</div>
                         </div>
-
-                    </div>
                     </div>
                 </div>
             </aside>
@@ -44,16 +34,12 @@
             <div class="ss-right seventeen columns">
                 <aside class="draw push_five hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-draw">
-                        <img src="{{ MEDIA_URL }}{{ april.milestone }}" />
+                        <img src="{{ STATIC_URL }}img/milestones/mix_launch.png" />
                     </figure>
                 </aside>
-
             </div> 
 
-        </div>
-    </aside>
-
-    <!-- HIGHLIGHT -->
+            <!-- Highlight 01 -->
             <div class="ss-left ten columns">
                 <aside class="hightlight-draw hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-highlight-draw">
@@ -64,25 +50,18 @@
 
             <aside class="tooltip-article-highlight">
                 <div class="ss-right seventeen columns">
-                    
                     <div class="wrap-text seventeen columns">
-                    <div class="text-highlight arrow-left seventeen columns">
-                        
-                        {% include "overlays/highlights/february.html" %}
-        
-                        <h3>iMinds Projects per Market Segments</h3>
-
-                        <button class="md-trigger go" data-modal="highlight-february">go to the article</button>
-
-                        <div class="md-overlay"></div>
-
-                    </div>
+                        <div class="text-highlight arrow-left seventeen columns">
+                            <!--{% include "overlays/highlights/february.html" %}-->
+                            <h3>iMinds Projects per Market Segments</h3>
+                            <button class="md-trigger go" data-modal="highlight-february">go to the article</button>
+                            <div class="md-overlay"></div>
+                        </div>
                     </div>
                 </div>
             </aside>
-
-
-    <!-- HIGHLIGHT -->
+            
+            <!-- Highlight 02 -->
             <div class="ss-right ten columns">
                 <aside class="hightlight-draw hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-highlight-draw">
@@ -97,7 +76,7 @@
                     <div class="wrap-text seventeen columns">
                     <div class="text-highlight arrow-left seventeen columns">
                         
-                        {% include "overlays/highlights/february.html" %}
+                        <!--{% include "overlays/highlights/february.html" %}-->
         
                         <h3>iMinds Projects per Market Segments</h3>
 
@@ -110,13 +89,6 @@
                 </div>
             </aside>
 
-    
-</div>
-</aside>
-
-
-    
+        </div>
+    </aside>
 </section>
-{% endfor %}
-{% else %}
-{% endif %}

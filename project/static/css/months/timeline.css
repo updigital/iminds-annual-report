@@ -1,20 +1,19 @@
 .ss-container {
     width: 100%;
-	.hidden;
+	overflow: hidden;
 }
     .ss-row{
         border:;
         width: 100%;
-        .relative;
+        position: relative;
         height: 20em;
     }
         .ss-left,
         .ss-right {
             width: 50%;
-
-            .relative;
-            .left;
+            position: relative;
+            float: left;
         }
         .ss-left {
-            .left;
+            float: left;
         }

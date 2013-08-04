@@ -1,15 +1,13 @@
-{% if january %}
-{% for january in january %}
 <section role="odd" id="january" class="section-container">
-
     <aside class="ss-container content">
         <div class="ss-row row">
             
+            <!-- Header -->
             <header class="seven columns">
-                <span>{{ january.report }}</span>
+                <span>2012</span>
                 <div class="ss-left">
                     <h2 class="four columns alpha">
-                        {% if nl %}januari{% else %}{{ january.get_month_display }}{% endif %}
+                        January
                     </h2>
                 </div>
                 <h3>01</h3>
@@ -17,21 +15,22 @@
 
             <div class="line one columns"></div>
             
-            <div class="ss-left eighteen columns" style="margin-top: 6em;">
+            <!-- Milestone 01 -->
+            <div class="ss-left eighteen columns" style="margin-top: 4em;">
                 <aside class="draw hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-draw">
-                        <img src="{{ MEDIA_URL }}{{ january.milestone }}" />
+                        <img src="{{ STATIC_URL }}img/milestones/bike_to_the_moon.png" />
                     </figure>
                 </aside>
             </div>            
             
-            <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" style="margin-top: 17em;">
+            <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" style="margin-top: 15em;">
                 <div class="ss-right push_two sixteen columns">
                     
                     <div class="wrap-text seventeen columns">
                     <div class="text arrow-left seventeen columns">
-                        <h3>{{ january.title }}</h3>
-                        <p>{{ january.description }}</p>
+                        <h3>INDIVIDUAL COMMITMENT TO A GROUP EFFORT</h3>
+                        <p>Throughout the year, iMinds stimulates activities to strengthen cooperation amongst staff members and researchers. In 2012, one of our most ambitious endeavours was launched on 17th January: a 356,400 kilometres bicycle ride to the moon.</p>
 
                         {% include "overlays/milestones/january.html" %}
         
@@ -46,8 +45,4 @@
             
         </div>
     </aside>
-    
 </section>
-{% endfor %}
-{% else %}
-{% endif %}

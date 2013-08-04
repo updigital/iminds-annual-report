@@ -1,14 +1,12 @@
-{% if december %}
-{% for december in december %}
 <section role="even" id="december" class="section-container">
-
     <aside class="ss-container content">
         <div class="ss-row row">
-                
+            
+            <!-- Header -->
             <header class="seven columns">
                 <div class="ss-left">
                     <h2 class="four columns alpha">
-                        {% if nl %}december{% else %}{{ december.get_month_display }}{% endif %}
+                        December
                     </h2>
                 </div>
                 <h3>12</h3>
@@ -16,8 +14,7 @@
 
             <div class="line one columns"></div>
             
-          
-
+            <!-- Milestone 01 -->
             <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
                 <div class="ss-left sixteen columns">
                     
@@ -48,16 +45,10 @@
                         <img src="{{ MEDIA_URL }}{{ december.milestone }}" />
                     </figure>
                 </aside>
-
-                {% if december.highlight %}
-                <img class="highlight-right" src="{{ STATIC_URL }}img/highlight.png" />
-                {% else %}
-                {% endif %}
             </div> 
 
-        </div>
-
-        <div class="ss-left ten columns" style="position: relative; top: 14em; right: -5em">
+            <!-- Highlight 01 -->
+            <div class="ss-left ten columns">
                 <aside class="hightlight-draw push_twelve hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-highlight-draw">
                         <img src="{{ STATIC_URL }}img/highlight.png" />
@@ -65,8 +56,7 @@
                 </aside>
             </div>
 
-
-            <aside class="tooltip-article-highlight hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" style="position: relative; top: 8em; left: 3em">
+            <aside class="tooltip-article-highlight hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
                 <div class="ss-right sixteen columns">
                     
                     <div class="wrap-text twelve columns">
@@ -87,10 +77,8 @@
                     </div>
                     </div>
                 </div>
-                
-    </aside>
+            </aside>
 
+        </div>        
+    </aside>
 </section>
-{% endfor %}
-{% else %}
-{% endif %}

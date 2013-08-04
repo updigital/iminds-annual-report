@@ -1,14 +1,12 @@
-{% if march %}
-{% for march in march %}
 <section role="odd" id="march" class="section-container">
-
     <aside class="ss-container content">
         <div class="ss-row row">
-                
+            
+            <!-- Header -->
             <header class="seven columns">
                 <div class="ss-left">
                     <h2 class="four columns alpha">
-                        {% if nl %}maart{% else %}{{ march.get_month_display }}{% endif %}
+                        March
                     </h2>
                 </div>
                 <h3>03</h3>
@@ -16,23 +14,22 @@
 
             <div class="line one columns"></div>
             
-            <!-- MILESTONE -->
+            <!-- Milestone 01 -->
             <div class="ss-left eighteen columns">
                 <aside class="draw hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-draw">
-                        <img src="{{ MEDIA_URL }}{{ march.milestone }}" />
+                        <img src="{{ STATIC_URL }}img/milestones/mix_launch.png" />
                     </figure>
                 </aside>
-
             </div>            
 
-            <aside class="tooltip-article" style="margin-top: 11em;">
+            <aside class="tooltip-article">
                 <div class="ss-right push_two sixteen columns">
                     
                     <div class="wrap-text seventeen columns">
                     <div class="text arrow-left seventeen columns">
-                        <h3>{{ march.title }}</h3>
-                        <p>{{ march.description }}</p>
+                        <h3>MEDIA, A SECTOR IN FULL TRANSITION</h3>
+                        <p>iMinds enables media companies to make optimal use of new digital technologies and transform them into new and attractive products and services for modern consumers. Over the years, we have built a strong reputation in this area, with numerous research projects resulting in many new developments. The establishment in March 2012 of MiX—an innovation center dedicated to the media sector—became the crowning achievement for iMinds in this domain.</p>
                         
                         {% include "overlays/milestones/march.html" %}
         
@@ -45,8 +42,8 @@
                 </div>
             </aside>
 
-            <!-- HIGHLIGHT -->
-            <div class="ss-right three columns" style="position: relative; top: 6em;">
+            <!-- Highlight 01 -->
+            <div class="ss-right three columns">
                 <aside class="hightlight-draw push_one hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-highlight-draw">
                         <img src="{{ STATIC_URL }}img/highlight.png" />
@@ -54,27 +51,21 @@
                 </aside>
             </div>
 
-            <aside class="tooltip-article-highlight seventeen columns" style="position: relative;">
+            <aside class="tooltip-article-highlight seventeen columns">
                 <div class="ss-left">
-                
                     <div class="text-highlight arrow-right seventeen columns">
                         <h3>Digital challenges and opportunities in Media</h3>
 
                         {% include "overlays/highlights/march.html" %}
 
-                        <button style="position: relative; -top: 5em; left: 18.8em;" class="md-trigger go" data-modal="highlight-march">go to the article</button>
+                        <button class="md-trigger go" data-modal="highlight-march">go to the article</button>
 
                         <div class="md-overlay"></div>
 
                     </div>
-
                 </div>
             </aside>
         
         </div>
     </aside>
-    
 </section>
-{% endfor %}
-{% else %}
-{% endif %}

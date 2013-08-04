@@ -1,0 +1,127 @@
+section[role="home"] {
+    height: 100%;
+    position: relative;
+    color: #404040;
+    border-top: 3px solid #b8c4ce;
+}
+    section[role="home"] header.main {
+        height: 5em;
+        position: relative;
+
+        -moz-animation-name: Fade;
+        -moz-animation-iteration-count: once;
+        -moz-animation-timing-function: ease-in;
+        -moz-animation-duration: 0.5s;
+
+        -webkit-animation-name: Fade;
+        -webkit-animation-iteration-count: once;
+        -webkit-animation-timing-function: ease-in;
+        -webkit-animation-duration: 0.5s;
+    } 
+        section[role="home"] header.main h1 a.logo {
+            height: 40px;
+            margin-top: 1.6em;
+            overflow: hidden;
+            display: block;
+        }
+    section[role="home"] h2 {
+        margin-top: 1.05em;
+        font-size: 36px;
+        color: #404040;
+        font-family: 'Open Sans Condensed', sans-serif;
+        text-transform: uppercase;
+    }
+    section[role="home"] h3 {
+        font-size: 2.3em;
+        text-transform: uppercase; 
+    }
+    section[role="home"] aside.text {
+        position: relative;
+        top: 12.8em;
+    }
+        section[role="home"] aside.text p {
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+            font-size: 12px;
+            line-height: 24px;
+        }
+
+
+/* oi
+========================================================================== */
+section[role="home"] aside.text {
+    height: 26em;
+    color: @black;
+    top: 11.1em;
+    margin-right: 50px;
+    -moz-animation-name: asideRight;
+    -moz-animation-iteration-count: once;
+    -moz-animation-timing-function: ease-out;
+    -moz-animation-duration: 1.2s;
+
+    -webkit-animation-name: asideRight;
+    -webkit-animation-iteration-count: once;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 1.2s;
+
+    .relative;
+}
+section[role="home"] aside.text {
+    text-shadow: 1px 1px 0 #fff;
+    max-height: 13em;
+
+}
+    section[role="home"] aside.text p {
+        line-height: 1.6em;
+        font-size: 12px;
+    }
+    section[role="home"] aside.text h3 {
+        margin-top: 29px;
+        margin-bottom: 164px;
+    }
+
+
+section[role="home"] figure.iminds-ceo {
+    position: relative;
+    top: 9em;
+
+    /* Transition: dropFigure */
+    -moz-animation-name: dropFigure;
+    -moz-animation-iteration-count: once;
+    -moz-animation-timing-function: ease-out;
+    -moz-animation-duration: 1.3s;
+
+    -webkit-animation-name: dropFigure;
+    -webkit-animation-iteration-count: once;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 1.3s;
+}
+    section[role="home"] figure.iminds-ceo img {
+        border: 2px solid #fff;
+        box-shadow: -3px 5px 0 #b8c4ce;
+        border-radius: 50%;
+    }
+        section[role="home"] figure.iminds-ceo:hover img {
+            box-shadow: -2px 3px 0 #ec008c;
+        }
+    section[role="home"] figure.iminds-ceo figcaption {
+        font-size: 13px;
+        color: #404040;
+        font-weight: bold;
+        font-style: italic;
+        text-align: center;
+    }
+
+footer {
+
+    position: relative;
+
+    -moz-animation-name: dropFooter;
+    -moz-animation-iteration-count: once;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 0.5s;
+
+    -webkit-animation-name: dropFooter;
+    -webkit-animation-iteration-count: once;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 0.5s;
+}

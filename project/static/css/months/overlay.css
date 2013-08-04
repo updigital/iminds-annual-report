@@ -1,130 +1,10 @@
-/*
- * CSS Styles that are needed by jScrollPane for it to operate correctly.
- *
- * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
- * may not operate correctly without them.
- */
-
-.jspContainer
-{
-    overflow: hidden;
-    position: relative;
-}
-
-.jspPane
-{
-    position: absolute;
-}
-
-.jspVerticalBar
-{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 16px;
-    height: 100%;
-    background: red;
-}
-
-.jspHorizontalBar
-{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 16px;
-    background: red;
-}
-
-.jspVerticalBar *,
-.jspHorizontalBar *
-{
-    margin: 0;
-    padding: 0;
-}
-
-.jspCap
-{
-    display: none;
-}
-
-.jspHorizontalBar .jspCap
-{
-    float: left;
-}
-
-.jspTrack
-{
-    background: #F2F4F8;
-    position: relative;
-}
-
-.jspDrag
-{
-    background: #79a1b5;
-    position: relative;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-    border:1px solid #56839a;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-}
-
-.jspHorizontalBar .jspTrack,
-.jspHorizontalBar .jspDrag
-{
-    float: left;
-    height: 100%;
-}
-
-.jspArrow
-{
-    background: #50506d;
-    text-indent: -20000px;
-    display: block;
-    cursor: pointer;
-}
-
-.jspArrow.jspDisabled
-{
-    cursor: default;
-    background: #80808d;
-}
-
-.jspVerticalBar .jspArrow
-{
-    height: 16px;
-}
-
-.jspHorizontalBar .jspArrow
-{
-    width: 16px;
-    float: left;
-    height: 100%;
-}
-
-.jspVerticalBar .jspArrow:focus
-{
-    outline: none;
-}
-
-.jspCorner
-{
-    background: #eeeef4;
-    float: left;
-    height: 100%;
-}
-
 .jp-container{
     width: 94%;
     height: 600px;
     padding: 30px;
     position:fixed;
-    background: @gray-tiny;
+    background: #eff2f5;
     float:left;
-    .open-sans-condensed!important;
 }
 
 .md-perspective,
@@ -141,7 +21,7 @@
 }
 
 .container {
-    background: @white;
+    background: #fff;
     min-height: 100%;
 }
 .md-close {
@@ -178,7 +58,7 @@
     left: 0;
     z-index: 1000;
     opacity: 0;
-    background: @white;
+    background: #fff;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
@@ -191,8 +71,8 @@
 
 /* Content styles */
 .md-content {
-    background: @white;
-    .relative;
+    background: #fff;
+    position: relative;
     margin: 0 auto;
 }
 
@@ -224,17 +104,17 @@ aside.milestone {
 }
 aside.milestone img.milestone {
     margin-top: -2px;
-    .radius-full;
-    border: 2px solid @gray-hard;
+    border-radius: 50%;
+    border: 2px solid #b8c4ce;
     left: 50%;
-    .relative;
+    position: relative;
     z-index: 9;
 }
 aside.milestone div.m-line {
     width: 94%;
     height: 2px;
-    background: @gray-hard;
-    .absolute;
+    background: #b8c4ce;
+    position: absolute;
     top: 83px;
 }
 
@@ -245,14 +125,14 @@ div.o-content header {
     font-size: 22px;
     margin-top: 10px;
     margin-bottom: 10px;
-    .block;
-    .bold;
+    display: block;
+    font-weight: bold;
 }
 div.o-content p {
+    color: #404040;
     margin-top: 10px;
     line-height: 1.4em;
     font-style: normal!important;
-    .open-sans-condensed;
 }
 div.o-content img {
     border-radius: 0%!important;
@@ -261,22 +141,22 @@ div.o-content img {
 }
 
 div.o-content header h1 {
-    .bold
+    font-weight: bold;
 }
 div.o-content a {
-    .bold;
-    color: @pink;
+    font-weight: bold;
+    color: #ec008c;
 }
 div.o-content a:hover {
-    border-bottom: 1px solid @gray-hard;
+    border-bottom: 1px solid #b8c4ce;
 }
 
 
 div.o-content h3 {
-    .bold;
-    color: @pink!important;
+    font-weight: bold;
+    color: #ec008c;
     letter-spacing: 0px;
-    .uppercase;
+    text-transform: uppercase;
     font-size: 12px!important;
 }
 div.o-content {
@@ -292,11 +172,11 @@ div.o-content blockquote {
     float: right;
 }
 div.o-content blockquote h4 {
-    color: @pink;
+    color: #ec008c;
     margin-top: 1.6em;
-    .bold;
+    font-weight: bold;
 }
 div.o-content blockquote p {
     font-size: 13px;
-    .bold;
+    font-weight: bold;
 }

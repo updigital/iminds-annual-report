@@ -1,0 +1,404 @@
+section[role="odd"],
+section[role="even"] {
+    background-image: url('../../img/noise.png');
+    position: relative;
+    color: #fff;
+    padding: 0;
+    height: 99.8%;
+    padding-bottom: 20%;
+}
+    section[role="even"] {
+        box-shadow: inset 0 4px 120px #b8c4ce;
+        background-color: #fff;
+        
+    }
+    section[role="odd"] {
+        box-shadow: inset 0 4px 200px #b8c4ce;
+        background-color: #eff2f5;
+    }
+        section[role="odd"]#january {
+            box-shadow: inset 0 8px 200px #b8c4ce;
+        }
+        section[role="even"]#february {
+            height: 110%;
+        }
+        section[role="even"]#april {
+            background: #b8c4ce;
+            height: 140%;
+        }
+        section[role="even"]#october {
+            height: 210%;
+        }
+
+section[role="odd"].old,
+section[role="even"].old {
+    background: url('../../img/noise.png') #fff;
+
+    -webkit-transition: all 0.8s linear;
+    -moz-transition: all 0.8s linear;
+    -o-transition: all 0.8s linear;
+    -ms-transition: all 0.8s linear;
+    transition: all 0.8s linear;
+}
+section[role="odd"].new,
+section[role="even"].new {
+    box-shadow: inset 0 0 110px #404040;
+    background: url('../../img/noise.png') #b8c4ce;
+
+    -webkit-transition: all 0.8s linear;
+    -moz-transition: all 0.8s linear;
+    -o-transition: all 0.8s linear;
+    -ms-transition: all 0.8s linear;
+    transition: all 0.8s linear;
+}
+section[role="even"]#october.new {
+    background: url('../../img/noise.png') #fff;
+}
+section[role="even"]#october.old {
+    box-shadow: inset 0 0 110px @black!important;
+    background: url('../../img/noise.png') #b8c4ce;
+}
+
+
+
+/* other need refactoring */
+section[role="odd"] aside.tooltip-article,
+section[role="even"] aside.tooltip-article {}
+    section[role="odd"] aside.tooltip-article h3,
+    section[role="even"] aside.tooltip-article h3 {
+        font-size: 28px;
+        color: #404040;
+        margin-bottom: 0.75em;
+        position: relative;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    section[role="odd"] aside.tooltip-article h3 {
+        text-align: left;
+    }
+    section[role="even"] aside.tooltip-article h3 {
+        text-align: right;
+    }
+
+section[role="odd"] aside.tooltip-article-highlight,
+section[role="even"] aside.tooltip-article-highlight {}
+    section[role="odd"] aside.tooltip-article-highlight h3,
+    section[role="even"] aside.tooltip-article-highlight h3 {
+        font-size: 22px;
+        color: #404040;
+        margin-bottom: 0.75em;
+        position: relative;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    section[role="odd"] aside.tooltip-article-highlight h3 {
+        text-align: right;
+    }
+    section[role="even"] aside.tooltip-article-highlight h3 {
+        text-align: left;
+    }
+
+.highlight-left {
+    position: relative;
+    top: -6.4em;
+    z-index: 9;
+    border: 3px solid #fff;
+    background: #fff;
+}
+.highlight-right {
+    position: relative;
+    left: 410px;
+    top: -6.4em;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #fff;
+}
+section[role="odd"]#july .ss-right .text-highlight {
+    border-left: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="even"]#april .ss-left .text {
+    border-right: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="odd"]#may .ss-right .text-highlight {
+    border-right: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="odd"]#march .ss-left .text-highlight {
+    border-right: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="odd"]#july .ss-left .text-highlight {
+    border-right: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="odd"]#june .ss-right .text-highlight {
+    border-left: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="odd"]#june .ss-left .text-highlight {
+    border-right: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="odd"]#august .ss-right .text-highlight {
+    border-left: 3px solid #fff!important;
+    text-align: left!important;
+}
+
+section[role="odd"] aside.content .text,
+section[role="even"] aside.content .text {
+    background: none;
+    height: 270px;
+    color: @black;
+    padding: 10px 30px 30px 30px;
+    -webkit-appearance: none;
+-webkit-transition: all 0.2s linear;
+-moz-transition: all 0.2s linear;
+-o-transition: all 0.2s linear;
+transition: all 0.2s linear;
+}
+section[role="odd"] aside.content .text-highlight,
+section[role="even"] aside.content .text-highlight {
+    background: none;
+    height: 110px;
+    color: @black;
+    padding: 10px 30px 30px 30px;
+    -webkit-appearance: none;
+-webkit-transition: all 0.2s linear;
+-moz-transition: all 0.2s linear;
+-o-transition: all 0.2s linear;
+transition: all 0.2s linear;
+}
+section[role="odd"] aside.content .text {
+    border-left: 2px solid #b8c4ce;
+}
+section[role="odd"] aside.content .text-highlight {
+    border-right: 2px solid #b8c4ce;
+}
+section[role="odd"]#july aside.content .text-highlight {
+    border-left: 2px solid #b8c4ce;
+}
+section[role="odd"].new aside.content .text {
+    border-left: 2px solid #eff2f5
+}
+section[role="even"] aside.content .text-highlight {
+    border-left: 2px solid #b8c4ce;
+}
+section[role="even"] aside.content .text {
+    border-right: 2px solid #b8c4ce;
+}
+section[role="even"].new aside.content .text {
+    border-right: 2px solid #eff2f5;
+}
+section[role="even"].new aside.content .text-highlight {
+    border-left: 2px solid #eff2f5;
+}
+section[role="odd"] aside.content .text {
+    text-align: left;
+}
+section[role="even"] aside.content .text {
+    text-align: right;
+}
+section[role="odd"] aside.content .text:hover {
+    margin-left: 20px;
+}
+section[role="even"] aside.content .text:hover {
+    margin-left: -20px;
+}
+
+aside.content .text p {
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* ==========================================================================
+Section: ''.
+Aside: 'draw';
+========================================================================== */
+aside.draw {
+    width: 400px;
+    height: 400px;
+    margin-top: 8em;
+    margin-left: 0;
+}
+
+/* other need refactoring */
+section[role="odd"] aside.tooltip-article,
+section[role="even"] aside.tooltip-article {}
+    section[role="odd"] aside.tooltip-article h3,
+    section[role="even"] aside.tooltip-article h3 {
+        font-size: 28px;
+        color: #404040;
+        margin-bottom: 0.75em;
+        position: relative;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    section[role="odd"] aside.tooltip-article h3 {
+        text-align: left;
+    }
+    section[role="even"] aside.tooltip-article h3 {
+        text-align: right;
+    }
+
+section[role="odd"] aside.tooltip-article-highlight,
+section[role="even"] aside.tooltip-article-highlight {}
+    section[role="odd"] aside.tooltip-article-highlight h3,
+    section[role="even"] aside.tooltip-article-highlight h3 {
+        font-size: 22px;
+        color: #404040;
+        margin-bottom: 0.75em;
+        position: relative;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    section[role="odd"] aside.tooltip-article-highlight h3 {
+        text-align: right;
+    }
+    section[role="even"] aside.tooltip-article-highlight h3 {
+        text-align: left;
+    }
+
+.highlight-left {
+    position: relative;
+    top: -6.4em;
+    z-index: 9;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #fff;
+}
+.highlight-right {
+    position: relative;
+    left: 410px;
+    top: -6.4em;
+    z-index: 9;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #fff;
+}
+section[role="odd"]#july .ss-right .text-highlight {
+    border-left: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="even"]#april .ss-left .text {
+    border-right: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="odd"]#may .ss-right .text-highlight {
+    border-right: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="odd"]#march .ss-left .text-highlight {
+    border-right: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="odd"]#july .ss-left .text-highlight {
+    border-right: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="odd"]#june .ss-right .text-highlight {
+    border-left: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="odd"]#june .ss-left .text-highlight {
+    border-right: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="odd"]#august .ss-right .text-highlight {
+    border-left: 3px solid #fff!important;
+    text-align: left!important;
+}
+
+
+/* MONTHS
+=================================== */
+nav.months {
+    font-size: 17,5pt;
+    z-index: 9;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+    nav.months ul {
+        list-style: none;
+        margin-top: 10px;
+    }
+        nav.months ul li { .left }
+            nav.months ul li a {
+                width: 38px;
+                height: 0;
+                padding: 0 0 20px 0;
+                margin: 0 14px 0 0;
+                top: 2px;
+                font-size: 12px;
+                line-height: 20px;
+                color: #b8c4ce;
+                position: relative;
+                text-align: center;
+                display: block;
+                border-radius: 3px;
+                -webkit-transition: all 0.3s linear;
+                -moz-transition: all 0.3s linear;
+                -o-transition: all 0.3s linear;
+                -ms-transition: all 0.3s linear;
+                transition: all 0.3s linear;
+            }
+                nav.months ul li a:hover {
+                    font-size: 18px;
+                }
+                nav.months ul li a.selected {
+                    font-size: 20px;
+                    color: #ec008c;
+                }
+                nav.months ul li a:active {
+                    font-size: 20px;
+                    color: #ec008c;
+                }
+
+
+.cbp-af-header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 0 7px @black;
+    z-index: 3;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    -webkit-appearance: none;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    position: fixed;
+}
+
+.cbp-af-header .cbp-af-inner {
+    width: 90%;
+    max-width: 69em;
+    margin: 0 auto;
+}
+
+.cbp-af-header.cbp-af-header-shrink {
+    height: 43px;
+    opacity: 0.7;
+}
+.cbp-af-header.cbp-af-header-shrink:hover {
+    opacity: 1;
+}
+
+
+
+
+div.wrapper-months {
+    position: fixed;
+}
+
