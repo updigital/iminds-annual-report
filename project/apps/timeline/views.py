@@ -69,4 +69,4 @@ def report_nl(request, slug):
                 'april':april, 'may':may, 'june':june, 'july':july, 'august':august,
                 'september':september, 'october':october, 'november':november,'december':december}
     
-    return render(request, 'home.html', payload)
+    return render(request, 'home_nl.html', payload)

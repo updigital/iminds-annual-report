@@ -18,18 +18,18 @@
             <div class="ss-left eighteen columns">
                 <aside class="draw hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-draw">
-                        <img src="{{ MEDIA_URL }}{{ may.milestone }}" />
+                        <img src="{{ STATIC_URL }}img/milestones/mix_launch.png" />
                     </figure>
                 </aside>
             </div>            
 
-            <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
+            <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" style="margin-top: 11em">
                 <div class="ss-right push_two sixteen columns">
                     
                     <div class="wrap-text seventeen columns">
                     <div class="text arrow-left seventeen columns">
                         <h3>{{ may.title }}</h3>
-                        <p>{{ may.description }}</p>
+                        <p>ICON stands for Interdisciplinary Cooperative Research and is a rather unique research model. Companies, governments or other organizations that have identified specific needs with their users, can start a research project in collaboration with iMinds to address these needs. The 2012 call for projects opened on <strong>May 2nd</strong>.</p>
                         
                         {% include "overlays/milestones/may.html" %}
         
@@ -52,28 +52,27 @@
             </aside>
 
             <!-- Highlight 01 -->
-            <div class="ss-right ten columns">
-                <aside class="hightlight-draw push_twelve hi-icon-effect-9 hi-icon-effect-9a">
+            <!-- Highlight 01 -->
+            <div class="ss-right three columns" style="margin-top: 5em;">
+                <aside class="hightlight-draw push_one hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-highlight-draw">
                         <img src="{{ STATIC_URL }}img/highlight.png" />
                     </figure>
                 </aside>
             </div>
 
-            <aside class="tooltip-article-highlight seventeen columns">
-                <div class="ss-left">
-                
+            <aside class="tooltip-article-highlight seventeen columns text-left" style="margin-top: -6em;">
+                <div class="ss-left  sixteen columns">
                     <div class="text-highlight arrow-right seventeen columns">
-                        <h3>ICON facts & figures</h3>
+                        <h3>Digital challenges and opportunities in Media</h3>
 
-                        {% include "overlays/highlights/may.html" %}
+                        {% include "overlays/highlights/march.html" %}
 
-                        <button style="position: relative; -top: 5em; left: 18.8em;" class="md-trigger go" data-modal="highlight-may">go to the article</button>
+                        <button class="md-trigger push_eight go" data-modal="highlight-march">go to the article</button>
 
                         <div class="md-overlay"></div>
 
                     </div>
-
                 </div>
             </aside>
             

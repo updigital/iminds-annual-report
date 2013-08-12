@@ -18,10 +18,11 @@
         transition: all 0.8s;
     }
         .button-down div.new span {
+            background: #b8c4ce;
             font-size: 13px;
             top: 0;
             left: -13px;
-            color: #ec008c;
+            color: #fff;
             text-transform: uppercase;
             font-weight: bold;
             float: left;
@@ -44,7 +45,7 @@
         display: block;
         }
         .button-down div.new svg path {
-            fill: #ec008c;
+            fill: #b8c4ce;
         }
 .button-down div.new,
 .button-down:hover div.old {
@@ -106,7 +107,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d90081', end
     button.download a {
         color: #fff;
         font-size: 11px;
-        text-shadow: 1px 1px 0 #c20073;
+        text-shadow: 1px 1px 0 #b8c4ce;
     }
 
     button.download:hover {

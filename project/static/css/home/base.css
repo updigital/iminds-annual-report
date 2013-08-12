@@ -37,7 +37,7 @@ section[role="home"] {
     }
     section[role="home"] aside.text {
         position: relative;
-        top: 12.8em;
+        top: 14.8em;
     }
         section[role="home"] aside.text p {
             font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; 
@@ -49,10 +49,8 @@ section[role="home"] {
 /* oi
 ========================================================================== */
 section[role="home"] aside.text {
-    height: 26em;
-    color: @black;
-    top: 11.1em;
-    margin-right: 50px;
+    position: relative;
+
     -moz-animation-name: asideRight;
     -moz-animation-iteration-count: once;
     -moz-animation-timing-function: ease-out;
@@ -62,8 +60,6 @@ section[role="home"] aside.text {
     -webkit-animation-iteration-count: once;
     -webkit-animation-timing-function: ease-out;
     -webkit-animation-duration: 1.2s;
-
-    .relative;
 }
 section[role="home"] aside.text {
     text-shadow: 1px 1px 0 #fff;

@@ -15,33 +15,26 @@
             <div class="line one columns"></div>
             
             <!-- Highlight 01 -->
-            <div class="ss-left ten columns">
-                <aside class="hightlight-draw push_twelve hi-icon-effect-9 hi-icon-effect-9a">
+            <!-- Highlight 01 -->
+            <div class="ss-right four columns push_twenty" style="margin-top: 20em;">
+                <aside class="hightlight-draw push_one hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-highlight-draw">
                         <img src="{{ STATIC_URL }}img/highlight.png" />
                     </figure>
                 </aside>
             </div>
 
-            <aside class="tooltip-article-highlight hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
-                <div class="ss-right sixteen columns">
-                    
-                    <div class="wrap-text twelve columns">
-                    <div style class="text-highlight arrow-left twelve columns">
-                        <h3>{{ august.title }}</h3>
-                        
-                        <button class="md-trigger go" data-modal="milestone-january">go to the article</button>
+            <aside class="tooltip-article-highlight seventeen columns" style="margin-top: -5em;">
+                <div class="ss-left">
+                    <div class="text-highlight arrow-right seventeen columns">
+                        <h3>Digital challenges and opportunities in Media</h3>
 
-                        <div id="overlay-august" style="width:820px;display: none;">
-                            <aside class="milestone">
-                            <img class="milestone" src="{{ august.milestone.url_100x100 }}" />
-                            <div class="m-line"></div>
-                            </aside>
+                        {% include "overlays/highlights/march.html" %}
 
-                            <div class="o-content">{{ august.content|safe }}</div>
-                        </div>
+                        <button class="md-trigger push_eight go" data-modal="highlight-march">go to the article</button>
 
-                    </div>
+                        <div class="md-overlay"></div>
+
                     </div>
                 </div>
             </aside>

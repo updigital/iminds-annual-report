@@ -1,0 +1,114 @@
+{% extends "index.html" %}
+{% block section %}
+<section role="home" id="top">
+    <div class="row">
+        <div class="push_two thirty-six columns">
+            
+            <!-- Header Home -->
+            <header class="main thirty-six columns">
+                <h1>
+                    <a href="http://www.iminds.be/" class="logo eight columns" target="_blank">
+                        <img src="{{ STATIC_URL }}img/logo-iminds.png" />
+                    </a>
+                </h1> 
+                <nav class="language four columns omega">
+                    <ul>
+                        <li><a href="/en/2012/">EN</a></li>
+                        <li class="active"><a href="/nl/2012/">NL</a></li>
+                    </ul>
+                </nav>
+                <h2 class="push_four columns">
+                    Annual Report <strong>2012</strong>
+                </h2>
+            </header>
+            
+            <!-- Header Months: Show-Hide -->
+            <div class="cbp-af-header">
+                <div class="cbp-af-inner">
+                    <header class="main full">
+
+                        <a href="#top">
+                            <button class="home two columns alpha">
+                            {% include "svg/icon-home.svg" %}
+                            </button>
+                        </a>
+
+                        <div class="row">
+                            <nav class="navigator ss-links months push_eight twenty-five columns">
+                                <ul>
+                                    <li><a href="#january">jan</a></li>
+                                    <li><a href="#february">feb</a></li>
+                                    <li><a href="#march">mar</a></li>
+                                    <li><a href="#april">apr</a></li>
+                                    <li><a href="#may">may</a></li>
+                                    <li><a href="#june">jun</a></li>
+                                    <li><a href="#july">jul</a></li>
+                                    <li><a href="#august">aug</a></li>
+                                    <li><a href="#september">sep</a></li>
+                                    <li><a href="#october">oct</a></li>
+                                    <li><a href="#november">nov</a></li>
+                                    <li><a href="#december">dec</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </header>
+                </div>
+            </div>
+
+            <figure class="iminds-ceo ten columns alpha">
+                <img src="{{ STATIC_URL }}img/ceo-iminds.png" />
+                <figcaption>Wim De Waele, CEO iMinds</figcaption>
+            </figure>
+
+            {% include "base/slider.html" %}
+        
+            <aside class="text push_fourteen twenty-four columns">
+
+                <p>Once again, 2012 was a busy year for iMinds. Our name change reflects both our evolution as an organization and the many new projects that we have launched. The new name also mirrors our ambition to stimulate and market basic digital technology research throughout Flanders together with our partners. In this way, we intend to gain international recognition for our region. I particularly want to take this opportunity to thank all of our partners, researchers, and employees that helped us along the way. Our basic philosophy remains unchanged. We will continue to use digital technology to contribute to society and the economy as a whole. This is especially true in those sectors in which ICT already has had or can yet have the greatest impact. A perfect example is MiX. We launched this media innovation center together with the media sector in 2012. Other sectors that get our close attention are the health, mobility, energy, and manufacturing industries. Since our inception, we have already realized 81 ICON research projects. In 2012, we also saw a strong rise in our incubation activities. Innovation stems not only from collaboration with established players, but also from the many start-ups that bring new ideas and products to the marketplace. I am delighted to see such a strong dynamic in this domain rising throughout Flanders. iMinds not only chose to change its name in 2012. We also renewed and strengthened our organization with new talent, to ready ourselves for the challenges that await us in 2013 and beyond.</p>
+                
+                <!-- Button: Download -->
+                <button class="download tt-wrapper twelve columns omega">
+                    <div>
+                        <a href="{{ report.pdf.url }}" target="_blank">
+                            download printable version (12.6mb)
+                            <span><img src="{{ STATIC_URL }}img/report-screen_en.jpg" /></span>
+                        </a>
+                    </div>
+                </button> 
+
+            </aside>
+    
+        </div>
+    </div>
+    <!-- Row -->
+    </div>
+    {% include "base/footer.html" %}
+</section>
+
+{% include "sections/january.html" %}
+
+{% include "sections/february.html" %}
+
+{% include "sections/march.html" %}
+
+{% include "sections/april.html" %}
+
+{% include "sections/may.html" %}
+
+{% include "sections/june.html" %}
+
+{% include "sections/july.html" %}
+
+{% include "sections/august.html" %}
+
+{% include "sections/september.html" %}
+
+{% include "sections/october.html" %}
+
+{% include "sections/november.html" %}
+
+{% include "sections/december.html" %}
+
+
+{% endblock %}

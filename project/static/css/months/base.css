@@ -1,3 +1,7 @@
+.text-left {
+    border-left: none!important;
+    border-right: 2px solid #fff;
+}
 section[role="odd"],
 section[role="even"] {
     background-image: url('../../img/noise.png');
@@ -125,6 +129,18 @@ section[role="even"]#april .ss-left .text {
     text-align: left!important;
 }
 section[role="odd"]#may .ss-right .text-highlight {
+    border-right: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="odd"]#may .ss-left .text-highlight {
+    border-right: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="odd"]#august .ss-left .text-highlight {
+    border-right: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="odd"]#september .ss-left .text-highlight {
     border-right: 3px solid #fff!important;
     text-align: left!important;
 }

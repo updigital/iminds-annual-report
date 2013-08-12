@@ -18,20 +18,20 @@
             <div class="ss-left eighteen columns">
                 <aside class="draw hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-draw">
-                        <img src="{{ MEDIA_URL }}{{ september.milestone }}" />
+                        <img src="{{ STATIC_URL }}img/milestones/mix_launch.png" />
                     </figure>
                 </aside>
             </div>            
 
-            <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
+            <aside class="tooltip-article hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" style="margin-top: 11em;">
                 <div class="ss-right push_two sixteen columns">
                     
                     <div class="wrap-text seventeen columns">
                     <div class="text arrow-left seventeen columns">
-                        <h3>{{ september.title }}</h3>
-                        <p>{{ september.description }}</p>
+                        <h3>COLLABORATING FOR THE CARE OF THE FUTURE</h3>
+                        <p>Over the years, iMinds has launched more than 25 research projects in the health care sector. Today iMinds is an important partner with the Flemish government in the realization of the Flanders Care program, which is part of the Vlaanderen in Actie (ViA) action plan. In September 2012, Flemish Minister of Innovation Ingrid Lieten launched an open innovation lab (Zorginnovatieruimte Vlaanderen), which iMinds is coordinating.</p>
                         
-                        <button class="go-to-article fancybox" href="#overlay-september">go to the article ></button>
+                        <button class="go-to-article go" href="#overlay-september">go to the article ></button>
 
                         <div id="overlay-september" style="width:820px;display: none;">
                             <aside class="milestone">
@@ -48,33 +48,25 @@
             </aside>
             
             <!-- Highlight 01 -->
-            <div class="ss-right ten columns">
-                <aside class="hightlight-draw push_twelve hi-icon-effect-9 hi-icon-effect-9a">
+            <div class="ss-right three columns" style="margin-top: 5em;">
+                <aside class="hightlight-draw push_one hi-icon-effect-9 hi-icon-effect-9a">
                     <figure class="hi-icon-highlight-draw">
                         <img src="{{ STATIC_URL }}img/highlight.png" />
                     </figure>
                 </aside>
             </div>
 
-            <aside class="tooltip-article-highlight hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
-                <div class="ss-right sixteen columns">
-                    
-                    <div class="wrap-text seventeen columns">
-                    <div class="text-highlight arrow-left seventeen columns">
-                        <h3>Digital Innovation For Better And Affordable Health Care</h3>
+            <aside class="tooltip-article-highlight seventeen columns" style="margin-top: -6em;">
+                <div class="ss-left">
+                    <div class="text-highlight arrow-right seventeen columns">
+                        <h3>Digital challenges and opportunities in Media</h3>
 
-                        <button class="go-to-article fancybox" href="#overlay-february">go to the article >></button>
+                        {% include "overlays/highlights/march.html" %}
 
-                        <div id="overlay-february" style="width:820px;display: none;">
-                            <aside class="milestone">
-                            <img src="{{ february.milestone.url_100x100 }}" />
-                            <div class="m-line"></div>
-                            </aside>
+                        <button class="md-trigger push_eight go" data-modal="highlight-march">go to the article</button>
 
-                            <div class="o-content">{{ february.content|safe }}</div>
-                        </div>
+                        <div class="md-overlay"></div>
 
-                    </div>
                     </div>
                 </div>
             </aside>
