@@ -8,6 +8,8 @@ urlpatterns = patterns('project.apps.timeline.views',
 	(r'^en/(?P<slug>[\w_-]+)/$', 'report_en'),
 	(r'^nl/(?P<slug>[\w_-]+)/$', 'report_nl'),
 
+	(r'^en/2012/milestone/january', 'milestone_january_en'),
+
 	(r'^en/', 'list_en'),
 	(r'^nl/', 'list_nl'),
 

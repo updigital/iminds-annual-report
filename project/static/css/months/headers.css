@@ -45,6 +45,10 @@ section[role="even"] .content header {
         height: 60em;
         top: 7em!important;
     }
+    section[role="even"]#december .content div.line {
+        height: 80em;
+        top: 5em!important;
+    }
     section[role="even"]#april .content div.line {
         height: 70em;
         border: 1px dashed #eff2f5;

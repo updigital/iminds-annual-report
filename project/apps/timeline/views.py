@@ -9,6 +9,10 @@ from django.http import HttpResponseRedirect
 from models import *
 
 
+def milestone_january_en(request):
+    return direct_to_template(request, 'milestones/en/january.html',
+)
+
 def list_en(request):
     en = Report.objects.filter(language='EN')
     report = Report.objects.filter(language='EN')
