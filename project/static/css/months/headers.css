@@ -36,6 +36,7 @@ section[role="even"] .content header {
         z-index: 2;
     }
     section[role="even"]#april .content header h3,
+    section[role="even"]#october .content header h3,
     section[role="odd"].new .content header h3,
     section[role="even"].new .content header h3 {
         background: #fff;
@@ -52,6 +53,10 @@ section[role="even"] .content header {
     section[role="even"]#april .content div.line {
         height: 70em;
         border: 1px dashed #eff2f5;
+    }
+    section[role="even"]#october .content div.line {
+        height: 98em;
+        border: 1px dashed #fff;
     }
     section[role="odd"] .content div.line,
     section[role="even"] .content div.line {

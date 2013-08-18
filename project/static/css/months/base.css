@@ -152,6 +152,14 @@ section[role="odd"]#july .ss-left .text-highlight {
     border-right: 3px solid #fff!important;
     text-align: left!important;
 }
+section[role="even"]#october .ss-left .text-highlight {
+    border-right: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="even"]#october .ss-right .text-highlight {
+    border-left: 3px solid #fff!important;
+    text-align: right!important;
+}
 section[role="odd"]#june .ss-right .text-highlight {
     border-left: 3px solid #fff!important;
     text-align: left!important;
@@ -306,6 +314,15 @@ section[role="odd"]#july .ss-right .text-highlight {
 section[role="even"]#april .ss-left .text {
     border-right: 3px solid #fff!important;
     text-align: left!important;
+}
+section[role="even"]#october .ss-left .text {
+    border-right: 3px solid #fff!important;
+    text-align: left!important;
+}
+section[role="even"]#october .ss-right .text {
+    border-left: 3px solid #fff!important;
+    text-align: left!important;
+    border-right: none!important;
 }
 section[role="odd"]#may .ss-right .text-highlight {
     border-right: 3px solid #fff!important;

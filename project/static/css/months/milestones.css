@@ -34,6 +34,7 @@ section[role="odd"] aside .hi-icon-effect-9 .hi-icon-draw:after,
 section[role="even"] aside .hi-icon-effect-9 .hi-icon-draw:after {
     box-shadow: 0 0 0 5px #b8c4ce;
 }
+section[role="even"]#october aside .hi-icon-effect-9 .hi-icon-draw:after,
 section[role="odd"].new aside .hi-icon-effect-9 .hi-icon-draw:after,
 section[role="even"].new aside .hi-icon-effect-9 .hi-icon-draw:after {
     box-shadow: 0 0 0 5px #eff2f5;
@@ -107,6 +108,7 @@ section[role="odd"] aside .hi-icon-effect-9 .hi-icon-highlight-draw:after,
 section[role="even"] aside .hi-icon-effect-9 .hi-icon-highlight-draw:after {
     box-shadow: 0 0 0 5px #b8c4ce;
 }
+section[role="even"]#october aside .hi-icon-effect-9 .hi-icon-highlight-draw:after,
 section[role="odd"].new aside .hi-icon-effect-9 .hi-icon-highlight-draw:after,
 section[role="even"].new aside .hi-icon-effect-9 .hi-icon-highlight-draw:after {
     box-shadow: 0 0 0 5px #eff2f5;
@@ -211,7 +213,8 @@ section[role="even"].new .arrow-left:after {
     border-right-color: #eff2f5;
 }
 /* Right */
-section[role="odd"] .arrow-right:after {
+section[role="odd"] .arrow-right:after,
+section[role="even"]#october .arrow-right:after {
     border-color: rgba(136, 183, 213, 0);
     border-left-color: #b8c4ce;
 }
@@ -219,7 +222,8 @@ section[role="even"] .arrow-right:after {
     border-color: rgba(136, 183, 213, 0);
     border-left-color: #b8c4ce;
 }
-section[role="odd"].new .arrow-right:after {
+section[role="odd"].new .arrow-right:after,
+section[role="even"]#october .arrow-right:after {
     border-color: rgba(136, 183, 213, 0);
     border-left-color: #eff2f5;
 }
