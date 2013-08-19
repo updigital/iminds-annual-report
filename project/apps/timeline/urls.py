@@ -89,8 +89,5 @@ urlpatterns = patterns('project.apps.timeline.views',
 	(r'^en/2012/highlight/december', 'highlight_december_en'),
 	(r'^nl/2012/highlight/december', 'highlight_december_nl'),
 
-	(r'^en/', 'list_en'),
-	(r'^nl/', 'list_nl'),
-
 	(r'^', lambda x: HttpResponseRedirect('/en/2012/')),
 )

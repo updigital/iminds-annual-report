@@ -79,6 +79,7 @@ nav.language {
     font-size: 12px;
     right: 0;
     position: absolute;
+    z-index: 99;
 }
 nav.language ul li {
     width: 20px;
