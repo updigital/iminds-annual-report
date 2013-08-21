@@ -60,7 +60,10 @@ section {
 					color: #d80169;
 				}
 				blockquote figure figcaption p {
-					font-size: 0.8em;
+					font-size: 1em;
+				}
+				blockquote figure figcaption strong {
+					font-size: 1.4em;
 				}
 		blockquote p {
 			font-size: 1.2em;
