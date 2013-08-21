@@ -1,0 +1,102 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Digitale innovatie voor betere en betaalbare zorg</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="shortcut icon" href="{{ STATIC_URL }}new/favicon.png" type="image/x-icon" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}new/css/style.css">
+
+    <script src="{{ STATIC_URL }}new/js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+    
+<section role="highlight" class="row">
+        
+        <header>
+            <h1>
+                <img src="{{ STATIC_URL }}new/img/highlight.png" />
+            </h1>
+
+            <hr />
+        </header>
+
+      <h2>Digitale innovatie voor betere en betaalbare zorg</h2>
+      
+            <p>&nbsp;</p>
+            <p>Een kwalitatieve, efficiënte en betaalbare gezondheidszorg voor iedereen staat hoog op de politieke agenda. De inzet van digitale technologie kan de efficiëntie van onze gezondheidszorg nog sterk verhogen en het mogelijk maken om te evolueren naar een meer vraaggedreven en patiëntgeoriënteerde zorg.</p>
+  <h3>Vergrijzende bevolking</h3>
+            <p> De vergrijzing van de bevolking doet de nood aan zorg toenemen, terwijl het budget van de overheid onder druk staat en er een tekort aan gekwalificeerd personeel is. Een verhoogde inzet van digitale technologie zal cruciaal worden om een betaalbare en kwaliteitsvolle gezondheidszorg te blijven garanderen voor iedereen. Thuiszorg, begeleid wonen, permanente monitoring en hulpverlening vanop afstand kunnen – mits goede ondersteuning van digitale technologiëen en gebruiksvriendelijke interfaces – de kwaliteit van de zorg verhogen en tegelijk de kosten onder controle houden.</p>
+            <h3>Focus op preventie</h3>
+            <p> De gezondheidszorg is vandaag nog heel sterk gericht op genezing en onvoldoende op preventie. Van elke euro die gespendeerd wordt in onze gezondheidszorg gaat slechts een fractie naar preventie, terwijl het leeuwendeel van de uitgaven aan de laatste 2 jaar van ons leven besteed wordt. Actieve en persoonlijke monitoring van cruciale gezondheidsparameters wordt perfect mogelijk dankzij nieuwe technologieën. Denk maar aan apps op smartphones die de hartslag meten of het aantal gemaakte stappen per dag tellen. Bovendien gaan consumenten bewuster dan ooit om met hun gezondheid en zijn ze vragende partij voor toepassingen waarmee ze hun levensstijl kunnen beheren en verbeteren.</p>
+                       <h3>Zorg op maat</h3>
+            <p>Nieuwe technologieën zoals medische beeldvorming of bio-informatica bieden een schat aan informatie om iedere patiënt de juiste behandeling te bieden. Maar zorgverleners en specialisten hebben digitale ondersteuning nodig om al deze data op een effectieve manier te gebruiken
+en te interpreteren. Een meer patiëntgedreven gezondheidszorg vraagt ook om een optimale uitwisseling van gegevens tussen de verschillende zorginstanties. De nodige technologieën hiervoor zijn vandaag al beschikbaar, maar zijn vaak nog onvoldoende aangepast aan de specifieke behoeften van de medische sector op het vlak van gebruiksvriendelijkheid, veiligheid, privacy en aansprakelijkheid.
+</p>
+  <p>&nbsp;</p> 
+  <blockquote>
+            <figure class="thirteen columns alpha">
+                <img src="{{ STATIC_URL }}new/img/Quote-Highlight-September-copy2.png" />
+                <figcaption>
+                    <strong>Birgit Morlion</strong>
+                  <p>Directeur Healthy Society Innovation iMinds</p>
+              </figcaption>
+    </figure>
+
+            <p>“Technologiebedrijven begrijpen de behoeften van de zorgsector vaak onvoldoende om te komen tot werkbare en bruikbare toepassingen. Door zorgverleners rechtstreeks bij de ontwikkeling te betrekken, willen we de slaagkansen van digitale health-projecten vergroten."</p>
+  </blockquote>
+</section>
+
+    <br /><br />
+
+
+
+    <!-- Grab Google CDN's jQuery, fall back to local if offline -->
+    <!-- 2.0 for modern browsers, 1.10 for .oldie -->
+    <script>
+        var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
+            if(!oldieCheck) {
+                document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
+            } else {
+                document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
+            }
+        </script>
+        <script>
+        if(!window.jQuery) {
+            if(!oldieCheck) {
+                document.write('<script src="{{ STATIC_URL }}new/js/libs/jquery-2.0.2.min.js"><\/script>');
+            } else {
+                document.write('<script src="{{ STATIC_URL }}new/js/libs/jquery-1.10.1.min.js"><\/script>');
+            }
+        }
+    </script>
+
+    <script src="{{ STATIC_URL }}new/js/libs/gumby.min.js"></script>
+    <script src="{{ STATIC_URL }}new/js/plugins.js"></script>
+
+    <script src="{{ STATIC_URL }}new/js/main.js"></script>
+
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
+
+</body>
+</html>

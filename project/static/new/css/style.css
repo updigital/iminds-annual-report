@@ -1,0 +1,70 @@
+@import 'gumby.css';
+
+body {
+	background: #fff;
+}
+
+section {
+	background: #eef2f5;
+	border-radius: 12px;
+	padding: 2em 9em;
+}
+	header {
+		height: 9em;
+	}
+		header img {
+			border-radius: 50%;
+			border: 3px solid #c0c5c9;
+			position: relative;
+			left: 43.6%;
+			z-index: 1;
+		}
+		header hr {
+			border: 1px solid #c0c5c9;
+			position: relative;
+			top: -6.2em;
+			z-index: 0;
+		}
+	h2 {
+		font-size: 2em;
+		border-bottom: 1px solid #c0c5c9;
+		text-align: center;
+	}
+	h3 {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 1em;
+		color: #d80169;
+		margin-top: 1.2em;
+	}
+	p {
+		font-family: Arial, sans-serif;
+		font-size: 0.8em;
+		line-height: 1.5em;
+	}
+
+	blockquote {
+		margin-top: 4em;
+		border: none;
+	}
+		blockquote figure img {
+			border-radius: 50%;
+			border: 6px solid #c0c5c9;
+		}
+			blockquote figure figcaption {
+				position: relative;
+				left: 100%;
+				top: -3.7em;
+			}
+				blockquote figure figcaption strong {
+					color: #d80169;
+				}
+				blockquote figure figcaption p {
+					font-size: 0.8em;
+				}
+		blockquote p {
+			font-size: 1.2em;
+			line-height: 1.2em;
+			font-style: italic;
+			color: #000304;
+		}

@@ -1,0 +1,100 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Digital innovation for better and affordable health care</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="shortcut icon" href="{{ STATIC_URL }}new/favicon.png" type="image/x-icon" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}new/css/style.css">
+
+    <script src="{{ STATIC_URL }}new/js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+    
+<section role="highlight" class="row">
+        
+        <header>
+            <h1>
+                <img src="{{ STATIC_URL }}new/img/highlight.png" />
+            </h1>
+
+            <hr />
+        </header>
+
+      <h2>Digital innovation for better and affordable health care</h2>
+      
+            <p>&nbsp;</p>
+            <p>High-quality, effective and affordable health care for everyone is high on the political agenda. The expanded use of digital technology can greatly increase the efficiency of our health care system and make it possible to move towards more demand-driven and patient-oriented care.</p>
+  <h3>Aging population</h3>
+            <p> The aging of the population increases the need for care, while the budgets of governments worldwide are under severe pressure and there is a shortage of qualified personnel. The increased use of digital technologies will be crucial in order to guarantee affordable and high- quality health care for everyone. Home care, assisted living, permanent monitoring and remote assistance can—provided there is effective technological support and user-friendly interfacing— improve the quality of our health care and at the same time keep costs under control.</p>
+            <h3>Focus on prevention</h3>
+            <p> Today, health care is primarily focused on healing. Of every euro spent in our health care system, only a fraction is used for prevention, while the bulk goes to the final two years of our lives. Active and personal monitoring of key health parameters is entirely possible thanks to new technologies. Think of apps on smartphones that measure the pulse or count the number of steps per day. Furthermore, consumers are increasingly conscious of their health and they are asking for applications that enable them to manage and improve their lifestyle.</p>
+                       <h3>Personalized care</h3>
+            <p>New medical technologies such as medical imaging and bioinformatics generate a wealth of information to provide each patient with precisely targeted treatment. Nevertheless, health care providers and specialists need digital support to interpret the data correctly and use it effectively. Patient-driven health care also requires an optimal exchange of information between various health organizations and authorities. The necessary technologies for this are already available, but are often insufficiently adapted to the specific needs of the medical sector in terms of usability, security, privacy and liability.</p>
+  <p>&nbsp;</p> 
+  <blockquote>
+            <figure class="thirteen columns alpha">
+                <img src="{{ STATIC_URL }}new/img/Quote-Highlight-September-copy2.png" />
+                <figcaption>
+                    <strong>Birgit Morlion</strong>
+                  <p>Director Healthy Society Innovation iMinds</p>
+              </figcaption>
+    </figure>
+
+            <p>“Technology companies often have insufficient knowledge about the health care sector to come up with workable and useful applications. By involving health care providers directly in the development process, we increase the chances of success for our digital health projects.”</p>
+  </blockquote>
+</section>
+
+    <br /><br />
+
+
+
+    <!-- Grab Google CDN's jQuery, fall back to local if offline -->
+    <!-- 2.0 for modern browsers, 1.10 for .oldie -->
+    <script>
+        var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
+            if(!oldieCheck) {
+                document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
+            } else {
+                document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
+            }
+        </script>
+        <script>
+        if(!window.jQuery) {
+            if(!oldieCheck) {
+                document.write('<script src="{{ STATIC_URL }}new/js/libs/jquery-2.0.2.min.js"><\/script>');
+            } else {
+                document.write('<script src="{{ STATIC_URL }}new/js/libs/jquery-1.10.1.min.js"><\/script>');
+            }
+        }
+    </script>
+
+    <script src="{{ STATIC_URL }}new/js/libs/gumby.min.js"></script>
+    <script src="{{ STATIC_URL }}new/js/plugins.js"></script>
+
+    <script src="{{ STATIC_URL }}new/js/main.js"></script>
+
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
+
+</body>
+</html>

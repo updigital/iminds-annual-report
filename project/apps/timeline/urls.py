@@ -27,14 +27,14 @@ urlpatterns = patterns('project.apps.timeline.views',
 	(r'^nl/2012/highlight/march', 'highlight_march_nl'),
 
 	#April
-	(r'^en/2012/milestone/march', 'milestone_march_en'),
-	(r'^nl/2012/milestone/march', 'milestone_march_nl'),
+	(r'^en/2012/milestone/april', 'milestone_april_en'),
+	(r'^nl/2012/milestone/april', 'milestone_april_nl'),
 
-	(r'^en/2012/highlight/march', 'highlight_march_en'),
-	(r'^nl/2012/highlight/march', 'highlight_march_nl'),
+	(r'^en/2012/highlight/april', 'highlight_april_en'),
+	(r'^nl/2012/highlight/april', 'highlight_april_nl'),
 
-	(r'^en/2012/highlight-02/march', 'highlight_02_march_en'),
-	(r'^nl/2012/highlight-02/march', 'highlight_02_march_nl'),
+	(r'^en/2012/highlight-02/april', 'highlight_april_02_en'),
+	(r'^nl/2012/highlight-02/april', 'highlight_april_02_nl'),
 
 	#May
 	(r'^en/2012/milestone/may', 'milestone_may_en'),
@@ -47,8 +47,8 @@ urlpatterns = patterns('project.apps.timeline.views',
 	(r'^en/2012/highlight/june', 'highlight_june_en'),
 	(r'^nl/2012/highlight/june', 'highlight_june_nl'),
 
-	(r'^en/2012/highlight-02/june', 'highlight_02_june_en'),
-	(r'^nl/2012/highlight-02/june', 'highlight_02_june_nl'),
+	(r'^en/2012/highlight-02/june', 'highlight_june_02_en'),
+	(r'^nl/2012/highlight-02/june', 'highlight_june_02_nl'),
 
 	#July
 	(r'^en/2012/highlight/july', 'highlight_july_en'),
@@ -72,11 +72,11 @@ urlpatterns = patterns('project.apps.timeline.views',
 	(r'^en/2012/highlight/october', 'highlight_october_en'),
 	(r'^nl/2012/highlight/october', 'highlight_october_nl'),
 
-	(r'^en/2012/highlight-02/october', 'highlight_02_october_en'),
-	(r'^nl/2012/highlight-02/october', 'highlight_02_october_nl'),
+	(r'^en/2012/highlight/october-02', 'highlight_october_02_en'),
+	(r'^nl/2012/highlighe/october-02', 'highlight_october_02_nl'),
 
-	(r'^en/2012/milestone-02/october', 'milestone_02_october_en'),
-	(r'^nl/2012/milestone-02/october', 'milestone_02_october_nl'),
+	(r'^en/2012/milestone/october-02', 'milestone_october_02_en'),
+	(r'^nl/2012/milestone/october-02', 'milestone_october_02_nl'),
 
 	#November
 	(r'^en/2012/milestone/november', 'milestone_november_en'),

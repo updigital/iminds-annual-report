@@ -1,0 +1,94 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>COLLABORATING FOR THE CARE OF THE FUTURE</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="shortcut icon" href="{{ STATIC_URL }}new/favicon.png" type="image/x-icon" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}new/css/style.css">
+
+    <script src="{{ STATIC_URL }}new/js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+    
+<section role="highlight" class="row">
+        
+        <header>
+            <h1>
+                <img src="{{ STATIC_URL }}new/img/September copy.png" />
+            </h1>
+
+            <hr />
+        </header>
+
+      <h2>COLLABORATING FOR THE CARE OF THE FUTURE</h2>
+      
+            <p>&nbsp;</p>
+  <h3><strong>Living labs for health care innovation</strong></h3>
+            <p> In September 2012, Flemish Minister of Innovation Ingrid Lieten launched an open innovation lab (Zorginnovatieruimte Vlaanderen) in which many organizations collaborate on new processes, services and products for future care. iMinds is coordinating these living labs and is responsible for the support of the different platforms and projects.              </p>
+            <h3>President of the ICT in Health Care roundtable</h3>
+            <p> iMinds CEO Wim De Waele presided over the 'ICT in Health Care' roundtable in February 2012. He also wrote the vision statement for the initiative. The roundtable was part of the Flanders Care program, which in turn is part of the ViA action plan of the Flemish government. The program stimulates entrepreneurship in the health care sector and lays down firm foundations for our future health care system. The roundtable met with considerable interest: over 500 participants attended, including the four ministers with direct responsibilities in the matter.              </p>
+            <h3>ACCIO—the patient room of the future</h3>
+            <p>The ACCIO research project was completed in 2012. The project investigated—in close collaboration with health care providers—the development of more efficient nurse-calling systems. These new systems make use of the latest technologies and are based on the actual needs and behaviors of patients. The results are being tested and demonstrated in the Patient Room of the Future, intended to serve as the blueprint for future care concepts.              </p>
+            <h3>Bednet helps 200 ill children</h3>
+            <p>In 2012, 200 chronically ill children used Bednet to attend lessons in their school from their home environment or from their hospital bed. Bednet uses a digital platform developed within the framework of the iMinds ASCIT research project. Through a virtual classroom environment, the children can take classes in real time via a webcam, take pictures of the board with a digital camera and submit their assignments via a scanner. </p>
+  <p>&nbsp;</p> 
+  <p><img src="{{ STATIC_URL }}new/img/Facts & Figures Milestone September EN.jpg" width="598" height="529" /></p>
+  
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</section>
+
+    <br /><br />
+
+
+
+    <!-- Grab Google CDN's jQuery, fall back to local if offline -->
+    <!-- 2.0 for modern browsers, 1.10 for .oldie -->
+    <script>
+        var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
+            if(!oldieCheck) {
+                document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
+            } else {
+                document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
+            }
+        </script>
+        <script>
+        if(!window.jQuery) {
+            if(!oldieCheck) {
+                document.write('<script src="{{ STATIC_URL }}new/js/libs/jquery-2.0.2.min.js"><\/script>');
+            } else {
+                document.write('<script src="{{ STATIC_URL }}new/js/libs/jquery-1.10.1.min.js"><\/script>');
+            }
+        }
+    </script>
+
+    <script src="{{ STATIC_URL }}new/js/libs/gumby.min.js"></script>
+    <script src="{{ STATIC_URL }}new/js/plugins.js"></script>
+
+    <script src="{{ STATIC_URL }}new/js/main.js"></script>
+
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
+
+</body>
+</html>

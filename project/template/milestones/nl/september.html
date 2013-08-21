@@ -1,0 +1,96 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>SAMEN WERKEN AAN DE ZORGVERLENING VAN DE TOEKOMST</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="shortcut icon" href="{{ STATIC_URL }}new/favicon.png" type="image/x-icon" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}new/css/style.css">
+
+    <script src="{{ STATIC_URL }}new/js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+    
+<section role="highlight" class="row">
+        
+        <header>
+            <h1>
+                <img src="{{ STATIC_URL }}new/img/September copy.png" />
+            </h1>
+
+            <hr />
+        </header>
+
+      <h2>SAMEN WERKEN AAN DE ZORGVERLENING VAN DE TOEKOMST</h2>
+      
+            <p>&nbsp;</p>
+  <h3><strong>Proeftuinen voor zorginnovatie</strong></h3>
+            <p> In september 2012 lanceerde Vlaams Minister van Innovatie Ingrid Lieten de 'Zorginnovatieruimte Vlaanderen', een openinnovatieproeftuin waarin tal van organisaties samenwerken rond de nieuwe processen, diensten en producten voor de zorgverlening van de toekomst. iMinds neemt de coördinatie van de proeftuinen voor haar rekening en staat in voor de begeleiding van de verschillende platformen en projecten. </p>
+            <h3>Voorzitter rondetafel ‘ICT in de zorg’</h3>
+            <p> Wim De Waele, CEO van iMinds, mocht in februari 2012 de rondetafel over ‘ICT in de zorg’ voorzitten. Hij stelde ook de visietekst op. De rondetafel kaderde in het programma Flanders Care, dat deel uitmaakt van het ViA-actieplan van de Vlaamse overheid. Het programma moet het ondernemerschap in de zorgsector stimuleren en stevige fundamenten leggen voor onze toekomstige gezondheidszorg. De rondetafel kon met meer dan 500 aanwezigen – onder wie ook de vier bevoegde ministers – op heel wat belangstelling rekenen. </p>
+            <h3>ACCIO – patiëntenkamer van de toekomst</h3>
+            <p>In 2012 werd het ACCIO-project afgerond. De onderzoekers gingen in nauwe samenwerking met zorgverleners op zoek naar meer efficiënte verpleegoproepsystemen. Die zullen niet alleen gebruikmaken van nieuwe technologieën, maar ook beter afgestemd moeten zijn
+op de werkelijke behoeften en gedragingen van patiënten. Het resultaat wordt uitgetest en gedemonstreerd in de Patient Room of the Future, dat de blauwdruk vormt voor toekomstige zorgconcepten.
+</p>
+            <h3>Bednet helpt 200 zieke kinderen</h3>
+            <p>Dankzij Bednet konden 200 langdurig zieke kinderen in 2012 de lessen in hun school meevolgen vanuit hun thuisomgeving of vanuit hun ziekenhuisbed. Bednet maakt gebruik van een digitaal platform dat ontwikkeld werd in het kader van het iMinds-onderzoeksproject ASCIT. Via een virtuele klasomgeving volgen kinderen lessen in real-time via een webcam, nemen foto’s van het bord met een digitale camera en dienen taken in via een scanner.</p>
+  <p>&nbsp;</p> 
+  <p><img src="{{ STATIC_URL }}new/img/Facts & Figures Milestone September NL.jpg" width="555" height="556" /></p>
+  
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</section>
+
+    <br /><br />
+
+
+
+    <!-- Grab Google CDN's jQuery, fall back to local if offline -->
+    <!-- 2.0 for modern browsers, 1.10 for .oldie -->
+    <script>
+        var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
+            if(!oldieCheck) {
+                document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
+            } else {
+                document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
+            }
+        </script>
+        <script>
+        if(!window.jQuery) {
+            if(!oldieCheck) {
+                document.write('<script src="{{ STATIC_URL }}new/js/libs/jquery-2.0.2.min.js"><\/script>');
+            } else {
+                document.write('<script src="{{ STATIC_URL }}new/js/libs/jquery-1.10.1.min.js"><\/script>');
+            }
+        }
+    </script>
+
+    <script src="{{ STATIC_URL }}new/js/libs/gumby.min.js"></script>
+    <script src="{{ STATIC_URL }}new/js/plugins.js"></script>
+
+    <script src="{{ STATIC_URL }}new/js/main.js"></script>
+
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
+
+</body>
+</html>

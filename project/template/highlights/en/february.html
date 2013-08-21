@@ -1,0 +1,90 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>iMinds projects by market segments</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="shortcut icon" href="{{ STATIC_URL }}new/favicon.png" type="image/x-icon" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}new/css/style.css">
+
+    <script src="{{ STATIC_URL }}new/js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+    
+    <section role="highlight" class="row">
+        
+        <header>
+            <h1>
+                <img src="img/highlight.png" />
+            </h1>
+
+            <hr />
+        </header>
+
+        <h2>iMinds projects by market segments</h2>
+        
+        <p>&nbsp;</p>
+        <p>When we look at the Market Segments in which <a href="http://www.iminds.be/en/research/start-a-project/icon" target="new">ICON</a> projects are situated, we see a clear preponderance of the media and the health sectors. Building on that expertise, iMinds founded in 2012 a Media Innovation Center – MiX – that focuses specifically on the media sector. For 2013, iMinds predicts a similar initiative for the medical and healthcare sector, given the high demand for projects in the field.</p>
+      <p>&nbsp;</p>
+        
+        <p align="center"><strong>Approved ICON and MiX-ICON projects per market segment</strong><img src="{{ STATIC_URL }}new/img/Highlight February - Graph1.png" />        </p>
+            
+        <p>When it comes to budgeted commitment, the ratio of investments among iMinds, External Partners and IWT (the Flemish agency for Innovation by Science and Technology) is very well balanced throughout the six market segments. It is clear, however, that the highest investment from the three parties is in Media – which justifies the launch of iMinds’ MiX, since such a high demand in the field was identified. Manufacturing has demanded the lowest number of research projects, and therefore investments, among the six. Below, you may find the investment of each contributor per market segment. </p>
+      <p>&nbsp;</p>
+<p align="center"><strong>Budget commitment for ICON (2009 – 2012) by market segment</strong><img src="{{ STATIC_URL }}new/img/Highlight February - Graph2.png" />      </p>
+        
+
+    </section>
+    <br /><br />
+
+
+
+    <!-- Grab Google CDN's jQuery, fall back to local if offline -->
+    <!-- 2.0 for modern browsers, 1.10 for .oldie -->
+    <script>
+        var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
+            if(!oldieCheck) {
+                document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
+            } else {
+                document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
+            }
+        </script>
+        <script>
+        if(!window.jQuery) {
+            if(!oldieCheck) {
+                document.write('<script src="{{ STATIC_URL }}new/js/libs/jquery-2.0.2.min.js"><\/script>');
+            } else {
+                document.write('<script src="{{ STATIC_URL }}new/js/libs/jquery-1.10.1.min.js"><\/script>');
+            }
+        }
+    </script>
+
+    <script src="{{ STATIC_URL }}new/js/libs/gumby.min.js"></script>
+    <script src="{{ STATIC_URL }}new/js/plugins.js"></script>
+
+    <script src="{{ STATIC_URL }}new/js/main.js"></script>
+
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
+
+</body>
+</html>

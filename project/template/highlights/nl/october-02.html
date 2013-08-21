@@ -1,0 +1,111 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>iMinds, strategisch onderzoekscentrum op wereldniveau</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="shortcut icon" href="{{ STATIC_URL }}new/favicon.png" type="image/x-icon" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}new/css/style.css">
+
+    <script src="{{ STATIC_URL }}new/js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+    
+    <section role="highlight" class="row">
+        
+        <header>
+            <h1>
+                <img src="{{ STATIC_URL }}new/img/highlight.png" />
+            </h1>
+
+            <hr />
+        </header>
+
+        <h2>iMinds, strategisch onderzoekscentrum op wereldniveau</h2>
+        
+        <p>&nbsp;</p><h3>PARTNERSHIPS</h3>
+     <p><strong>iMinds versterkt samenwerking met universiteiten 
+     </strong></p>
+     <p>iMinds hernieuwde in 2012 haar samenwerkingsovereenkomsten met de vijf Vlaamse universiteiten: Universiteit Gent, Vrije Universiteit Brussel, Universiteit Antwerpen, Universiteit Hasselt en Katholieke Universiteit Leuven. Aandacht ging onder meer uit naar een verhoogde uniformiteit in de samenwerking met de universiteiten. Dat vergemakkelijkt het opstarten van onderzoeksprojecten en creëert een duidelijk kader en verhoogde zichtbaarheid voor alle betrokken partners.
+
+     </p>
+     <h3>RESEARCH</h3>
+     <p><strong>Actief in toonaangevend onderzoek
+     </strong></p>
+     <p>De iMinds-onderzoeksgroepen bevinden zich in de frontlinie van de nationale en internationale onderzoekswereld. Zo is het onderzoeksdepartement Future Media & Imaging een
+belangrijke partner in het SIMRET-project. Binnen dit project wordt een nieuwe medische beeldvormingstechniek ontwikkeld voor een hybride scanner die tegelijk SPECT- en MR- beelden kan maken. Dat moet leiden tot meer accurate diagnoses bij patiënten. Een van de vele voorbeelden van hoe iMinds onderzoeksprojecten bijdragen tot een betere leefwereld voor iedereen.
+
+     </p>
+        <p><img src="{{ STATIC_URL }}new/img/Highlight 2 October img 1.png" style="float:left; margin-right:20px; margin-bottom:25px;"/></p><h3>CAF</h3>
+     <p><strong>Europees ondernemerschap in digitale innovatie ondersteunen
+     </strong></p>
+     <p>iMinds werd eind 2012 Associate Partner van de Kennis- en Innovatiecommunity (KIC) ICT Labs van het Europees Instituut voor Innovatie en Technologie (EIT). EIT ICT Labs verenigt onderwijs, onderzoek en industrie in een Europees ecosysteem van ondernemers met als doel om van Europa een wereldleider in ICT-innovatie te maken. Het lidmaatschap biedt iMinds heel wat mogelijkheden om haar internationale aanwezigheid te versterken.
+     </p>
+     
+     <img src="{{ STATIC_URL }}new/img/Highlight 2 October img 2.png" style="float:left; margin-right:20px; margin-bottom:25px;"/><h3>KIC ICT LABS</h3>
+     <p><strong>iMinds coördineert Europese proeftuinen netwerk 
+     </strong></p>
+     <p>In 2012 werd iMinds herkozen als Europees secretaris
+van het European Network of Living Labs (ENoLL), de internationale federatie van erkende Living Labs in Europa en de wereld. Een living lab of proeftuin is een real-life test- en experimentomgeving waar gebruikers en producenten samen innovaties creëren. ENoLL verenigt vandaag meer dan 300 proeftuinen over de hele wereld, waarvan er 30 actief zijn op Europese schaal.
+     </p>
+     <img src="{{ STATIC_URL }}new/img/Highlight 2 October img 3.png" style="float:left; margin-right:20px; margin-bottom:25px;"/><h3>LIVING LABS</h3>
+     <p><strong>iMinds coordinates European Network of Living Labs 
+     </strong></p>
+     <p>In 2012, iMinds was re-elected as European secretary of the European Network of Living Labs (ENoLL), the international federation of recognized Living Labs in Europe and the rest of the world. A living lab is a real life test and experimentation environment where users and producers create innovations together. ENoLL today unites more than 300 labs worldwide, of which 30 are active at the European level.
+     </p>
+     
+     
+    </section>
+    <br /><br />
+
+
+
+    <!-- Grab Google CDN's jQuery, fall back to local if offline -->
+    <!-- 2.0 for modern browsers, 1.10 for .oldie -->
+    <script>
+        var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
+            if(!oldieCheck) {
+                document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
+            } else {
+                document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
+            }
+        </script>
+        <script>
+        if(!window.jQuery) {
+            if(!oldieCheck) {
+                document.write('<script src="{{ STATIC_URL }}new/js/libs/jquery-2.0.2.min.js"><\/script>');
+            } else {
+                document.write('<script src="{{ STATIC_URL }}new/js/libs/jquery-1.10.1.min.js"><\/script>');
+            }
+        }
+    </script>
+
+    <script src="{{ STATIC_URL }}new/js/libs/gumby.min.js"></script>
+    <script src="{{ STATIC_URL }}new/js/plugins.js"></script>
+
+    <script src="{{ STATIC_URL }}new/js/main.js"></script>
+
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
+
+</body>
+</html>
