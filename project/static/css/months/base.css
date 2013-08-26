@@ -177,7 +177,7 @@ section[role="odd"] aside.content .text,
 section[role="even"] aside.content .text {
     background: none;
     height: 270px;
-    color: @black;
+    color: #000;
     padding: 10px 30px 30px 30px;
     -webkit-appearance: none;
 -webkit-transition: all 0.2s linear;
