@@ -131,13 +131,12 @@ section[role="even"]#april .ss-left .text {
     border-right: 3px solid #fff!important;
     text-align: left!important;
 }
-section[role="odd"]#may .ss-right .text-highlight {
-    border-right: 3px solid #fff!important;
-    text-align: left!important;
-}
 section[role="odd"]#may .ss-left .text-highlight {
     border-right: 3px solid #fff!important;
     text-align: left!important;
+}
+section[role="odd"]#may .text-left {
+    border-right: none!important;
 }
 section[role="odd"]#august .ss-left .text-highlight {
     border-right: 3px solid #fff!important;
@@ -326,10 +325,6 @@ section[role="even"]#october .ss-right .text {
     border-left: 3px solid #fff!important;
     text-align: left!important;
     border-right: none!important;
-}
-section[role="odd"]#may .ss-right .text-highlight {
-    border-right: 3px solid #fff!important;
-    text-align: left!important;
 }
 section[role="odd"]#march .ss-left .text-highlight {
     border-right: 3px solid #fff!important;
