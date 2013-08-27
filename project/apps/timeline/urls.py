@@ -73,7 +73,7 @@ urlpatterns = patterns('project.apps.timeline.views',
 	(r'^nl/2012/milestone/october', 'milestone_october_nl'),
 
 	(r'^en/2012/highlight/october-02', 'highlight_october_02_en'),
-	(r'^nl/2012/highlighe/october-02', 'highlight_october_02_nl'),
+	(r'^nl/2012/highlight/october-02', 'highlight_october_02_nl'),
 
 	(r'^en/2012/highlight/october', 'highlight_october_en'),
 	(r'^nl/2012/highlight/october', 'highlight_october_nl'),
