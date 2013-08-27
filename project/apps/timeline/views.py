@@ -138,13 +138,6 @@ def milestone_october_nl(request):
     return direct_to_template(request, 'milestones/nl/october.html',
 )
 
-def highlight_october_en(request):
-    return direct_to_template(request, 'highlights/en/october.html',
-)
-def highlight_october_nl(request):
-    return direct_to_template(request, 'highlights/nl/october.html',
-)
-
 def milestone_october_02_en(request):
     return direct_to_template(request, 'milestones/en/october-02.html',
 )
@@ -152,6 +145,13 @@ def milestone_october_02_nl(request):
     return direct_to_template(request, 'milestones/nl/october-02.html',
 )
 
+def highlight_october_en(request):
+    return direct_to_template(request, 'highlights/en/october.html',
+)
+def highlight_october_nl(request):
+    return direct_to_template(request, 'highlights/nl/october.html',
+)
+    
 def highlight_october_02_en(request):
     return direct_to_template(request, 'highlights/en/october-02.html',
 )
