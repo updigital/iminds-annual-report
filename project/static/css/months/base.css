@@ -33,6 +33,9 @@ section[role="even"] {
         section[role="even"]#october {
             height: 210%;
         }
+        section[role="even"]#december {
+            height: 110%;
+        }
 
 section[role="odd"].old,
 section[role="even"].old {

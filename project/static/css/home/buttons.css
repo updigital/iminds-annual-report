@@ -1,6 +1,6 @@
 /* Button: Arrow Down */
 .button-down {
-    top: 83%;
+    top: 36.6em;
     left: 46.75%;
     position: relative;
     display: block;
@@ -11,7 +11,7 @@
     transition: all 0.8s;
 }
     .button-down:hover {
-        top: 85%;
+        top: 37.6em;
 
         -webkit-transition: all 0.8s;
         -moz-transition: all 0.8s;
@@ -81,7 +81,7 @@ button.download {
     height: 32px;
     padding: 0 0 0 6px;
 
-    top: 2.2em;
+    top: 5em;
     left: -1em;
     letter-spacing: 2px;
 
@@ -107,7 +107,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d90081', end
     button.download a {
         color: #fff;
         font-size: 11px;
-        text-shadow: 1px 1px 0 #b8c4ce;
     }
 
     button.download:hover {

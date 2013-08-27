@@ -58,6 +58,10 @@ section[role="even"] .content header {
         height: 98em;
         border: 1px dashed #fff;
     }
+    section[role="even"]#december .content div.line {
+        height: 48em!important;
+        border: 1px dashed #fff;
+    }
     section[role="odd"] .content div.line,
     section[role="even"] .content div.line {
         width: 2px;
